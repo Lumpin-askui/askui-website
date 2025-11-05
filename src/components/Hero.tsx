@@ -139,19 +139,32 @@ Results: ./output/test-results.json`}</code>
                 <div className="inline-flex flex-col sm:flex-row gap-4 justify-center items-center">
                   <Button size="lg" className="bg-accent hover:bg-accent/90 text-primary font-semibold shadow-glow" asChild>
                     <a href="/enterprise">
-                      Get Started Free
+                      Book a Demo
                       <ArrowRight className="ml-2 h-4 w-4" />
                     </a>
                   </Button>
                   <Button size="lg" variant="outline" className="border-white/20 bg-white/5 text-white hover:bg-white/10 backdrop-blur-sm" asChild>
                     <a href="#contact">
-                      Talk to Sales
+                      Try Caesr
                     </a>
                   </Button>
                 </div>
-                <p className="text-white/60 text-sm mt-4">
+                <p className="text-white/60 text-sm mt-6">
                   No credit card required • Free tier available • Enterprise support
                 </p>
+                
+                {/* Security Badges */}
+                <div className="flex flex-wrap gap-4 justify-center mt-6">
+                  <div className="px-4 py-2 rounded-lg bg-white/10 backdrop-blur-sm text-white text-sm font-medium">
+                    ISO27001 Certified
+                  </div>
+                  <div className="px-4 py-2 rounded-lg bg-white/10 backdrop-blur-sm text-white text-sm font-medium">
+                    On-Premise Available
+                  </div>
+                  <div className="px-4 py-2 rounded-lg bg-white/10 backdrop-blur-sm text-white text-sm font-medium">
+                    BYOM Support
+                  </div>
+                </div>
               </div>
             </div>
           </div>
