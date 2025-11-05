@@ -1,8 +1,20 @@
 import { Button } from "@/components/ui/button";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { ArrowRight, Github, Terminal, MessageSquare } from "lucide-react";
+import dbLogo from "@/assets/clients/db.png";
+import sewLogo from "@/assets/clients/sew.png";
+import zucchettiLogo from "@/assets/clients/zucchetti.png";
+import soluteLogo from "@/assets/clients/solute.png";
+import intelLogo from "@/assets/clients/intel.png";
 
 const Hero = () => {
+  const customers = [
+    { name: "Deutsche Bahn", logo: dbLogo },
+    { name: "SEW Eurodrive", logo: sewLogo },
+    { name: "Zucchetti", logo: zucchettiLogo },
+    { name: "Solute", logo: soluteLogo },
+    { name: "Intel Software", logo: intelLogo }
+  ];
   return (
     <>
       {/* Hero Text Section */}
@@ -28,7 +40,7 @@ const Hero = () => {
               Deploy AI agents on Windows, MacOS, Linux, iOS, and Android with enterprise-grade security, reliability, and compliance.
             </p>
             
-            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
               <Button size="lg" className="bg-accent hover:bg-accent/90 text-primary font-semibold shadow-glow" asChild>
                 <a href="#contact">Book a Demo</a>
               </Button>
@@ -38,6 +50,22 @@ const Hero = () => {
                   View on GitHub
                 </a>
               </Button>
+            </div>
+
+            {/* Customer Logos */}
+            <div className="grid grid-cols-2 md:grid-cols-5 gap-8 items-center justify-items-center max-w-4xl mx-auto">
+              {customers.map((customer, index) => (
+                <div
+                  key={index}
+                  className="flex items-center justify-center"
+                >
+                  <img
+                    src={customer.logo}
+                    alt={customer.name}
+                    className="h-6 md:h-8 w-auto object-contain opacity-40 hover:opacity-70 transition-opacity grayscale hover:grayscale-0"
+                  />
+                </div>
+              ))}
             </div>
           </div>
         </div>
