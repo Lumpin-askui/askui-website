@@ -1,220 +1,105 @@
-import { useEffect } from 'react';
+import ReactMarkdown from 'react-markdown';
+import remarkGfm from 'remark-gfm';
+import { useMemo } from 'react';
 
 interface BlogContentProps {
   content: string;
 }
 
 const BlogContent = ({ content }: BlogContentProps) => {
-  useEffect(() => {
-    // Inject styles for embedded content (tables, etc.)
-    const styleId = 'blog-content-embedded-styles';
-    if (!document.getElementById(styleId)) {
-      const style = document.createElement('style');
-      style.id = styleId;
-      style.textContent = `
-        .blog-content {
-          color: hsl(var(--foreground));
-          line-height: 1.75;
-        }
-        
-        .blog-content h1 {
-          font-size: 2.25rem;
-          font-weight: 700;
-          margin-top: 2rem;
-          margin-bottom: 1rem;
-          line-height: 1.2;
-          color: hsl(var(--foreground));
-        }
-        
-        .blog-content h1:first-child {
-          margin-top: 0;
-        }
-        
-        .blog-content h2 {
-          font-size: 1.875rem;
-          font-weight: 600;
-          margin-top: 2rem;
-          margin-bottom: 1rem;
-          line-height: 1.3;
-          color: hsl(var(--foreground));
-        }
-        
-        .blog-content h3 {
-          font-size: 1.5rem;
-          font-weight: 600;
-          margin-top: 1.5rem;
-          margin-bottom: 0.75rem;
-          line-height: 1.4;
-          color: hsl(var(--foreground));
-        }
-        
-        .blog-content h4 {
-          font-size: 1.25rem;
-          font-weight: 600;
-          margin-top: 1.25rem;
-          margin-bottom: 0.5rem;
-          line-height: 1.4;
-          color: hsl(var(--foreground));
-        }
-        
-        .blog-content p {
-          margin-bottom: 1.25rem;
-          line-height: 1.75;
-          color: hsl(var(--foreground));
-        }
-        
-        .blog-content p:last-child {
-          margin-bottom: 0;
-        }
-        
-        .blog-content strong {
-          font-weight: 600;
-          color: hsl(var(--foreground));
-        }
-        
-        .blog-content em {
-          font-style: italic;
-        }
-        
-        .blog-content ul,
-        .blog-content ol {
-          margin-top: 1rem;
-          margin-bottom: 1.25rem;
-          padding-left: 1.5rem;
-        }
-        
-        .blog-content ul {
-          list-style-type: disc;
-        }
-        
-        .blog-content ol {
-          list-style-type: decimal;
-        }
-        
-        .blog-content li {
-          margin-bottom: 0.5rem;
-          line-height: 1.75;
-          color: hsl(var(--foreground));
-        }
-        
-        .blog-content li > ul,
-        .blog-content li > ol {
-          margin-top: 0.5rem;
-          margin-bottom: 0.5rem;
-        }
-        
-        .blog-content a {
-          color: hsl(var(--primary));
-          text-decoration: underline;
-          text-underline-offset: 2px;
-          transition: color 0.2s;
-        }
-        
-        .blog-content a:hover {
-          color: #962C5D;
-        }
-        
-        .blog-content code {
-          background-color: hsl(var(--muted));
-          padding: 0.125rem 0.375rem;
-          border-radius: 0.25rem;
-          font-size: 0.875em;
-          font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', monospace;
-          color: hsl(var(--foreground));
-        }
-        
-        .blog-content pre {
-          background-color: hsl(var(--muted));
-          padding: 1rem;
-          border-radius: 0.5rem;
-          overflow-x: auto;
-          margin-top: 1.25rem;
-          margin-bottom: 1.25rem;
-          line-height: 1.5;
-        }
-        
-        .blog-content pre code {
-          background: none;
-          padding: 0;
-          font-size: 0.875rem;
-        }
-        
-        .blog-content blockquote {
-          border-left: 4px solid hsl(var(--primary));
-          padding-left: 1rem;
-          margin: 1.5rem 0;
-          color: hsl(var(--muted-foreground));
-          font-style: italic;
-        }
-        
-        .blog-content img {
-          max-width: 100%;
-          height: auto;
-          border-radius: 0.5rem;
-          margin: 1.5rem 0;
-        }
-        
-        .blog-content figure {
-          margin: 1.5rem 0;
-        }
-        
-        .blog-content figure img {
-          margin: 0;
-        }
-        
-        .blog-content table {
-          width: 100%;
-          border-collapse: collapse;
-          margin: 1.5rem 0;
-          font-size: 0.875rem;
-        }
-        
-        .blog-content table th,
-        .blog-content table td {
-          padding: 0.75rem;
-          border: 1px solid hsl(var(--border));
-          text-align: left;
-        }
-        
-        .blog-content table th {
-          background-color: hsl(var(--muted));
-          font-weight: 600;
-        }
-        
-        .blog-content hr {
-          border: none;
-          border-top: 1px solid hsl(var(--border));
-          margin: 2rem 0;
-        }
-        
-        /* Preserve embedded styles from content (like tables with custom classes) */
-        .blog-content [data-rt-embed-type] {
-          margin: 1.5rem 0;
-        }
-        
-        .blog-content [data-rt-embed-type] iframe {
-          width: 100%;
-          max-width: 100%;
-          border-radius: 0.5rem;
-        }
-        
-        /* Style embedded divs with custom classes */
-        .blog-content div[class*="table"],
-        .blog-content div[class*="container"] {
-          margin: 1.5rem 0;
-        }
-      `;
-      document.head.appendChild(style);
-    }
-  }, []);
+  if (!content) {
+    return null;
+  }
+
+  // Process content to handle HTML divs with markdown inside
+  const processedContent = useMemo(() => {
+    // Replace HTML div wrappers with markdown-friendly format
+    // This allows ReactMarkdown to parse the markdown table inside
+    let processed = content;
+    
+    // Remove the div wrapper around tables but keep the table markdown
+    processed = processed.replace(
+      /<div data-rt-embed-type=['"]true['"]>\s*\n?\s*/g,
+      ''
+    );
+    processed = processed.replace(/\s*<\/div>\s*$/gm, '');
+    
+    return processed;
+  }, [content]);
 
   return (
-    <div
-      className="blog-content"
-      dangerouslySetInnerHTML={{ __html: content }}
-    />
+    <div className="blog-content prose prose-lg dark:prose-invert max-w-none
+                    prose-headings:font-bold prose-headings:text-foreground
+                    prose-p:text-foreground prose-strong:text-foreground prose-li:text-foreground
+                    prose-a:text-[#962C5D] prose-a:underline hover:prose-a:text-[#962C5D]/80
+                    prose-ul:list-disc prose-ul:pl-5 prose-ul:space-y-2
+                    prose-ol:list-decimal prose-ol:pl-5 prose-ol:space-y-2
+                    prose-li:marker:text-[#962C5D]
+                    prose-blockquote:border-l-4 prose-blockquote:border-[#962C5D] prose-blockquote:pl-4 prose-blockquote:italic
+                    prose-code:bg-muted prose-code:p-1 prose-code:rounded prose-code:text-sm
+                    prose-pre:bg-muted prose-pre:p-4 prose-pre:rounded-lg prose-pre:overflow-x-auto
+                    prose-img:rounded-lg prose-img:shadow-md prose-img:mx-auto prose-img:my-8
+                    prose-table:w-full prose-table:border-collapse prose-table:my-8
+                    prose-th:bg-muted prose-th:p-3 prose-th:text-left prose-th:font-semibold prose-th:border-b
+                    prose-td:p-3 prose-td:border-b prose-td:border-border
+                    prose-h1:text-4xl prose-h1:font-bold prose-h1:mb-4 prose-h1:mt-8
+                    prose-h2:text-3xl prose-h2:font-semibold prose-h2:mb-3 prose-h2:mt-8 prose-h2:border-b prose-h2:border-border prose-h2:pb-2
+                    prose-h3:text-2xl prose-h3:font-semibold prose-h3:mb-2 prose-h3:mt-6
+                    prose-h4:text-xl prose-h4:font-semibold prose-h4:mb-2 prose-h4:mt-4
+                    prose-p:mb-4 prose-p:leading-relaxed
+                    prose-ul:mb-4 prose-ol:mb-4
+                    prose-li:mb-2
+                    prose-blockquote:my-4 prose-blockquote:bg-muted/50 prose-blockquote:py-2 prose-blockquote:px-4 prose-blockquote:rounded-r
+                    prose-hr:my-8 prose-hr:border-border
+                    ">
+      <ReactMarkdown
+        remarkPlugins={[remarkGfm]}
+        components={{
+          // Custom heading components to ensure proper rendering
+          h1: ({ children, ...props }: any) => (
+            <h1 className="text-4xl font-bold mb-4 mt-8 text-foreground first:mt-0" {...props}>
+              {children}
+            </h1>
+          ),
+          h2: ({ children, ...props }: any) => (
+            <h2 className="text-3xl font-semibold mb-3 mt-8 text-foreground border-b border-border pb-2 first:mt-0" {...props}>
+              {children}
+            </h2>
+          ),
+          h3: ({ children, ...props }: any) => (
+            <h3 className="text-2xl font-semibold mb-2 mt-6 text-foreground" {...props}>
+              {children}
+            </h3>
+          ),
+          h4: ({ children, ...props }: any) => (
+            <h4 className="text-xl font-semibold mb-2 mt-4 text-foreground" {...props}>
+              {children}
+            </h4>
+          ),
+          // Custom table styling
+          table: ({ children, ...props }: any) => (
+            <div className="overflow-x-auto my-8">
+              <table className="w-full border-collapse border border-border" {...props}>
+                {children}
+              </table>
+            </div>
+          ),
+          th: ({ children, ...props }: any) => (
+            <th className="bg-muted p-3 text-left font-semibold border-b border-border" {...props}>
+              {children}
+            </th>
+          ),
+          td: ({ children, ...props }: any) => (
+            <td className="p-3 border-b border-border" {...props}>
+              {children}
+            </td>
+          ),
+        }}
+      >
+        {processedContent}
+      </ReactMarkdown>
+    </div>
   );
 };
 
 export default BlogContent;
-

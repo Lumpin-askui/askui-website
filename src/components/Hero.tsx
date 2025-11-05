@@ -29,7 +29,7 @@ const Hero = () => {
             {/* Tagline */}
             <div className="text-center mb-16">
               <Link to="/benchmarks" className="mb-6 inline-flex items-center rounded-full border border-accent/20 bg-accent/10 px-4 py-2 text-sm font-medium text-accent hover:bg-accent/20 transition-colors cursor-pointer">
-                #1 in Android World & OSWorld Benchmarks
+                Leading Android World Benchmark
               </Link>
               
               <h1 className="mb-12 text-4xl font-bold tracking-tight text-white sm:text-5xl md:text-6xl lg:text-7xl">

@@ -97,7 +97,7 @@ const AutomationTeams = () => {
 
             <Card>
               <CardHeader>
-                <CheckCircle className="h-10 w-10 text-[#962C5D] mb-4" />
+                <CheckCircle className="h-10 w-10 text-accent mb-4" />
                 <CardTitle>Enterprise Orchestration</CardTitle>
                 <CardDescription>
                   Manage thousands of bots from a centralized platform. Schedule, monitor, and scale automation across teams.

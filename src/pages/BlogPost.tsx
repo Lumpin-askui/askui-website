@@ -91,13 +91,15 @@ const BlogPost = () => {
       )}
 
       {/* Content */}
-      <section className="py-12">
-        <div className="container mx-auto px-4 lg:px-8">
-          <article className="max-w-4xl mx-auto">
-            <BlogContent content={post.content} />
-          </article>
-        </div>
-      </section>
+      {post.content && (
+        <section className="py-12">
+          <div className="container mx-auto px-4 lg:px-8">
+            <article className="max-w-4xl mx-auto">
+              <BlogContent content={post.content} />
+            </article>
+          </div>
+        </section>
+      )}
 
       {/* Tags */}
       {post.tags && post.tags.length > 0 && (

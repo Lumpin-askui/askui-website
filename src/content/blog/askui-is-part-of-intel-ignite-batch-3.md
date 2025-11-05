@@ -1,0 +1,3 @@
+On April 6, 2022, askui was chosen as one of the participants in the batch#3 of the accelerator program Intel Ignite out of more than 250 applications. Intel Ignite is [Intel Corporation](https://www.linkedin.com/company/intel-corporation/)'s program for deep-tech [#startups](https://www.linkedin.com/feed/hashtag/?keywords=startups&highlightedUpdateUrns=urn%3Ali%3Aactivity%3A6925101196668010496), helping turn cutting-edge ideas into industry-disrupting technologies by providing entrepreneurs hands-on mentorship, technical support, and business acumen.
+
+askui is looking forward to this cooperation to accelerate their mission of enabling developers in building automated, digital worlds.

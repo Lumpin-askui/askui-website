@@ -26,12 +26,32 @@ const Benchmarks = () => {
             
             <h1 className="mb-6 text-4xl font-bold tracking-tight text-white sm:text-5xl md:text-6xl">
               Benchmark Results
-              <span className="block text-accent text-2xl md:text-3xl font-normal mt-4">#1 in Android World & OSWorld</span>
+              <span className="block text-accent text-2xl md:text-3xl font-normal mt-4">
+                Leading Android World Benchmark
+              </span>
             </h1>
             
             <p className="mb-8 text-lg text-white/80">
               Proven performance across industry-standard benchmarks. See how AskUI delivers superior results in computer use agent technology.
             </p>
+            
+            <div className="flex flex-wrap items-center justify-center gap-4 text-sm">
+              <a 
+                href="https://docs.google.com/spreadsheets/d/1cchzP9dlTZ3WXQTfYNhh3avxoLipqHN75v1Tb86uhHo/edit?gid=0#gid=0" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="text-white/90 hover:text-white underline underline-offset-4 transition-colors"
+              >
+                View Official Leaderboard →
+              </a>
+              <span className="text-white/40">•</span>
+              <Link 
+                to="/blog/askui-vision-agent-achieves-2nd-place-on-androidworld-benchmark"
+                className="text-white/90 hover:text-white underline underline-offset-4 transition-colors"
+              >
+                Read Analysis →
+              </Link>
+            </div>
           </div>
         </div>
       </section>
@@ -39,32 +59,23 @@ const Benchmarks = () => {
       {/* Key Metrics */}
       <section className="py-16 bg-muted/30">
         <div className="container mx-auto px-4 lg:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
             <Card className="p-8 text-center border-border/50">
               <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-[#962C5D]/10 mb-4">
                 <Award className="h-8 w-8 text-[#962C5D]" />
               </div>
-              <div className="text-4xl font-bold text-[#962C5D] mb-2">#1</div>
+              <div className="text-4xl font-bold text-[#962C5D] mb-2">#2</div>
               <div className="text-sm text-muted-foreground mb-2">Android World Benchmark</div>
-              <p className="text-xs text-muted-foreground">Top performance in mobile automation testing</p>
-            </Card>
-
-            <Card className="p-8 text-center border-border/50">
-              <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-[#962C5D]/10 mb-4">
-                <Trophy className="h-8 w-8 text-[#962C5D]" />
-              </div>
-              <div className="text-4xl font-bold text-[#962C5D] mb-2">#1</div>
-              <div className="text-sm text-muted-foreground mb-2">OSWorld Benchmark</div>
-              <p className="text-xs text-muted-foreground">Leading results in cross-platform automation</p>
+              <p className="text-xs text-muted-foreground">Ranked #2 globally among AI agents</p>
             </Card>
 
             <Card className="p-8 text-center border-border/50">
               <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-[#962C5D]/10 mb-4">
                 <TrendingUp className="h-8 w-8 text-[#962C5D]" />
               </div>
-              <div className="text-4xl font-bold text-[#962C5D] mb-2">95%+</div>
-              <div className="text-sm text-muted-foreground mb-2">Test Accuracy</div>
-              <p className="text-xs text-muted-foreground">Consistent reliability across all platforms</p>
+              <div className="text-4xl font-bold text-[#962C5D] mb-2">94.8%</div>
+              <div className="text-sm text-muted-foreground mb-2">Success Rate (pass@1)</div>
+              <p className="text-xs text-muted-foreground">Industry-leading task completion on first attempt</p>
             </Card>
           </div>
         </div>
@@ -86,19 +97,21 @@ const Benchmarks = () => {
                   <div className="flex-1">
                     <h3 className="text-2xl font-bold mb-2">Android World Benchmark</h3>
                     <p className="text-muted-foreground">
-                      Comprehensive testing framework for mobile device automation and interaction capabilities.
+                      Comprehensive testing framework for mobile device automation and interaction capabilities. AskUI's AndroidVisionA agent achieved #2 ranking globally with a 94.8% success rate on first-attempt task completion.
                     </p>
                   </div>
                 </div>
                 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
                   <div className="p-4 rounded-lg bg-muted/50">
-                    <div className="text-2xl font-bold text-[#962C5D] mb-1">#1</div>
-                    <div className="text-sm text-muted-foreground">Overall Ranking</div>
+                    <div className="text-2xl font-bold text-[#962C5D] mb-1">#2</div>
+                    <div className="text-sm text-muted-foreground">Global Ranking</div>
+                    <div className="text-xs text-muted-foreground mt-1">Among all AI agents</div>
                   </div>
                   <div className="p-4 rounded-lg bg-muted/50">
-                    <div className="text-2xl font-bold text-[#962C5D] mb-1">98%</div>
-                    <div className="text-sm text-muted-foreground">Success Rate</div>
+                    <div className="text-2xl font-bold text-[#962C5D] mb-1">94.8%</div>
+                    <div className="text-sm text-muted-foreground">Success Rate (pass@1)</div>
+                    <div className="text-xs text-muted-foreground mt-1">First-attempt completion</div>
                   </div>
                 </div>
 
@@ -107,69 +120,27 @@ const Benchmarks = () => {
                   <ul className="space-y-2">
                     <li className="flex items-start gap-2">
                       <CheckCircle className="h-5 w-5 text-[#962C5D] flex-shrink-0 mt-0.5" />
-                      <span>Top performance in complex UI interactions</span>
+                      <span>Ranked #2 globally in Android World leaderboard (as of October 2025)</span>
                     </li>
                     <li className="flex items-start gap-2">
                       <CheckCircle className="h-5 w-5 text-[#962C5D] flex-shrink-0 mt-0.5" />
-                      <span>Superior accuracy in gesture recognition</span>
+                      <span>94.8% success rate on first-attempt task completion</span>
                     </li>
                     <li className="flex items-start gap-2">
                       <CheckCircle className="h-5 w-5 text-[#962C5D] flex-shrink-0 mt-0.5" />
-                      <span>Fastest execution time across test scenarios</span>
+                      <span>AI agent architecture with advanced vision and action capabilities</span>
                     </li>
                     <li className="flex items-start gap-2">
                       <CheckCircle className="h-5 w-5 text-[#962C5D] flex-shrink-0 mt-0.5" />
-                      <span>Consistent performance across Android versions</span>
+                      <span>Outperforms human baseline performance (80.0%) by significant margin</span>
                     </li>
                   </ul>
                 </div>
-              </Card>
 
-              {/* OSWorld */}
-              <Card className="p-8 border-border/50">
-                <div className="flex items-start gap-4 mb-6">
-                  <div className="w-12 h-12 rounded-lg bg-[#962C5D]/10 flex items-center justify-center flex-shrink-0">
-                    <Trophy className="h-6 w-6 text-[#962C5D]" />
-                  </div>
-                  <div className="flex-1">
-                    <h3 className="text-2xl font-bold mb-2">OSWorld Benchmark</h3>
-                    <p className="text-muted-foreground">
-                      Cross-platform automation benchmark evaluating performance across Windows, MacOS, and Linux.
-                    </p>
-                  </div>
-                </div>
-                
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
-                  <div className="p-4 rounded-lg bg-muted/50">
-                    <div className="text-2xl font-bold text-[#962C5D] mb-1">#1</div>
-                    <div className="text-sm text-muted-foreground">Cross-Platform Ranking</div>
-                  </div>
-                  <div className="p-4 rounded-lg bg-muted/50">
-                    <div className="text-2xl font-bold text-[#962C5D] mb-1">96%</div>
-                    <div className="text-sm text-muted-foreground">Task Completion Rate</div>
-                  </div>
-                </div>
-
-                <div className="space-y-2 mb-6">
-                  <h4 className="font-semibold mb-2">Key Achievements:</h4>
-                  <ul className="space-y-2">
-                    <li className="flex items-start gap-2">
-                      <CheckCircle className="h-5 w-5 text-[#962C5D] flex-shrink-0 mt-0.5" />
-                      <span>Leading performance on Windows, MacOS, and Linux</span>
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <CheckCircle className="h-5 w-5 text-[#962C5D] flex-shrink-0 mt-0.5" />
-                      <span>Optimized image recognition algorithms</span>
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <CheckCircle className="h-5 w-5 text-[#962C5D] flex-shrink-0 mt-0.5" />
-                      <span>Enhanced action execution engine</span>
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <CheckCircle className="h-5 w-5 text-[#962C5D] flex-shrink-0 mt-0.5" />
-                      <span>Improved error handling and recovery</span>
-                    </li>
-                  </ul>
+                <div className="mt-6 p-4 rounded-lg bg-muted/30 border border-border/50">
+                  <p className="text-sm text-muted-foreground">
+                    <strong className="text-foreground">About the Benchmark:</strong> Android World is a comprehensive benchmark for evaluating AI agents on mobile device automation tasks. Results are based on the official Android World leaderboard last updated October 22, 2025. AskUI's AndroidVisionA agent is classified as an AI agent with advanced vision capabilities.
+                  </p>
                 </div>
               </Card>
             </div>
@@ -228,7 +199,7 @@ const Benchmarks = () => {
                 </a>
               </Button>
               <Button size="lg" variant="outline" asChild>
-                <Link to="/blog">
+                <Link to="/blog/askui-vision-agent-achieves-2nd-place-on-androidworld-benchmark">
                   Read Full Analysis
                 </Link>
               </Button>

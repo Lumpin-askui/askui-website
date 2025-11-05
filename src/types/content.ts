@@ -3,7 +3,8 @@ export interface BlogPost {
   slug: string;
   title: string;
   excerpt: string;
-  content: string;
+  content?: string; // HTML content (legacy)
+  contentPath?: string; // Path to markdown file
   category: string;
   readTime: string;
   date: string;
