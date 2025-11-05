@@ -150,18 +150,10 @@ Results: ./output/test-results.json`}</code>
                   </Button>
                 </div>
                 
-                {/* Security Badges */}
-                <div className="flex flex-wrap gap-4 justify-center mt-6">
-                  <div className="px-4 py-2 rounded-lg bg-white/10 backdrop-blur-sm text-white text-sm font-medium">
-                    ISO27001 Certified
-                  </div>
-                  <div className="px-4 py-2 rounded-lg bg-white/10 backdrop-blur-sm text-white text-sm font-medium">
-                    On-Premise Available
-                  </div>
-                  <div className="px-4 py-2 rounded-lg bg-white/10 backdrop-blur-sm text-white text-sm font-medium">
-                    BYOM Support
-                  </div>
-                </div>
+                {/* Security Text */}
+                <p className="text-white/60 text-sm mt-6">
+                  ISO27001 Certified • On-Premise Available • BYOM Support
+                </p>
               </div>
             </div>
           </div>
