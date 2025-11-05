@@ -30,28 +30,18 @@ const Hero = () => {
                 #1 in Android World & OSWorld Benchmarks
               </div>
               
-              <h1 className="mb-6 text-4xl font-bold tracking-tight text-white sm:text-5xl md:text-6xl lg:text-7xl">
+              <h1 className="mb-12 text-4xl font-bold tracking-tight text-white sm:text-5xl md:text-6xl lg:text-7xl">
                 Production-Ready
                 <span className="block text-accent mt-2">Computer Use Agents</span>
               </h1>
               
-              <p className="text-xl md:text-2xl font-light text-white/90 mb-4">
-                For All Platforms
-              </p>
-              
-              <p className="text-base md:text-lg text-white/70 max-w-2xl mx-auto">
+              <p className="text-base md:text-lg text-white/70 max-w-2xl mx-auto mb-16">
                 Automate workflows across Windows, MacOS, Linux, iOS, and Android. Enterprise-grade security built in.
               </p>
             </div>
 
-            {/* Built for Developers & Business Users */}
+            {/* Demo Tabs */}
             <div className="max-w-5xl mx-auto">
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4 text-center">
-                Built for Developers & Business Users
-              </h2>
-              <p className="text-white/80 text-center mb-8 text-lg">
-                CLI for technical teams. Chat for everyone else.
-              </p>
               
               <Tabs defaultValue="chat" className="w-full">
                 <TabsList className="grid w-full max-w-md mx-auto grid-cols-2 mb-8 bg-white/5 border border-white/10">
