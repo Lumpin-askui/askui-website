@@ -78,7 +78,7 @@ const BlogCaseStudies = () => {
                   </h3>
                   <p className="text-sm text-muted-foreground">{post.excerpt}</p>
                 </div>
-                <div className="flex items-center text-sm font-medium text-accent">
+                <div className="flex items-center text-sm font-medium text-primary">
                   Read more
                   <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
                 </div>
@@ -113,19 +113,19 @@ const BlogCaseStudies = () => {
             {caseStudies.map((study, index) => (
               <Card key={index} className="p-6 hover:shadow-lg transition-all duration-300 border-border/50 bg-card group cursor-pointer">
                 <div className="mb-4">
-                  <div className="flex items-center gap-2 text-xs font-semibold mb-3 text-accent">
-                    <BookOpen className="h-4 w-4" />
+                  <div className="flex items-center gap-2 text-xs font-semibold mb-3 text-primary">
+                    <BookOpen className="h-4 w-4 text-accent" />
                     <span>{study.company}</span>
                   </div>
                   <h3 className="text-lg font-semibold mb-2 group-hover:text-accent transition-colors">
                     {study.title}
                   </h3>
-                  <div className="text-2xl font-bold text-accent mb-3">
+                  <div className="text-2xl font-bold text-primary mb-3">
                     {study.result}
                   </div>
                   <p className="text-sm text-muted-foreground">{study.description}</p>
                 </div>
-                <div className="flex items-center text-sm font-medium text-accent">
+                <div className="flex items-center text-sm font-medium text-primary">
                   Read case study
                   <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
                 </div>

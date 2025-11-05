@@ -118,15 +118,15 @@ const CustomerStory = () => {
                   </h4>
                   <div className="grid grid-cols-3 gap-4">
                     <div className="text-center p-4 rounded-lg bg-background">
-                      <div className="text-3xl font-bold text-accent mb-1">80%</div>
+                      <div className="text-3xl font-bold text-primary mb-1">80%</div>
                       <div className="text-xs text-muted-foreground">Time Saved</div>
                     </div>
                     <div className="text-center p-4 rounded-lg bg-background">
-                      <div className="text-3xl font-bold text-accent mb-1">95%</div>
+                      <div className="text-3xl font-bold text-primary mb-1">95%</div>
                       <div className="text-xs text-muted-foreground">Coverage</div>
                     </div>
                     <div className="text-center p-4 rounded-lg bg-background">
-                      <div className="text-3xl font-bold text-accent mb-1">300%</div>
+                      <div className="text-3xl font-bold text-primary mb-1">300%</div>
                       <div className="text-xs text-muted-foreground">ROI</div>
                     </div>
                   </div>

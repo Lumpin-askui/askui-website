@@ -42,15 +42,15 @@ const Customers = () => {
 
         <div className="mt-20 grid grid-cols-1 md:grid-cols-3 gap-8">
           <div className="text-center p-8 rounded-lg bg-background border border-border">
-            <div className="text-4xl font-bold text-accent mb-2">#1</div>
+            <div className="text-4xl font-bold text-primary mb-2">#1</div>
             <div className="text-sm text-muted-foreground">Android World Benchmark</div>
           </div>
           <div className="text-center p-8 rounded-lg bg-background border border-border">
-            <div className="text-4xl font-bold text-accent mb-2">ISO27001</div>
+            <div className="text-4xl font-bold text-primary mb-2">ISO27001</div>
             <div className="text-sm text-muted-foreground">Security Certified</div>
           </div>
           <div className="text-center p-8 rounded-lg bg-background border border-border">
-            <div className="text-4xl font-bold text-accent mb-2">5+</div>
+            <div className="text-4xl font-bold text-primary mb-2">5+</div>
             <div className="text-sm text-muted-foreground">Supported Platforms</div>
           </div>
         </div>
