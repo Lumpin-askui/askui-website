@@ -27,7 +27,7 @@ const Hero = () => {
             {/* Tagline */}
             <div className="text-center mb-16">
               <div className="mb-6 inline-flex items-center rounded-full border border-accent/20 bg-accent/10 px-4 py-2 text-sm font-medium text-accent">
-                Leading in Android World & OSWorld Benchmarks
+                #1 in Android World & OSWorld Benchmarks
               </div>
               
               <h1 className="mb-6 text-4xl font-bold tracking-tight text-white sm:text-5xl md:text-6xl lg:text-7xl">
@@ -36,11 +36,11 @@ const Hero = () => {
               </h1>
               
               <p className="text-xl md:text-2xl font-light text-white/90 mb-4">
-                Across All Platforms
+                For All Platforms
               </p>
               
               <p className="text-base md:text-lg text-white/70 max-w-2xl mx-auto">
-                Deploy AI agents on Windows, MacOS, Linux, iOS, and Android with enterprise-grade security, reliability, and compliance.
+                Automate workflows across Windows, MacOS, Linux, iOS, and Android. Enterprise-grade security built in.
               </p>
             </div>
 
@@ -50,7 +50,7 @@ const Hero = () => {
                 Built for Developers & Business Users
               </h2>
               <p className="text-white/80 text-center mb-8 text-lg">
-                Choose your interface: CLI for technical teams or Chat for everyone
+                CLI for technical teams. Chat for everyone else.
               </p>
               
               <Tabs defaultValue="chat" className="w-full">
@@ -95,7 +95,7 @@ Results: ./output/test-results.json`}</code>
                     </pre>
                   </div>
                   <p className="text-white/70 text-center mt-6 text-base">
-                    Configure models, devices, and tools via command line. Perfect for CI/CD pipelines.
+                    Command-line automation for CI/CD pipelines and DevOps workflows.
                   </p>
                 </TabsContent>
 
@@ -142,7 +142,7 @@ Results: ./output/test-results.json`}</code>
                     </div>
                   </div>
                   <p className="text-white/70 text-center mt-6 text-base">
-                    Natural language interface for non-technical users. Automate across all platforms with no coding required.
+                    No-code automation for all platforms. No technical skills required.
                   </p>
                 </TabsContent>
               </Tabs>
