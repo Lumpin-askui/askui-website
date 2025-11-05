@@ -76,20 +76,20 @@ const Header = () => {
                       <div className="space-y-3">
                         <NavigationMenuLink asChild>
                           <a href="#solutions" className="block p-3 rounded-md hover:bg-accent/10 transition-colors">
-                            <div className="font-semibold mb-1">Autonomous Testing Agents</div>
-                            <div className="text-sm text-muted-foreground">AI agents that test applications independently</div>
+                            <div className="font-semibold mb-1">Software Testing & Infrastructure Teams</div>
+                            <div className="text-sm text-muted-foreground">Automated testing and quality assurance at scale</div>
                           </a>
                         </NavigationMenuLink>
                         <NavigationMenuLink asChild>
                           <a href="#solutions" className="block p-3 rounded-md hover:bg-accent/10 transition-colors">
-                            <div className="font-semibold mb-1">Business Process Agents</div>
-                            <div className="text-sm text-muted-foreground">Intelligent automation for complex workflows</div>
+                            <div className="font-semibold mb-1">Automation Teams</div>
+                            <div className="text-sm text-muted-foreground">RPA and workflow automation solutions</div>
                           </a>
                         </NavigationMenuLink>
                         <NavigationMenuLink asChild>
                           <a href="#solutions" className="block p-3 rounded-md hover:bg-accent/10 transition-colors">
-                            <div className="font-semibold mb-1">Cross-Platform Agents</div>
-                            <div className="text-sm text-muted-foreground">AI agents operating across all platforms</div>
+                            <div className="font-semibold mb-1">Agent Startups</div>
+                            <div className="text-sm text-muted-foreground">Infrastructure for building AI agent products</div>
                           </a>
                         </NavigationMenuLink>
                       </div>
