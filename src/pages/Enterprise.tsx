@@ -87,22 +87,22 @@ const Enterprise = () => {
         <div className="container mx-auto px-4 lg:px-8">
           {/* Features Grid */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mb-8">
-            <div className="p-4 rounded-lg bg-background border border-border text-center">
+            <div className="p-4 rounded-lg text-center">
               <Shield className="h-8 w-8 text-accent mx-auto mb-3" />
               <h3 className="font-semibold mb-1 text-sm">ISO27001 Certified</h3>
               <p className="text-xs text-muted-foreground">Enterprise security & compliance</p>
             </div>
-            <div className="p-4 rounded-lg bg-background border border-border text-center">
+            <div className="p-4 rounded-lg text-center">
               <Lock className="h-8 w-8 text-accent mx-auto mb-3" />
               <h3 className="font-semibold mb-1 text-sm">On-Premise Deployment</h3>
               <p className="text-xs text-muted-foreground">Full data sovereignty</p>
             </div>
-            <div className="p-4 rounded-lg bg-background border border-border text-center">
+            <div className="p-4 rounded-lg text-center">
               <Server className="h-8 w-8 text-accent mx-auto mb-3" />
               <h3 className="font-semibold mb-1 text-sm">Dedicated Infrastructure</h3>
               <p className="text-xs text-muted-foreground">Private cloud options</p>
             </div>
-            <div className="p-4 rounded-lg bg-background border border-border text-center">
+            <div className="p-4 rounded-lg text-center">
               <Headphones className="h-8 w-8 text-accent mx-auto mb-3" />
               <h3 className="font-semibold mb-1 text-sm">24/7 Support</h3>
               <p className="text-xs text-muted-foreground">Dedicated success team</p>
@@ -113,7 +113,7 @@ const Enterprise = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
             {/* Left Column - Benefits & Compliance */}
             <div className="space-y-6">
-              <div className="bg-background p-6 rounded-lg border border-border">
+              <div className="p-6 rounded-lg">
                 <h2 className="text-2xl font-bold mb-6">Enterprise Benefits</h2>
                 <ul className="space-y-4">
                   <li className="flex items-start gap-3">
@@ -147,7 +147,7 @@ const Enterprise = () => {
                 </ul>
               </div>
 
-              <div className="bg-background p-6 rounded-lg border border-border">
+              <div className="p-6 rounded-lg">
                 <h2 className="text-2xl font-bold mb-6">Security & Compliance</h2>
                 <ul className="space-y-4">
                   <li className="flex items-start gap-3">
