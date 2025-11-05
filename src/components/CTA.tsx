@@ -26,9 +26,8 @@ const CTA = () => {
                 </a>
               </Button>
               <Button size="lg" variant="outline" className="border-white/20 bg-white/5 text-white hover:bg-white/10 backdrop-blur-sm" asChild>
-                <a href="https://github.com/askui/vision-agent" target="_blank" rel="noopener noreferrer">
-                  <Github className="mr-2 h-4 w-4" />
-                  Explore SDK
+                <a href="https://www.caesr.ai" target="_blank" rel="noopener noreferrer">
+                  Try Caesr
                 </a>
               </Button>
             </div>

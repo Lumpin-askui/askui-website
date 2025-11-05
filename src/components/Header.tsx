@@ -26,103 +26,109 @@ const Header = () => {
     <header className="sticky top-0 z-50 w-full border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <nav className="container mx-auto px-4 lg:px-8">
         <div className="flex h-16 items-center justify-between">
-          <div className="flex items-center">
+          <div className="flex items-center gap-6">
             <a href="/" className="flex items-center">
               <img src={askuiLogo} alt="AskUI" className="h-8" />
             </a>
+
+            {/* Desktop Navigation - Left Aligned */}
+            <div className="hidden md:flex md:items-center md:gap-6">
+              <NavigationMenu>
+                <NavigationMenuList>
+                  <NavigationMenuItem>
+                    <NavigationMenuTrigger className="text-sm font-medium bg-transparent">Products</NavigationMenuTrigger>
+                    <NavigationMenuContent>
+                      <div className="w-[400px] p-4 bg-background">
+                        <div className="space-y-3">
+                          <NavigationMenuLink asChild>
+                            <a href="#products" className="block p-3 rounded-md hover:bg-accent/10 transition-colors">
+                              <div className="font-semibold mb-1">AskUI Caesr</div>
+                              <div className="text-sm text-muted-foreground">Chat interface for automation</div>
+                            </a>
+                          </NavigationMenuLink>
+                          <NavigationMenuLink asChild>
+                            <a href="#products" className="block p-3 rounded-md hover:bg-accent/10 transition-colors">
+                              <div className="font-semibold mb-1">AskUI CLI</div>
+                              <div className="text-sm text-muted-foreground">Command-line orchestration</div>
+                            </a>
+                          </NavigationMenuLink>
+                          <NavigationMenuLink asChild>
+                            <a href="#products" className="block p-3 rounded-md hover:bg-accent/10 transition-colors">
+                              <div className="font-semibold mb-1">AskUI Suite</div>
+                              <div className="text-sm text-muted-foreground">Universal device infrastructure</div>
+                            </a>
+                          </NavigationMenuLink>
+                          <NavigationMenuLink asChild>
+                            <a href="#products" className="block p-3 rounded-md hover:bg-accent/10 transition-colors">
+                              <div className="font-semibold mb-1">AskUI SDK</div>
+                              <div className="text-sm text-muted-foreground">Open source developer library</div>
+                            </a>
+                          </NavigationMenuLink>
+                          <NavigationMenuLink asChild>
+                            <a href="#products" className="block p-3 rounded-md hover:bg-accent/10 transition-colors">
+                              <div className="font-semibold mb-1">AskUI Cloud</div>
+                              <div className="text-sm text-muted-foreground">Hosted inference</div>
+                            </a>
+                          </NavigationMenuLink>
+                        </div>
+                      </div>
+                    </NavigationMenuContent>
+                  </NavigationMenuItem>
+
+                  <NavigationMenuItem>
+                    <NavigationMenuTrigger className="text-sm font-medium bg-transparent">Solutions</NavigationMenuTrigger>
+                    <NavigationMenuContent>
+                      <div className="w-[400px] p-4 bg-background">
+                        <div className="space-y-3">
+                          <NavigationMenuLink asChild>
+                            <Link to="/solutions/software-testing" className="block p-3 rounded-md hover:bg-accent/10 transition-colors">
+                              <div className="font-semibold mb-1">Software Testing & Infrastructure Teams</div>
+                              <div className="text-sm text-muted-foreground">Automated testing and quality assurance at scale</div>
+                            </Link>
+                          </NavigationMenuLink>
+                          <NavigationMenuLink asChild>
+                            <Link to="/solutions/automation-teams" className="block p-3 rounded-md hover:bg-accent/10 transition-colors">
+                              <div className="font-semibold mb-1">Automation Teams</div>
+                              <div className="text-sm text-muted-foreground">RPA and workflow automation solutions</div>
+                            </Link>
+                          </NavigationMenuLink>
+                          <NavigationMenuLink asChild>
+                            <Link to="/solutions/agent-startups" className="block p-3 rounded-md hover:bg-accent/10 transition-colors">
+                              <div className="font-semibold mb-1">Agent Startups</div>
+                              <div className="text-sm text-muted-foreground">Infrastructure for building AI agent products</div>
+                            </Link>
+                          </NavigationMenuLink>
+                        </div>
+                      </div>
+                    </NavigationMenuContent>
+                  </NavigationMenuItem>
+                </NavigationMenuList>
+              </NavigationMenu>
+              
+              <Link to="/case-studies" className="text-sm font-medium text-foreground/80 hover:text-foreground transition-colors">
+                Customers
+              </Link>
+              <Link to="/blog" className="text-sm font-medium text-foreground/80 hover:text-foreground transition-colors">
+                Blog
+              </Link>
+              <a href="https://docs.askui.com" target="_blank" rel="noopener noreferrer" className="text-sm font-medium text-foreground/80 hover:text-foreground transition-colors">
+                Docs
+              </a>
+            </div>
           </div>
 
-          {/* Desktop Navigation */}
-          <div className="hidden md:flex md:items-center md:gap-6">
-            <NavigationMenu>
-              <NavigationMenuList>
-                <NavigationMenuItem>
-                  <NavigationMenuTrigger className="text-sm font-medium bg-transparent">Products</NavigationMenuTrigger>
-                  <NavigationMenuContent>
-                    <div className="w-[400px] p-4 bg-background">
-                      <div className="space-y-3">
-                        <NavigationMenuLink asChild>
-                          <a href="#products" className="block p-3 rounded-md hover:bg-accent/10 transition-colors">
-                            <div className="font-semibold mb-1">AskUI Caesr</div>
-                            <div className="text-sm text-muted-foreground">Chat interface for automation</div>
-                          </a>
-                        </NavigationMenuLink>
-                        <NavigationMenuLink asChild>
-                          <a href="#products" className="block p-3 rounded-md hover:bg-accent/10 transition-colors">
-                            <div className="font-semibold mb-1">AskUI CLI</div>
-                            <div className="text-sm text-muted-foreground">Command-line orchestration</div>
-                          </a>
-                        </NavigationMenuLink>
-                        <NavigationMenuLink asChild>
-                          <a href="#products" className="block p-3 rounded-md hover:bg-accent/10 transition-colors">
-                            <div className="font-semibold mb-1">AskUI Suite</div>
-                            <div className="text-sm text-muted-foreground">Universal device infrastructure</div>
-                          </a>
-                        </NavigationMenuLink>
-                        <NavigationMenuLink asChild>
-                          <a href="#products" className="block p-3 rounded-md hover:bg-accent/10 transition-colors">
-                            <div className="font-semibold mb-1">AskUI SDK</div>
-                            <div className="text-sm text-muted-foreground">Open source developer library</div>
-                          </a>
-                        </NavigationMenuLink>
-                        <NavigationMenuLink asChild>
-                          <a href="#products" className="block p-3 rounded-md hover:bg-accent/10 transition-colors">
-                            <div className="font-semibold mb-1">AskUI Cloud</div>
-                            <div className="text-sm text-muted-foreground">Hosted inference</div>
-                          </a>
-                        </NavigationMenuLink>
-                      </div>
-                    </div>
-                  </NavigationMenuContent>
-                </NavigationMenuItem>
-
-                <NavigationMenuItem>
-                  <NavigationMenuTrigger className="text-sm font-medium bg-transparent">Solutions</NavigationMenuTrigger>
-                  <NavigationMenuContent>
-                    <div className="w-[400px] p-4 bg-background">
-                      <div className="space-y-3">
-                        <NavigationMenuLink asChild>
-                          <Link to="/solutions/software-testing" className="block p-3 rounded-md hover:bg-accent/10 transition-colors">
-                            <div className="font-semibold mb-1">Software Testing & Infrastructure Teams</div>
-                            <div className="text-sm text-muted-foreground">Automated testing and quality assurance at scale</div>
-                          </Link>
-                        </NavigationMenuLink>
-                        <NavigationMenuLink asChild>
-                          <Link to="/solutions/automation-teams" className="block p-3 rounded-md hover:bg-accent/10 transition-colors">
-                            <div className="font-semibold mb-1">Automation Teams</div>
-                            <div className="text-sm text-muted-foreground">RPA and workflow automation solutions</div>
-                          </Link>
-                        </NavigationMenuLink>
-                        <NavigationMenuLink asChild>
-                          <Link to="/solutions/agent-startups" className="block p-3 rounded-md hover:bg-accent/10 transition-colors">
-                            <div className="font-semibold mb-1">Agent Startups</div>
-                            <div className="text-sm text-muted-foreground">Infrastructure for building AI agent products</div>
-                          </Link>
-                        </NavigationMenuLink>
-                      </div>
-                    </div>
-                  </NavigationMenuContent>
-                </NavigationMenuItem>
-              </NavigationMenuList>
-            </NavigationMenu>
-            
-            <Link to="/case-studies" className="text-sm font-medium text-foreground/80 hover:text-foreground transition-colors">
-              Customers
-            </Link>
-            <Link to="/blog" className="text-sm font-medium text-foreground/80 hover:text-foreground transition-colors">
-              Blog
-            </Link>
-            <a href="https://docs.askui.com" target="_blank" rel="noopener noreferrer" className="text-sm font-medium text-foreground/80 hover:text-foreground transition-colors">
-              Docs
+          {/* Desktop CTA Buttons - Right Aligned */}
+          <div className="hidden md:flex md:items-center md:gap-3">
+            <a href="https://app.caesr.ai" target="_blank" rel="noopener noreferrer">
+              <Button variant="outline" size="sm">
+                Log in
+              </Button>
             </a>
             <Link to="/enterprise">
-              <Button variant="outline" size="sm">
-                Enterprise
+              <Button variant="default" size="sm" className="bg-primary hover:bg-primary/90 text-accent">
+                Book Demo
               </Button>
             </Link>
-            <Button variant="default" size="sm" className="bg-primary hover:bg-primary/90 text-accent">
-              Book Demo
-            </Button>
           </div>
 
           {/* Mobile menu button */}
@@ -196,14 +202,16 @@ const Header = () => {
             <a href="https://docs.askui.com" target="_blank" rel="noopener noreferrer" className="block text-sm font-medium text-foreground/80 hover:text-foreground transition-colors">
               Docs
             </a>
-            <Link to="/enterprise" className="block">
+            <a href="https://app.caesr.ai" target="_blank" rel="noopener noreferrer" className="block">
               <Button variant="outline" size="sm" className="w-full">
-                Enterprise
+                Log in
+              </Button>
+            </a>
+            <Link to="/enterprise" className="block">
+              <Button variant="default" size="sm" className="w-full bg-primary hover:bg-primary/90 text-accent">
+                Book Demo
               </Button>
             </Link>
-            <Button variant="default" size="sm" className="w-full bg-primary hover:bg-primary/90 text-accent">
-              Book Demo
-            </Button>
           </div>
         )}
       </nav>

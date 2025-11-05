@@ -33,12 +33,12 @@ const Hero = () => {
               </Link>
               
               <h1 className="mb-12 text-4xl font-bold tracking-tight text-white sm:text-5xl md:text-6xl lg:text-7xl">
-                Production-Ready
-                <span className="block text-accent mt-2">Computer Use Agents</span>
+                Infrastructure for <span className="text-accent">AI agents</span>
+                <span className="block mt-2">on <span className="text-accent">any device</span></span>
               </h1>
               
               <p className="text-base md:text-lg text-white/70 max-w-2xl mx-auto mb-16">
-                Automate workflows across Windows, MacOS, Linux, iOS, and Android. Enterprise-grade security built in.
+                Universal computer use infrastructure. Enterprise-ready security.
               </p>
             </div>
 
@@ -150,7 +150,7 @@ const Hero = () => {
                     </a>
                   </Button>
                   <Button size="lg" variant="outline" className="border-white/20 bg-white/5 text-white hover:bg-white/10 backdrop-blur-sm" asChild>
-                    <a href="#contact">
+                    <a href="https://www.caesr.ai" target="_blank" rel="noopener noreferrer">
                       Try Caesr
                     </a>
                   </Button>

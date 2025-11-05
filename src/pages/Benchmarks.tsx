@@ -194,14 +194,14 @@ const Benchmarks = () => {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button size="lg" asChild>
                 <a href="/enterprise">
-                  Request a Demo
+                  Book a Demo
                   <ArrowRight className="ml-2 h-4 w-4" />
                 </a>
               </Button>
               <Button size="lg" variant="outline" asChild>
-                <Link to="/blog/askui-vision-agent-achieves-2nd-place-on-androidworld-benchmark">
-                  Read Full Analysis
-                </Link>
+                <a href="https://www.caesr.ai" target="_blank" rel="noopener noreferrer">
+                  Try Caesr
+                </a>
               </Button>
             </div>
           </div>

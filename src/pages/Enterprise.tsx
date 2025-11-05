@@ -178,7 +178,7 @@ const Enterprise = () => {
             {/* Right Column - Contact Form */}
             <div className="bg-background p-6 rounded-lg border border-border">
               <div className="mb-6">
-                <h2 className="text-2xl font-bold mb-2">Request Enterprise Demo</h2>
+                <h2 className="text-2xl font-bold mb-2">Request Demo</h2>
                 <p className="text-sm text-muted-foreground">
                   Get personalized guidance on deploying AskUI in your organization
                 </p>

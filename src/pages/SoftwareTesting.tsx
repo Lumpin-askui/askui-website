@@ -21,11 +21,15 @@ const SoftwareTesting = () => {
               Scale your QA operations with AI-powered visual testing that works across web, desktop, and mobile platforms. Reduce testing time by 80% while improving coverage.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button size="lg" className="bg-primary hover:bg-primary/90 text-accent">
-                Start Free Trial
+              <Button size="lg" className="bg-primary hover:bg-primary/90 text-accent" asChild>
+                <a href="/enterprise">
+                  Book a Demo
+                </a>
               </Button>
-              <Button size="lg" variant="outline">
-                Schedule Demo
+              <Button size="lg" variant="outline" asChild>
+                <a href="https://www.caesr.ai" target="_blank" rel="noopener noreferrer">
+                  Try Caesr
+                </a>
               </Button>
             </div>
           </div>
@@ -260,11 +264,15 @@ const SoftwareTesting = () => {
               Join leading software teams who trust AskUI for automated testing at scale
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button size="lg" variant="secondary">
-                Start Free Trial
+              <Button size="lg" variant="secondary" asChild>
+                <a href="/enterprise">
+                  Book a Demo
+                </a>
               </Button>
-              <Button size="lg" variant="outline" className="bg-white/10 text-white border-white/20 hover:bg-white/20">
-                Talk to Sales
+              <Button size="lg" variant="outline" className="bg-white/10 text-white border-white/20 hover:bg-white/20" asChild>
+                <a href="https://www.caesr.ai" target="_blank" rel="noopener noreferrer">
+                  Try Caesr
+                </a>
               </Button>
             </div>
           </div>

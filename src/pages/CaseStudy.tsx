@@ -125,7 +125,7 @@ const CaseStudy = () => {
                 {/* CTA */}
                 <Button className="w-full" size="lg" asChild>
                   <a href="/enterprise">
-                    Request a Demo
+                    Book a Demo
                   </a>
                 </Button>
               </div>

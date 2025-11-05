@@ -7,9 +7,9 @@ const products = [
     icon: MessageSquare,
     name: "AskUI Caesr",
     tagline: "Chat Interface for Automation",
-    description: "Quick automations and test workflows through an intuitive chat interface. Perfect for non-technical users.",
+    description: "Agentic chat interface for automation built on top of our core infrastructure. Perfect for non-technical users who want to automate tasks through conversation.",
     audience: "Software testers, prosumers, managers",
-    features: ["No-code automation", "Visual workflow builder", "Test case management", "Dashboard & reporting"]
+    features: ["Agentic chat interface", "Configure models", "Device management", "Infrastructure configuration"]
   },
   {
     icon: Terminal,

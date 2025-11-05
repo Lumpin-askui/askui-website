@@ -21,11 +21,15 @@ const AgentStartups = () => {
               Ship AI agents that can interact with any software—from legacy desktop apps to modern web platforms. Focus on your AI logic, we handle the execution layer.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button size="lg" className="bg-primary hover:bg-primary/90 text-accent">
-                Start Building Free
+              <Button size="lg" className="bg-primary hover:bg-primary/90 text-accent" asChild>
+                <a href="/enterprise">
+                  Book a Demo
+                </a>
               </Button>
-              <Button size="lg" variant="outline">
-                Explore API Docs
+              <Button size="lg" variant="outline" asChild>
+                <a href="https://www.caesr.ai" target="_blank" rel="noopener noreferrer">
+                  Try Caesr
+                </a>
               </Button>
             </div>
           </div>
@@ -360,11 +364,15 @@ const AgentStartups = () => {
               Join innovative startups building the future of AI agents on AskUI
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button size="lg" variant="secondary">
-                Start Building Free
+              <Button size="lg" variant="secondary" asChild>
+                <a href="/enterprise">
+                  Book a Demo
+                </a>
               </Button>
-              <Button size="lg" variant="outline" className="bg-white/10 text-white border-white/20 hover:bg-white/20">
-                Talk to Founders
+              <Button size="lg" variant="outline" className="bg-white/10 text-white border-white/20 hover:bg-white/20" asChild>
+                <a href="https://www.caesr.ai" target="_blank" rel="noopener noreferrer">
+                  Try Caesr
+                </a>
               </Button>
             </div>
           </div>
