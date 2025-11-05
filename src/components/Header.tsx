@@ -58,6 +58,12 @@ const Header = () => {
                             <div className="text-sm text-muted-foreground">Open source developer library</div>
                           </a>
                         </NavigationMenuLink>
+                        <NavigationMenuLink asChild>
+                          <a href="#products" className="block p-3 rounded-md hover:bg-accent/10 transition-colors">
+                            <div className="font-semibold mb-1">AskUI Cloud</div>
+                            <div className="text-sm text-muted-foreground">Hosted inference</div>
+                          </a>
+                        </NavigationMenuLink>
                       </div>
                     </div>
                   </NavigationMenuContent>
