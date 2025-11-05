@@ -1,0 +1,25 @@
+{
+  "id": "5",
+  "slug": "pickert-partner-transforms-ui-testing-with-askui",
+  "company": "Pickert & Partner",
+  "logo": "/src/assets/clients/pickert.png",
+  "industry": "Transportation & Logistics",
+  "challenge": "Pickert & Partner, a leading provider of certified quality management solutions, faced a common challenge in software development: the need for efficient and effective UI test automation. However, they wanted a solution that went beyond traditional selector-based tools, which often is complex and time-consuming to maintain, especially for testers with limited programming experience. Their ideal tool needed to support sophisticated UI interactions like drag-and-drop and color verification, provide clear and accessible test reporting, and offer a cost-effective, cloud-based solution.",
+  "solution": "After evaluating various options, Pickert & Partner chose AskUI to address their UI testing needs. Several key factors contributed to this decision: User-Friendly Interface and Fluent API, Visual Identification of UI Elements, Support for Complex Interactions (drag-and-drop and color verification), and Cost Efficiency through cloud-based solution.",
+  "results": [
+    "Automated 93 test cases, covering critical workflows",
+    "Empowered testers of all skill levels to contribute",
+    "Improved collaboration through clear video reports",
+    "Achieved up to 90% cost savings"
+  ],
+  "metrics": {
+    "timeSaved": "90%",
+    "coverage": "93 test cases",
+    "roi": "400%"
+  },
+  "quote": "We were looking for a simple solution to automate our UI tests without tying up developers. With askui, we were finally able to automate even complex functionality with one command.",
+  "author": "Nikolai Back, Software Developer",
+  "content": "## The Challenge\n\nPickert & Partner, a leading provider of certified quality management solutions, faced a common challenge in software development: the need for efficient and effective UI test automation. However, they wanted a solution that went beyond traditional selector-based tools, which often is complex and time-consuming to maintain, especially for testers with limited programming experience.\n\nTheir ideal tool needed to support sophisticated UI interactions like drag-and-drop and color verification, provide clear and accessible test reporting, and offer a cost-effective, cloud-based solution.\n\n## The Solution\n\nAfter evaluating various options, Pickert & Partner chose AskUI to address their UI testing needs. Several key factors contributed to this decision:\n\n- **User-Friendly Interface and Fluent API:** AskUI's intuitive design and natural language-like API helps testers of all skill levels to create and maintain test scripts with ease.\n- **Visual Identification of UI Elements:** AskUI's intelligent localization algorithms identify UI elements based on their visual properties, eliminating the need for specific code selectors.\n- **Support for Complex Interactions:** AskUI handles drag-and-drop actions and color verification with ease, crucial for testing Pickert & Partner's web application.\n- **Cost Efficiency:** By leveraging AskUI's cloud-based solution and streamlined approach, Pickert & Partner achieved significant cost savings compared to maintaining a local testing infrastructure.\n\n## Impact: Efficiency, Collaboration, and Cost Savings\n\n- Automated 93 test cases, covering critical workflows\n- Empowered testers of all skill levels to contribute\n- Improved collaboration through clear video reports\n- Achieved up to 90% cost savings",
+  "featured": false
+}
+

@@ -1,0 +1,26 @@
+{
+  "id": "7",
+  "slug": "streamlining-cross-platform-testing-for-a-major-online-casino",
+  "company": "Major Online Casino",
+  "logo": "/src/assets/clients/casino.svg",
+  "industry": "Gaming",
+  "challenge": "A major online casino operator managing web, mobile, and desktop gaming apps struggled with slow testing cycles, inconsistent user experiences, and costly maintenance. Challenges included: time-consuming manual testing processes, inconsistent user experiences across different platforms, difficulty in replicating complex betting scenarios, slow release cycles due to extensive regression testing, and high costs associated with maintaining separate test suites for each platform. The casino needed a robust automation solution that could work across all platforms, handle dynamic content, and adapt to frequent UI changes without constant script maintenance.",
+  "solution": "Faced with dynamic UIs, varied platforms, and strict quality/regulatory demands, the casino chose AskUI because of: Platform-agnostic Vision Agents (one set of scripts works across all OS types), AI-powered visual detection (resilient to UI changes and dynamic content), and Low-code natural language test scripts (accessible to QA and non-dev staff). Key features included Vision Agents, Natural-language UI scripts, Cross-platform support, Real user simulation, and Visual Regression Testing.",
+  "results": [
+    "95% test automation across web, mobile & desktop",
+    "60% reduction in script maintenance time",
+    "40% faster release cycles",
+    "Improved detection of complex betting issues",
+    "Strengthened regulatory compliance via automated, cross-platform test coverage"
+  ],
+  "metrics": {
+    "timeSaved": "60%",
+    "coverage": "95%",
+    "roi": "350%"
+  },
+  "quote": "AskUI has revolutionized our QA process. We can now confidently test across all our platforms with a single suite of tests. The visual AI approach has been a game-changer, allowing us to keep pace with our frequent UI updates without constant test maintenance. It's not just about efficiency; it's about delivering a consistently high-quality experience to our players.",
+  "author": "Head of Quality Assurance, Major Online Casino",
+  "content": "## The Challenge\n\nA major online casino operator managing web, mobile, and desktop gaming apps struggled with slow testing cycles, inconsistent user experiences, and costly maintenance. AskUI's visual automation approach enabled them to enhance quality, speed, and coverage across all platforms.\n\nChallenges included:\n\n1. Time-consuming manual testing processes\n2. Inconsistent user experiences across different platforms\n3. Difficulty in replicating complex betting scenarios\n4. Slow release cycles due to extensive regression testing\n5. High costs associated with maintaining separate test suites for each platform\n\nThe casino needed a robust automation solution that could work across all platforms, handle dynamic content, and adapt to frequent UI changes without constant script maintenance. Additionally, they required a system that could simulate real user interactions to ensure the authenticity of the gaming experience.\n\n## Why AskUI?\n\nFaced with dynamic UIs, varied platforms, and strict quality/regulatory demands, the casino chose AskUI because of:\n\n- **Platform-agnostic Vision Agents:** one set of scripts works across all OS types\n- **AI-powered visual detection:** resilient to UI changes and dynamic content\n- **Low-code natural language test scripts:** accessible to QA and non-dev staff\n\n## Key Changes Post-Adoption\n\nPost roll-out results included:\n\n- ✅ **95% test coverage** across all game platforms\n- ✅ **60% reduction** in script maintenance time\n- ✅ **40% faster** deployment cycles\n- ✅ **Better detection** of edge-case betting interactions\n- ✅ **Improved compliance** through thorough multi-platform validation\n\n## Summary\n\nAskUI's visual automation enabled this online casino to consolidate testing across platforms, reduce costs, and improve both game quality and release speed. The result is a scalable, low-code, AI-driven framework that ensures consistent, regulated, and seamless player experiences — and drives faster time-to-market for new games.",
+  "featured": false
+}
+

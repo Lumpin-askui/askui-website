@@ -1,0 +1,27 @@
+{
+  "id": "4",
+  "slug": "large-bank-automates-85-of-citrix-application-testing",
+  "company": "Large International Bank",
+  "logo": "/src/assets/clients/bank-citrix.svg",
+  "industry": "Finance & Banking",
+  "challenge": "A leading international bank faced critical hurdles in testing its Citrix-based applications. Manual testing was slow, error-prone, and required considerable human effort — delaying releases and risking customer-facing disruptions. Testing Citrix posed unique difficulties: no object recognition in Citrix (screen is treated as an image), difficulty locating and interacting with UI elements, stringent security policies — no additional software allowed on Citrix machines, need for non-technical testers to contribute, and requirement for seamless CI/CD integration.",
+  "solution": "The bank selected AskUI for three key reasons: Image-based Vision Agents overcame the lack of DOM or object recognition, security-compliant architecture required no local software on Citrix machines, and low-code accessibility empowered both QA engineers and business users. The bank leveraged AskUI's Vision Agents, Low-Code API, Cross-Platform Automation, CI/CD Integration, and Central Dashboard to streamline Citrix testing.",
+  "results": [
+    "85% of Citrix tests fully automated",
+    "Routine, comprehensive regression runs",
+    "Accelerated release cycles via CI/CD",
+    "Consistent, AI-driven validation",
+    "Open to business analysts and testers",
+    "Reduced QA operational costs"
+  ],
+  "metrics": {
+    "timeSaved": "85%",
+    "coverage": "85% automated",
+    "roi": "300%"
+  },
+  "quote": "AskUI gives us AI-driven automation that actually works in Citrix — no plugins, no hacks. It's like having a visual QA assistant that sees and clicks just like a human.",
+  "author": "Head of QA, Large International Bank",
+  "content": "## The Challenge\n\nA leading international bank faced critical hurdles in testing its Citrix-based applications. Manual testing was slow, error-prone, and required considerable human effort — delaying releases and risking customer-facing disruptions.\n\nTesting Citrix posed unique difficulties:\n\n- No object recognition in Citrix (screen is treated as an image)\n- Difficulty locating and interacting with UI elements\n- Stringent security policies — no additional software allowed on Citrix machines\n- Need for non-technical testers to contribute\n- Requirement for seamless CI/CD integration\n\nThe bank needed a way to automate Citrix testing — without compromising security, usability, or flexibility.\n\n## Why AskUI?\n\nThe bank needed a vendor that could handle **Citrix's image-based UI**, which traditional tools couldn't automate. After exploring the market, they selected AskUI for three key reasons:\n\n- **Image-based Vision Agents** overcame the lack of DOM or object recognition\n- **Security-compliant architecture** required no local software on Citrix machines\n- **Low-code accessibility** empowered both QA engineers and business users\n\n## Key Changes Post-Adoption\n\nSince adopting AskUI, the bank achieved:\n\n- **85% of Citrix testing automated**, eliminating most manual QA steps\n- **Expanded coverage** with routine regression testing now possible\n- **Faster releases**, with integrated pipelines triggering automated checks\n- **More contributors to automation**, thanks to the intuitive interface\n- **Cost and time savings**, freeing QA teams to focus on higher-value tasks\n\n## Summary\n\nAskUI helped this global bank transform its Citrix testing landscape by delivering secure, AI-powered test automation that fits Citrix, broader access to QA tools across departments, faster delivery with fewer bugs and bottlenecks, and long-term cost savings and scalable test infrastructure. AskUI turned what was once an \"un-automatable\" environment into a fully testable system — all while staying compliant, efficient, and future-ready.",
+  "featured": false
+}
+

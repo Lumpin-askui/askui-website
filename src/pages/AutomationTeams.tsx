@@ -47,7 +47,7 @@ const AutomationTeams = () => {
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
             <Card>
               <CardHeader>
-                <Workflow className="h-10 w-10 text-accent mb-4" />
+                <Workflow className="h-10 w-10 text-[#962C5D] mb-4" />
                 <CardTitle>Visual Process Automation</CardTitle>
                 <CardDescription>
                   Automate any application—legacy, modern, or cloud—using computer vision. Works where traditional automation fails.
@@ -57,7 +57,7 @@ const AutomationTeams = () => {
 
             <Card>
               <CardHeader>
-                <Clock className="h-10 w-10 text-accent mb-4" />
+                <Clock className="h-10 w-10 text-[#962C5D] mb-4" />
                 <CardTitle>10x Faster Bot Development</CardTitle>
                 <CardDescription>
                   Build automation workflows in hours, not weeks. Natural language commands replace complex scripting.
@@ -67,7 +67,7 @@ const AutomationTeams = () => {
 
             <Card>
               <CardHeader>
-                <Database className="h-10 w-10 text-accent mb-4" />
+                <Database className="h-10 w-10 text-[#962C5D] mb-4" />
                 <CardTitle>Zero Integration APIs Needed</CardTitle>
                 <CardDescription>
                   Automate systems without APIs or database access. Work directly with the UI layer just like humans do.
@@ -77,7 +77,7 @@ const AutomationTeams = () => {
 
             <Card>
               <CardHeader>
-                <Cpu className="h-10 w-10 text-accent mb-4" />
+                <Cpu className="h-10 w-10 text-[#962C5D] mb-4" />
                 <CardTitle>Self-Healing Automation</CardTitle>
                 <CardDescription>
                   Bots automatically adapt to UI changes. Reduce maintenance from days to minutes with AI-powered recovery.
@@ -87,7 +87,7 @@ const AutomationTeams = () => {
 
             <Card>
               <CardHeader>
-                <BarChart className="h-10 w-10 text-accent mb-4" />
+                <BarChart className="h-10 w-10 text-[#962C5D] mb-4" />
                 <CardTitle>Real-Time Analytics</CardTitle>
                 <CardDescription>
                   Monitor automation performance, identify bottlenecks, and optimize workflows with comprehensive dashboards.
@@ -97,7 +97,7 @@ const AutomationTeams = () => {
 
             <Card>
               <CardHeader>
-                <CheckCircle className="h-10 w-10 text-accent mb-4" />
+                <CheckCircle className="h-10 w-10 text-[#962C5D] mb-4" />
                 <CardTitle>Enterprise Orchestration</CardTitle>
                 <CardDescription>
                   Manage thousands of bots from a centralized platform. Schedule, monitor, and scale automation across teams.

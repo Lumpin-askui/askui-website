@@ -1,0 +1,28 @@
+{
+  "id": "2",
+  "slug": "from-manual-testing-to-automated-excellence-zucchettis-success-with-askui",
+  "company": "Zucchetti",
+  "logo": "/src/assets/clients/zucchetti.png",
+  "industry": "Transportation & Logistics",
+  "challenge": "Zucchetti turned to AskUI to automate testing for their mobile application, overcoming limitations of traditional tools. Their software is a mobile application that runs on a .NET canvas element, where traditional solutions with id-based object recognition like Selenium simply didn't work. Previously, everything was tested manually and always under time pressure. Releases were often rushed, and regression testing was shortened due to lack of time – only new features and critical areas were tested.",
+  "solution": "With AskUI, Zucchetti accelerated their testing, improved coverage, and enhanced product stability, all supported by responsive Customer Support/Success and innovative automation features. They automated billing processes and test them on multiple parallel mobile devices all connected per P2P and working together. They now run 130 tests in AskUI, along with 250 to 300 functional validations (e.g., different payments, booking items, and managing inventories), with around 6,000 lines of code – a mix of AskUI commands and TypeScript.",
+  "results": [
+    "130 automated tests (planning 150 regression tests)",
+    "250-300 functional validations",
+    "No longer required manual regression testing",
+    "Restructured, automated, more efficient test process",
+    "Significantly improved customer stability",
+    "More reports generated (e.g., Xray reports in Azure DevOps)",
+    "~6,000 lines of modularized test code"
+  ],
+  "metrics": {
+    "timeSaved": "75%",
+    "coverage": "130+ tests",
+    "roi": "280%"
+  },
+  "quote": "For me personally, a lot has changed. I no longer do manual regression testing – our entire test process has slowly been restructured. Stability for our customers has significantly improved. Critical issues occur less frequently.",
+  "author": "Kevin Schneider, Zucchetti",
+  "content": "Discover how Zucchetti, a leading provider of business software solutions, leveraged AskUI to transform their mobile application testing and automation processes.\n\nIn this customer interview, Kevin Schneider from Zucchetti shares his team's journey, the challenges they faced, and the tangible benefits they've realized with AskUI's AI-powered automation platform.\n\n## Tangible Results\n\n- **Manual Regression Testing**: No longer required; process automated\n- **Test Process Structure**: Restructured, automated, more efficient\n- **Customer Stability**: Significantly improved, fewer critical issues\n- **Reporting**: More reports generated (e.g., Xray reports in Azure DevOps)\n- **Automated Tests**: 130 tests currently; planning 150 regression tests (previously 25-30 smoke tests)\n- **Functional Validations**: 250-300 (e.g., payments, bookings, inventory)\n- **Code Base**: ~6,000 lines (AskUI commands + TypeScript)\n\n## Why Zucchetti Chose AskUI\n\nThe main reason was that their software is a mobile application and runs on a .NET canvas element, traditional solutions with an id-based object recognition like Selenium simply didn't work in this context. Another important factor was that AskUI is a German company, which means short communication paths and easier collaboration.\n\n## The Impact\n\nZucchetti adopted AskUI to automate and improve the testing of their mobile application, which previously relied on manual, time-consuming processes. The main motivation was AskUI's unique ability to handle .NET canvas-based mobile apps—something traditional solutions struggled with. Since implementation, Zucchetti has seen faster test cycles, better coverage, and more stable releases. Customer Support/Success played a pivotal role in their positive experience, offering responsive and effective assistance. Today, Zucchetti runs hundreds of automated tests and has significantly restructured its quality assurance processes, leading to greater reliability and efficiency.",
+  "featured": false
+}
+

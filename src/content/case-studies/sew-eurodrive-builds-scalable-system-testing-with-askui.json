@@ -1,0 +1,28 @@
+{
+  "id": "3",
+  "slug": "sew-eurodrive-builds-scalable-system-testing-with-askui",
+  "company": "SEW Eurodrive",
+  "logo": "/src/assets/clients/sew.png",
+  "industry": "Manufacturing",
+  "challenge": "SEW Eurodrive develops their own software with many highly specialized plugins and deeply nested menus. This complexity led to a critical question: How can we test this better? Traditional tools fell short, and performance suffered. Before AskUI, SEW Eurodrive only had unit and integration tests. System testing was manual, and the infrastructure for scalable, automated testing simply didn't exist.",
+  "solution": "AskUI enabled the company to create full end-to-end system tests across its entire CI/CD process. Today, each of their ~15 specialized plugins is tested via Azure DevOps pipelines, and 30 system tests now cover critical functionality. They're managing between 20,000 and 30,000 lines of modularized test code, with Python and TypeScript flexibility.",
+  "results": [
+    "30 detailed system tests covering all plugins",
+    "End-to-end automation via pipelines",
+    "20,000-30,000 lines of modularized test code",
+    "Full coverage of specialized plugins",
+    "Bugs caught automatically in pipelines",
+    "Major quality gain with fewer support issues",
+    "Full developer freedom with Python and TypeScript"
+  ],
+  "metrics": {
+    "timeSaved": "60%",
+    "coverage": "30 system tests",
+    "roi": "250%"
+  },
+  "quote": "Our product quality has improved. We're now catching bugs that wouldn't have been found manually. These days, there are no more issues - and if something does go wrong, it's usually on our end.",
+  "author": "Paul, SEW Eurodrive",
+  "content": "In the world of industrial automation, SEW-Eurodrive stands out as a pioneer-renowned for its commitment to innovation and quality across drive and automation technology for over 90 years.\n\n## The Challenge\n\nSEW Eurodrive develops their own software with many highly specialized plugins and deeply nested menus. This complexity led to a critical question: How can we test this better? Traditional tools fell short, and performance suffered.\n\nBefore AskUI, SEW Eurodrive only had unit and integration tests. System testing was manual, and the infrastructure for scalable, automated testing simply didn't exist.\n\n## The Solution\n\nAskUI enabled the company to create full end-to-end system tests across its entire CI/CD process. Today, each of their ~15 specialized plugins is tested via Azure DevOps pipelines, and 30 system tests now cover critical functionality.\n\nAskUI impressed from the start. It offered excellent performance and a gentle learning curve. Even complex UI scenarios like clicking through 10 nested menus became feasible.\n\n## Results at a Glance\n\n- **System Testing**: Automated via pipelines (previously manual, unstructured)\n- **Test Coverage**: 30 detailed system tests (previously no system tests)\n- **Bug Detection**: Bugs caught automatically in pipelines (previously many missed post-release bugs)\n- **Tool Flexibility**: Use of Python and TypeScript (previously manual scripting only)\n- **Code Base**: 20,000-30,000 lines of modularized test code\n\n## Key Benefits\n\n✓ Enables complex system test automation\n✓ Flexible scripting with Python & TypeScript\n✓ Fast support and product evolution\n✓ Delivers real QA value and fewer support issues\n\nSEW has now relied on AskUI for over three years, and they've seen a decrease in customer support tickets since automation began.",
+  "featured": true
+}
+

@@ -47,7 +47,7 @@ const AgentStartups = () => {
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
             <Card>
               <CardHeader>
-                <Rocket className="h-10 w-10 text-accent mb-4" />
+                <Rocket className="h-10 w-10 text-[#962C5D] mb-4" />
                 <CardTitle>Ship Faster</CardTitle>
                 <CardDescription>
                   Launch your AI agent in weeks, not months. Pre-built infrastructure for UI interaction, orchestration, and scaling.
@@ -57,7 +57,7 @@ const AgentStartups = () => {
 
             <Card>
               <CardHeader>
-                <Code className="h-10 w-10 text-accent mb-4" />
+                <Code className="h-10 w-10 text-[#962C5D] mb-4" />
                 <CardTitle>Developer-First APIs</CardTitle>
                 <CardDescription>
                   Simple REST APIs and SDKs for Python, TypeScript, and JavaScript. Integrate agent capabilities in minutes.
@@ -67,7 +67,7 @@ const AgentStartups = () => {
 
             <Card>
               <CardHeader>
-                <Globe className="h-10 w-10 text-accent mb-4" />
+                <Globe className="h-10 w-10 text-[#962C5D] mb-4" />
                 <CardTitle>Universal Compatibility</CardTitle>
                 <CardDescription>
                   Control any application—web, desktop, mobile, or legacy. One API to rule them all.
@@ -77,7 +77,7 @@ const AgentStartups = () => {
 
             <Card>
               <CardHeader>
-                <Zap className="h-10 w-10 text-accent mb-4" />
+                <Zap className="h-10 w-10 text-[#962C5D] mb-4" />
                 <CardTitle>Cloud or Self-Hosted</CardTitle>
                 <CardDescription>
                   Start with our cloud infrastructure, scale with self-hosted deployment. Full control when you need it.
@@ -87,7 +87,7 @@ const AgentStartups = () => {
 
             <Card>
               <CardHeader>
-                <Layers className="h-10 w-10 text-accent mb-4" />
+                <Layers className="h-10 w-10 text-[#962C5D] mb-4" />
                 <CardTitle>Visual Grounding</CardTitle>
                 <CardDescription>
                   State-of-the-art computer vision for UI understanding. Your agents see and interact like humans.
@@ -97,7 +97,7 @@ const AgentStartups = () => {
 
             <Card>
               <CardHeader>
-                <CheckCircle className="h-10 w-10 text-accent mb-4" />
+                <CheckCircle className="h-10 w-10 text-[#962C5D] mb-4" />
                 <CardTitle>Production-Ready Reliability</CardTitle>
                 <CardDescription>
                   99.9% uptime SLA, automatic failover, and comprehensive monitoring. Built for enterprise scale.

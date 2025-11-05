@@ -1,0 +1,28 @@
+{
+  "id": "1",
+  "slug": "deutsche-bahn-boosts-efficiency-with-askui-test-automation",
+  "company": "Deutsche Bahn",
+  "logo": "/src/assets/clients/db.png",
+  "industry": "Transportation & Logistics",
+  "challenge": "Deutsche Bahn, one of the world's leading mobility and logistics companies, relies heavily on its Point of Sale (POS) systems to serve millions of customers daily. Previously, their QA strategy for the POS system was entirely manual, leading to excessive time spent on regression testing, inability to achieve desired test coverage, manual testing errors, existing automation frameworks like Selenium being unable to effectively address elements within the app, difficulty integrating testing processes with existing enterprise tools, and challenges in testing applications across multiple Android devices.",
+  "solution": "Deutsche Bahn selected AskUI to automate their POS system testing within their Azure pipeline. AskUI was chosen for its ability to seamlessly integrate into their existing enterprise environment and effectively interact with app elements that other frameworks couldn't address. With AskUI, Deutsche Bahn achieved an 80% reduction in testing time, increased test coverage, successful deployment in an enterprise setup, smooth integration with their existing tool stack, enhanced testing capabilities across multiple Android devices, interoperability with Playwright, and simplified test creation process.",
+  "results": [
+    "80% reduction in testing time",
+    "Increased test coverage across all systems",
+    "Successful deployment in enterprise setup",
+    "Smooth integration with GitLab, Artifactory, Jira, and Xray",
+    "Enhanced testing capabilities across multiple Android devices",
+    "Interoperability with Playwright",
+    "Simplified test creation process"
+  ],
+  "metrics": {
+    "timeSaved": "80%",
+    "coverage": "95%",
+    "roi": "300%"
+  },
+  "quote": "Automation with AskUI ended up cutting the testing time by 80% compared to its competitors, significantly boosting efficiency and freeing up resources. They successfully integrated AskUI into their existing Azure pipeline, enabling seamless execution of automated tests alongside their development workflow.",
+  "author": "Deutsche Bahn QA Team",
+  "content": "Deutsche Bahn, one of the world's leading mobility and logistics companies, relies heavily on its Point of Sale (POS) systems to serve millions of customers daily. The efficiency and reliability of these systems are critical to operational success and customer satisfaction.\n\n## The Challenge\n\nPreviously, their QA strategy for the POS system was entirely manual, leading to several challenges:\n\n- **Excessive time spent on regression testing**, resulting in delayed release cycles\n- **Inability to achieve desired test coverage** due to limited testing resources\n- **Manual testing errors** leading to undetected bugs and potential service disruptions\n- **Existing automation frameworks**, like Selenium, were unable to effectively address elements within the app, especially in their complex testing environment\n- **Difficulty integrating testing processes** with existing enterprise tools and infrastructure, including GitLab (intranet), Artifactory, Jira, Xray, and Azure DevOps\n- **Challenges in testing applications across multiple Android devices**\n\n## The Solution\n\nDeutsche Bahn selected **AskUI** to automate their POS system testing within their Azure pipeline. AskUI was chosen for its ability to seamlessly integrate into their existing enterprise environment and effectively interact with app elements that other frameworks couldn't address.\n\nWith AskUI, Deutsche Bahn achieved:\n\n- An **80% reduction in testing time**, significantly accelerating their release cycles\n- **Increased test coverage**, enhancing software reliability and stability\n- **Successful deployment in an enterprise setup** without disrupting existing workflows\n- **Smooth integration** with their existing tool stack, including GitLab, Artifactory, Jira, and Xray\n- **Enhanced testing capabilities across multiple Android devices**, ensuring broad compatibility\n- **Interoperability with Playwright**, expanding their testing framework options\n- **Simplified test creation process**, making it much easier than with Selenium and reducing reliance on extensive technical expertise\n\n## The Impact\n\n**Impact on Efficiency:** Automation with AskUI ended up cutting the testing time by 80% compared to its competitors, significantly boosting efficiency and freeing up resources.\n\n**Successful integration:** They successfully integrated AskUI into their existing Azure pipeline, enabling seamless execution of automated tests alongside their development workflow.",
+  "featured": true
+}
+

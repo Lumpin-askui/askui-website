@@ -47,35 +47,38 @@ const blogPostsData: BlogPost[] = Object.values(blogPostsModules).map(
   }
 );
 
-// Import case studies
-import caseStudy1 from "@/content/case-studies/deutsche-bahn.json";
-import caseStudy2 from "@/content/case-studies/sew-eurodrive.json";
-import caseStudy3 from "@/content/case-studies/intel-software.json";
-import caseStudy4 from "@/content/case-studies/zucchetti.json";
-import caseStudy5 from "@/content/case-studies/solute.json";
+// Dynamically import all case studies using Vite's glob import
+const caseStudiesModules = import.meta.glob<CaseStudy>(
+  "@/content/case-studies/*.json",
+  { eager: true }
+);
 
-const caseStudiesData: CaseStudy[] = [
-  caseStudy1 as CaseStudy,
-  caseStudy2 as CaseStudy,
-  caseStudy3 as CaseStudy,
-  caseStudy4 as CaseStudy,
-  caseStudy5 as CaseStudy,
-];
+// Convert imported data to typed objects
+const caseStudiesData: CaseStudy[] = Object.values(caseStudiesModules).map(
+  (module) => {
+    const study = (module as any).default || module as CaseStudy;
+    return study;
+  }
+);
 
 // Import logo images
 import dbLogo from "@/assets/clients/db.png";
 import sewLogo from "@/assets/clients/sew.png";
-import intelLogo from "@/assets/clients/intel.png";
 import zucchettiLogo from "@/assets/clients/zucchetti.png";
-import soluteLogo from "@/assets/clients/solute.png";
+import pickertLogo from "@/assets/clients/pickert.png";
+import bankCitrixLogo from "@/assets/clients/bank-citrix.svg";
+import automotiveLogo from "@/assets/clients/automotive.svg";
+import casinoLogo from "@/assets/clients/casino.svg";
 
 // Helper to map logo paths to imported images
 const logoMap: Record<string, string> = {
   '/src/assets/clients/db.png': dbLogo,
   '/src/assets/clients/sew.png': sewLogo,
-  '/src/assets/clients/intel.png': intelLogo,
   '/src/assets/clients/zucchetti.png': zucchettiLogo,
-  '/src/assets/clients/solute.png': soluteLogo,
+  '/src/assets/clients/pickert.png': pickertLogo,
+  '/src/assets/clients/bank-citrix.svg': bankCitrixLogo,
+  '/src/assets/clients/automotive.svg': automotiveLogo,
+  '/src/assets/clients/casino.svg': casinoLogo,
 };
 
 // Process case studies to resolve logo paths
