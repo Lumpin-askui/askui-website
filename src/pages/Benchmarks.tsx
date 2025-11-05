@@ -41,28 +41,28 @@ const Benchmarks = () => {
         <div className="container mx-auto px-4 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
             <Card className="p-8 text-center border-border/50">
-              <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-accent/10 mb-4">
-                <Award className="h-8 w-8 text-accent" />
+              <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-[#962C5D]/10 mb-4">
+                <Award className="h-8 w-8 text-[#962C5D]" />
               </div>
-              <div className="text-4xl font-bold text-accent mb-2">#1</div>
+              <div className="text-4xl font-bold text-[#962C5D] mb-2">#1</div>
               <div className="text-sm text-muted-foreground mb-2">Android World Benchmark</div>
               <p className="text-xs text-muted-foreground">Top performance in mobile automation testing</p>
             </Card>
 
             <Card className="p-8 text-center border-border/50">
-              <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-accent/10 mb-4">
-                <Trophy className="h-8 w-8 text-accent" />
+              <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-[#962C5D]/10 mb-4">
+                <Trophy className="h-8 w-8 text-[#962C5D]" />
               </div>
-              <div className="text-4xl font-bold text-accent mb-2">#1</div>
+              <div className="text-4xl font-bold text-[#962C5D] mb-2">#1</div>
               <div className="text-sm text-muted-foreground mb-2">OSWorld Benchmark</div>
               <p className="text-xs text-muted-foreground">Leading results in cross-platform automation</p>
             </Card>
 
             <Card className="p-8 text-center border-border/50">
-              <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-accent/10 mb-4">
-                <TrendingUp className="h-8 w-8 text-accent" />
+              <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-[#962C5D]/10 mb-4">
+                <TrendingUp className="h-8 w-8 text-[#962C5D]" />
               </div>
-              <div className="text-4xl font-bold text-accent mb-2">95%+</div>
+              <div className="text-4xl font-bold text-[#962C5D] mb-2">95%+</div>
               <div className="text-sm text-muted-foreground mb-2">Test Accuracy</div>
               <p className="text-xs text-muted-foreground">Consistent reliability across all platforms</p>
             </Card>
@@ -80,8 +80,8 @@ const Benchmarks = () => {
               {/* Android World */}
               <Card className="p-8 border-border/50">
                 <div className="flex items-start gap-4 mb-6">
-                  <div className="w-12 h-12 rounded-lg bg-accent/10 flex items-center justify-center flex-shrink-0">
-                    <Award className="h-6 w-6 text-accent" />
+                  <div className="w-12 h-12 rounded-lg bg-[#962C5D]/10 flex items-center justify-center flex-shrink-0">
+                    <Award className="h-6 w-6 text-[#962C5D]" />
                   </div>
                   <div className="flex-1">
                     <h3 className="text-2xl font-bold mb-2">Android World Benchmark</h3>
@@ -93,11 +93,11 @@ const Benchmarks = () => {
                 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
                   <div className="p-4 rounded-lg bg-muted/50">
-                    <div className="text-2xl font-bold text-accent mb-1">#1</div>
+                    <div className="text-2xl font-bold text-[#962C5D] mb-1">#1</div>
                     <div className="text-sm text-muted-foreground">Overall Ranking</div>
                   </div>
                   <div className="p-4 rounded-lg bg-muted/50">
-                    <div className="text-2xl font-bold text-accent mb-1">98%</div>
+                    <div className="text-2xl font-bold text-[#962C5D] mb-1">98%</div>
                     <div className="text-sm text-muted-foreground">Success Rate</div>
                   </div>
                 </div>
@@ -106,19 +106,19 @@ const Benchmarks = () => {
                   <h4 className="font-semibold mb-2">Key Achievements:</h4>
                   <ul className="space-y-2">
                     <li className="flex items-start gap-2">
-                      <CheckCircle className="h-5 w-5 text-accent flex-shrink-0 mt-0.5" />
+                      <CheckCircle className="h-5 w-5 text-[#962C5D] flex-shrink-0 mt-0.5" />
                       <span>Top performance in complex UI interactions</span>
                     </li>
                     <li className="flex items-start gap-2">
-                      <CheckCircle className="h-5 w-5 text-accent flex-shrink-0 mt-0.5" />
+                      <CheckCircle className="h-5 w-5 text-[#962C5D] flex-shrink-0 mt-0.5" />
                       <span>Superior accuracy in gesture recognition</span>
                     </li>
                     <li className="flex items-start gap-2">
-                      <CheckCircle className="h-5 w-5 text-accent flex-shrink-0 mt-0.5" />
+                      <CheckCircle className="h-5 w-5 text-[#962C5D] flex-shrink-0 mt-0.5" />
                       <span>Fastest execution time across test scenarios</span>
                     </li>
                     <li className="flex items-start gap-2">
-                      <CheckCircle className="h-5 w-5 text-accent flex-shrink-0 mt-0.5" />
+                      <CheckCircle className="h-5 w-5 text-[#962C5D] flex-shrink-0 mt-0.5" />
                       <span>Consistent performance across Android versions</span>
                     </li>
                   </ul>
@@ -128,8 +128,8 @@ const Benchmarks = () => {
               {/* OSWorld */}
               <Card className="p-8 border-border/50">
                 <div className="flex items-start gap-4 mb-6">
-                  <div className="w-12 h-12 rounded-lg bg-accent/10 flex items-center justify-center flex-shrink-0">
-                    <Trophy className="h-6 w-6 text-accent" />
+                  <div className="w-12 h-12 rounded-lg bg-[#962C5D]/10 flex items-center justify-center flex-shrink-0">
+                    <Trophy className="h-6 w-6 text-[#962C5D]" />
                   </div>
                   <div className="flex-1">
                     <h3 className="text-2xl font-bold mb-2">OSWorld Benchmark</h3>
@@ -141,11 +141,11 @@ const Benchmarks = () => {
                 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
                   <div className="p-4 rounded-lg bg-muted/50">
-                    <div className="text-2xl font-bold text-accent mb-1">#1</div>
+                    <div className="text-2xl font-bold text-[#962C5D] mb-1">#1</div>
                     <div className="text-sm text-muted-foreground">Cross-Platform Ranking</div>
                   </div>
                   <div className="p-4 rounded-lg bg-muted/50">
-                    <div className="text-2xl font-bold text-accent mb-1">96%</div>
+                    <div className="text-2xl font-bold text-[#962C5D] mb-1">96%</div>
                     <div className="text-sm text-muted-foreground">Task Completion Rate</div>
                   </div>
                 </div>
@@ -154,19 +154,19 @@ const Benchmarks = () => {
                   <h4 className="font-semibold mb-2">Key Achievements:</h4>
                   <ul className="space-y-2">
                     <li className="flex items-start gap-2">
-                      <CheckCircle className="h-5 w-5 text-accent flex-shrink-0 mt-0.5" />
+                      <CheckCircle className="h-5 w-5 text-[#962C5D] flex-shrink-0 mt-0.5" />
                       <span>Leading performance on Windows, MacOS, and Linux</span>
                     </li>
                     <li className="flex items-start gap-2">
-                      <CheckCircle className="h-5 w-5 text-accent flex-shrink-0 mt-0.5" />
+                      <CheckCircle className="h-5 w-5 text-[#962C5D] flex-shrink-0 mt-0.5" />
                       <span>Optimized image recognition algorithms</span>
                     </li>
                     <li className="flex items-start gap-2">
-                      <CheckCircle className="h-5 w-5 text-accent flex-shrink-0 mt-0.5" />
+                      <CheckCircle className="h-5 w-5 text-[#962C5D] flex-shrink-0 mt-0.5" />
                       <span>Enhanced action execution engine</span>
                     </li>
                     <li className="flex items-start gap-2">
-                      <CheckCircle className="h-5 w-5 text-accent flex-shrink-0 mt-0.5" />
+                      <CheckCircle className="h-5 w-5 text-[#962C5D] flex-shrink-0 mt-0.5" />
                       <span>Improved error handling and recovery</span>
                     </li>
                   </ul>
@@ -188,18 +188,18 @@ const Benchmarks = () => {
                   <Link key={post.id} to={`/blog/${post.slug}`}>
                     <Card className="p-6 hover:shadow-lg transition-all duration-300 border-border/50 group cursor-pointer h-full">
                       <div className="flex items-center gap-2 text-xs text-muted-foreground mb-3">
-                        <Award className="h-4 w-4 text-accent" />
+                        <Award className="h-4 w-4 text-[#962C5D]" />
                         <span>{post.category}</span>
                         <span>•</span>
                         <span>{post.readTime}</span>
                       </div>
-                      <h3 className="text-lg font-semibold mb-2 group-hover:text-accent transition-colors">
+                      <h3 className="text-lg font-semibold mb-2 group-hover:text-[#962C5D] transition-colors">
                         {post.title}
                       </h3>
                       <p className="text-sm text-muted-foreground mb-4 line-clamp-2">
                         {post.excerpt}
                       </p>
-                      <div className="flex items-center text-sm font-medium text-accent">
+                      <div className="flex items-center text-sm font-medium text-[#962C5D]">
                         Read analysis
                         <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
                       </div>

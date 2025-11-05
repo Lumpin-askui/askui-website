@@ -1,0 +1,14 @@
+{
+  "id": "cookie_clicker_automation_askuis_vision_agent",
+  "slug": "cookie-clicker-automation-askuis-vision-agent",
+  "title": "Cookie Clicker Automation with AskUI's Vision Agent",
+  "excerpt": "Cookie Clicker is a very click-heavy game that requires a lot of attention. Let's automate it with AskUI's Vision Agent.",
+  "content": "<p id=\">Cookie Clicker, as the name suggests, is a very click-heavy game that requires a lot of attention and can not be played on the side.<br><br>Why not try automating it with AskUI's Vision Agent to gain an edge while you go to the bathroom or get another cup of coffee?</p><h2 id=\">1. Step: Install AskUI</h2><p id=\">Follow the <a href=\"https://github.com/askui/vision-agent\">installation guide in the README of our GitHub project.</a></p><p id=\">After the installation, create a <code id=\">cookieclicker.py</code> inside your project with the following skeletton code:</p><pre></pre><h2 id=\">2. Step: Make Sure to Have Focus</h2><p id=\">When you start the Vision Agent from your IDE or terminal the browser window on a second display where the cookie clicker resides in does <strong id=\">NOT</strong> have focus and may fail to automate because of it. So we move the mouse cursor there and trigger a left-click:</p><pre></pre><h2 id=\">3. Step: Start with the Big Cookie</h2><p id=\">We are going for a very simple automation with a single prompt here, just to get some cookies when we are getting a new cup of coffee. Therefore we use the <code id=\">agent.act(&lt;prompt&gt;)</code> method to specify a prompt with our automation needs:</p><pre></pre><p id=\">This clicks the big cookie on the left 20 times and repeats the step 20 times. Run it by running in your terminal:</p><pre></pre><h2>4. Step: Expand the Prompt</h2><p>For the sake of demonstration - and more cookies - let us add two more steps to the prompt which increase our cookie output by buying grandmas or cursors if possible:</p><pre></pre><h2>5. Step: Expand with your Ideas</h2><p>This is just the beginning. You can add even more steps and gain more cookies without risking RSI. Start building your own <a href=\"https://github.com/askui/vision-agent\">Cookie Clicker Vision Agent with AskUI.</a></p>",
+  "category": "Tutorial",
+  "readTime": "1 min read",
+  "date": "2024-11-21",
+  "publishedAt": "Thu Nov 21 2024 07:11:22 GMT+0000 (Coordinated Universal Time)",
+  "author": "Johannes Dienst",
+  "image": "https://cdn.prod.website-files.com/6630f90ff7431b0c5b1bb0e7/6737681d365df59a357e6d25_Cookieclicker-Single-Prompt-Automation-thumbnail.webp",
+  "featured": false
+}

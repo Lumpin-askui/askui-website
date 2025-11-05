@@ -1,14 +1,16 @@
 import type { BlogPost, CaseStudy } from "@/types/content";
 
-// Import blog posts
-import blogPost1 from "@/content/blog/leading-android-world-benchmark.json";
-import blogPost2 from "@/content/blog/building-production-ready-agents.json";
-import blogPost3 from "@/content/blog/cross-platform-automation-scale.json";
-import blogPost4 from "@/content/blog/introducing-askui-cli-2.json";
-import blogPost5 from "@/content/blog/getting-started-askui-sdk.json";
-import blogPost6 from "@/content/blog/osworld-benchmark-analysis.json";
-import blogPost7 from "@/content/blog/securing-ai-agent-infrastructure.json";
-import blogPost8 from "@/content/blog/mobile-device-automation.json";
+// Dynamically import all blog posts using Vite's glob import
+const blogPostsModules = import.meta.glob<BlogPost>(
+  "@/content/blog/*.json",
+  { eager: true }
+);
+
+// Convert imported data to typed objects
+// Vite's glob import for JSON files returns the JSON object directly as default
+const blogPostsData: BlogPost[] = Object.values(blogPostsModules).map(
+  (module) => (module as any).default || module as BlogPost
+);
 
 // Import case studies
 import caseStudy1 from "@/content/case-studies/deutsche-bahn.json";
@@ -16,18 +18,6 @@ import caseStudy2 from "@/content/case-studies/sew-eurodrive.json";
 import caseStudy3 from "@/content/case-studies/intel-software.json";
 import caseStudy4 from "@/content/case-studies/zucchetti.json";
 import caseStudy5 from "@/content/case-studies/solute.json";
-
-// Convert imported data to typed objects
-const blogPostsData: BlogPost[] = [
-  blogPost1 as BlogPost,
-  blogPost2 as BlogPost,
-  blogPost3 as BlogPost,
-  blogPost4 as BlogPost,
-  blogPost5 as BlogPost,
-  blogPost6 as BlogPost,
-  blogPost7 as BlogPost,
-  blogPost8 as BlogPost,
-];
 
 const caseStudiesData: CaseStudy[] = [
   caseStudy1 as CaseStudy,

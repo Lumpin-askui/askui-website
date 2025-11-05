@@ -31,17 +31,17 @@ const BlogCaseStudies = () => {
                 <Card className="p-6 hover:shadow-lg transition-all duration-300 border-border/50 bg-card group cursor-pointer h-full">
                   <div className="mb-4">
                     <div className="flex items-center gap-2 text-xs text-muted-foreground mb-3">
-                      <FileText className="h-4 w-4 text-accent" />
+                      <FileText className="h-4 w-4 text-[#962C5D]" />
                       <span>{post.category}</span>
                       <span>•</span>
                       <span>{post.readTime}</span>
                     </div>
-                    <h3 className="text-lg font-semibold mb-2 group-hover:text-accent transition-colors">
+                    <h3 className="text-lg font-semibold mb-2 group-hover:text-[#962C5D] transition-colors">
                       {post.title}
                     </h3>
                     <p className="text-sm text-muted-foreground">{post.excerpt}</p>
                   </div>
-                  <div className="flex items-center text-sm font-medium text-primary">
+                  <div className="flex items-center text-sm font-medium text-[#962C5D]">
                     Read more
                     <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
                   </div>
@@ -78,19 +78,19 @@ const BlogCaseStudies = () => {
               <Link key={study.id} to={`/case-studies/${study.slug}`}>
                 <Card className="p-6 hover:shadow-lg transition-all duration-300 border-border/50 bg-card group cursor-pointer h-full">
                   <div className="mb-4">
-                    <div className="flex items-center gap-2 text-xs font-semibold mb-3 text-primary">
-                      <BookOpen className="h-4 w-4 text-accent" />
+                    <div className="flex items-center gap-2 text-xs font-semibold mb-3 text-[#962C5D]">
+                      <BookOpen className="h-4 w-4 text-[#962C5D]" />
                       <span>{study.company}</span>
                     </div>
-                    <h3 className="text-lg font-semibold mb-2 group-hover:text-accent transition-colors">
+                    <h3 className="text-lg font-semibold mb-2 group-hover:text-[#962C5D] transition-colors">
                       {study.challenge.split(' ').slice(0, 5).join(' ')}...
                     </h3>
-                    <div className="text-2xl font-bold text-primary mb-3">
+                    <div className="text-2xl font-bold text-[#962C5D] mb-3">
                       {study.metrics.timeSaved} Time Saved
                     </div>
                     <p className="text-sm text-muted-foreground">{study.challenge}</p>
                   </div>
-                  <div className="flex items-center text-sm font-medium text-primary">
+                  <div className="flex items-center text-sm font-medium text-[#962C5D]">
                     Read case study
                     <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
                   </div>

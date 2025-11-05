@@ -1,6 +1,7 @@
 import { useParams, Link } from "react-router-dom";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import BlogContent from "@/components/BlogContent";
 import { Button } from "@/components/ui/button";
 import { ArrowLeft, Clock, Tag, Calendar, User } from "lucide-react";
 import { cms } from "@/services/cms";
@@ -20,30 +21,6 @@ const BlogPost = () => {
     month: "long",
     day: "numeric",
   });
-
-  // Convert markdown-like content to HTML (basic implementation)
-  const formatContent = (content: string) => {
-    return content
-      .split("\n\n")
-      .map((paragraph, index) => {
-        if (paragraph.startsWith("## ")) {
-          return `<h2 class="text-2xl font-bold mt-8 mb-4">${paragraph.replace("## ", "")}</h2>`;
-        }
-        if (paragraph.startsWith("### ")) {
-          return `<h3 class="text-xl font-semibold mt-6 mb-3">${paragraph.replace("### ", "")}</h3>`;
-        }
-        if (paragraph.startsWith("- ")) {
-          const items = paragraph.split("\n").filter(item => item.startsWith("- "));
-          const listItems = items.map(item => `<li class="ml-4">${item.replace("- ", "")}</li>`).join("");
-          return `<ul class="list-disc space-y-2 my-4">${listItems}</ul>`;
-        }
-        if (paragraph.startsWith("```")) {
-          return `<pre class="bg-muted p-4 rounded-lg overflow-x-auto my-4"><code>${paragraph.replace(/```[\w]*\n?/g, "")}</code></pre>`;
-        }
-        return `<p class="mb-4 leading-relaxed">${paragraph}</p>`;
-      })
-      .join("");
-  };
 
   return (
     <div className="min-h-screen">
@@ -116,11 +93,8 @@ const BlogPost = () => {
       {/* Content */}
       <section className="py-12">
         <div className="container mx-auto px-4 lg:px-8">
-          <article className="max-w-4xl mx-auto prose prose-lg dark:prose-invert">
-            <div 
-              className="prose-headings:font-bold prose-headings:text-foreground prose-p:text-foreground prose-strong:text-foreground prose-li:text-foreground"
-              dangerouslySetInnerHTML={{ __html: formatContent(post.content) }}
-            />
+          <article className="max-w-4xl mx-auto">
+            <BlogContent content={post.content} />
           </article>
         </div>
       </section>
@@ -160,7 +134,7 @@ const BlogPost = () => {
                     to={`/blog/${relatedPost.slug}`}
                     className="block p-6 rounded-lg border border-border hover:shadow-lg transition-all"
                   >
-                    <h3 className="font-semibold mb-2 hover:text-accent transition-colors">
+                    <h3 className="font-semibold mb-2 hover:text-[#962C5D] transition-colors">
                       {relatedPost.title}
                     </h3>
                     <p className="text-sm text-muted-foreground line-clamp-2">

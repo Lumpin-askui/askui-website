@@ -20,9 +20,6 @@ const Features = () => {
               <div className="px-4 py-2 rounded-lg bg-white/10 backdrop-blur-sm">
                 BYOM Support
               </div>
-              <div className="px-4 py-2 rounded-lg bg-white/10 backdrop-blur-sm">
-                SOC 2 Compliant
-              </div>
             </div>
           </div>
         </div>

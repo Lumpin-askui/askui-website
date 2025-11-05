@@ -84,16 +84,16 @@ const CaseStudies = () => {
 
                       {/* Metrics */}
                       <div className="grid grid-cols-3 gap-4 pt-4">
-                        <div className="text-center p-4 rounded-lg bg-accent/10">
-                          <div className="text-2xl font-bold text-accent mb-1">{study.metrics.timeSaved}</div>
+                        <div className="text-center p-4 rounded-lg bg-[#962C5D]/10">
+                          <div className="text-2xl font-bold text-[#962C5D] mb-1">{study.metrics.timeSaved}</div>
                           <div className="text-xs text-muted-foreground">Time Saved</div>
                         </div>
-                        <div className="text-center p-4 rounded-lg bg-accent/10">
-                          <div className="text-2xl font-bold text-accent mb-1">{study.metrics.coverage}</div>
+                        <div className="text-center p-4 rounded-lg bg-[#962C5D]/10">
+                          <div className="text-2xl font-bold text-[#962C5D] mb-1">{study.metrics.coverage}</div>
                           <div className="text-xs text-muted-foreground">Coverage</div>
                         </div>
-                        <div className="text-center p-4 rounded-lg bg-accent/10">
-                          <div className="text-2xl font-bold text-accent mb-1">{study.metrics.roi}</div>
+                        <div className="text-center p-4 rounded-lg bg-[#962C5D]/10">
+                          <div className="text-2xl font-bold text-[#962C5D] mb-1">{study.metrics.roi}</div>
                           <div className="text-xs text-muted-foreground">ROI</div>
                         </div>
                       </div>
@@ -110,7 +110,7 @@ const CaseStudies = () => {
                       <ul className="space-y-3">
                         {study.results.map((result, idx) => (
                           <li key={idx} className="flex items-start gap-3">
-                            <CheckCircle className="h-5 w-5 text-accent flex-shrink-0 mt-0.5" />
+                            <CheckCircle className="h-5 w-5 text-[#962C5D] flex-shrink-0 mt-0.5" />
                             <span>{result}</span>
                           </li>
                         ))}

@@ -1,6 +1,7 @@
 import { useParams, Link } from "react-router-dom";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import BlogContent from "@/components/BlogContent";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { ArrowLeft, Building2, TrendingUp, CheckCircle } from "lucide-react";
@@ -14,27 +15,6 @@ const CaseStudy = () => {
   if (!study) {
     return <NotFound />;
   }
-
-  // Format content
-  const formatContent = (content: string) => {
-    return content
-      .split("\n\n")
-      .map((paragraph, index) => {
-        if (paragraph.startsWith("## ")) {
-          return `<h2 class="text-2xl font-bold mt-8 mb-4">${paragraph.replace("## ", "")}</h2>`;
-        }
-        if (paragraph.startsWith("### ")) {
-          return `<h3 class="text-xl font-semibold mt-6 mb-3">${paragraph.replace("### ", "")}</h3>`;
-        }
-        if (paragraph.startsWith("- ")) {
-          const items = paragraph.split("\n").filter(item => item.startsWith("- "));
-          const listItems = items.map(item => `<li class="ml-4">${item.replace("- ", "")}</li>`).join("");
-          return `<ul class="list-disc space-y-2 my-4">${listItems}</ul>`;
-        }
-        return `<p class="mb-4 leading-relaxed">${paragraph}</p>`;
-      })
-      .join("");
-  };
 
   return (
     <div className="min-h-screen">
@@ -82,10 +62,7 @@ const CaseStudy = () => {
               <div className="lg:col-span-2 space-y-8">
                 {study.content && (
                   <Card className="p-8">
-                    <div 
-                      className="prose prose-lg dark:prose-invert max-w-none"
-                      dangerouslySetInnerHTML={{ __html: formatContent(study.content) }}
-                    />
+                    <BlogContent content={study.content} />
                   </Card>
                 )}
 
@@ -107,7 +84,7 @@ const CaseStudy = () => {
                   <ul className="space-y-3">
                     {study.results.map((result, idx) => (
                       <li key={idx} className="flex items-start gap-3">
-                        <CheckCircle className="h-5 w-5 text-accent flex-shrink-0 mt-0.5" />
+                        <CheckCircle className="h-5 w-5 text-[#962C5D] flex-shrink-0 mt-0.5" />
                         <span>{result}</span>
                       </li>
                     ))}
@@ -121,16 +98,16 @@ const CaseStudy = () => {
                 <Card className="p-6">
                   <h3 className="text-lg font-semibold mb-4">Key Metrics</h3>
                   <div className="space-y-4">
-                    <div className="text-center p-4 rounded-lg bg-accent/10">
-                      <div className="text-3xl font-bold text-accent mb-1">{study.metrics.timeSaved}</div>
+                    <div className="text-center p-4 rounded-lg bg-[#962C5D]/10">
+                      <div className="text-3xl font-bold text-[#962C5D] mb-1">{study.metrics.timeSaved}</div>
                       <div className="text-sm text-muted-foreground">Time Saved</div>
                     </div>
-                    <div className="text-center p-4 rounded-lg bg-accent/10">
-                      <div className="text-3xl font-bold text-accent mb-1">{study.metrics.coverage}</div>
+                    <div className="text-center p-4 rounded-lg bg-[#962C5D]/10">
+                      <div className="text-3xl font-bold text-[#962C5D] mb-1">{study.metrics.coverage}</div>
                       <div className="text-sm text-muted-foreground">Coverage</div>
                     </div>
-                    <div className="text-center p-4 rounded-lg bg-accent/10">
-                      <div className="text-3xl font-bold text-accent mb-1">{study.metrics.roi}</div>
+                    <div className="text-center p-4 rounded-lg bg-[#962C5D]/10">
+                      <div className="text-3xl font-bold text-[#962C5D] mb-1">{study.metrics.roi}</div>
                       <div className="text-sm text-muted-foreground">ROI</div>
                     </div>
                   </div>
@@ -177,7 +154,7 @@ const CaseStudy = () => {
                       alt={relatedStudy.company}
                       className="h-12 object-contain mb-4 bg-white p-2 rounded"
                     />
-                    <h3 className="font-semibold mb-2 hover:text-accent transition-colors">
+                    <h3 className="font-semibold mb-2 hover:text-[#962C5D] transition-colors">
                       {relatedStudy.company}
                     </h3>
                     <p className="text-sm text-muted-foreground line-clamp-2">

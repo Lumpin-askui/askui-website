@@ -88,22 +88,22 @@ const Enterprise = () => {
           {/* Features Grid */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mb-8">
             <div className="p-4 rounded-lg text-center">
-              <Shield className="h-8 w-8 text-accent mx-auto mb-3" />
+              <Shield className="h-8 w-8 text-[#962C5D] mx-auto mb-3" />
               <h3 className="font-semibold mb-1 text-sm">ISO27001 Certified</h3>
               <p className="text-xs text-muted-foreground">Enterprise security & compliance</p>
             </div>
             <div className="p-4 rounded-lg text-center">
-              <Lock className="h-8 w-8 text-accent mx-auto mb-3" />
+              <Lock className="h-8 w-8 text-[#962C5D] mx-auto mb-3" />
               <h3 className="font-semibold mb-1 text-sm">On-Premise Deployment</h3>
               <p className="text-xs text-muted-foreground">Full data sovereignty</p>
             </div>
             <div className="p-4 rounded-lg text-center">
-              <Server className="h-8 w-8 text-accent mx-auto mb-3" />
+              <Server className="h-8 w-8 text-[#962C5D] mx-auto mb-3" />
               <h3 className="font-semibold mb-1 text-sm">Dedicated Infrastructure</h3>
               <p className="text-xs text-muted-foreground">Private cloud options</p>
             </div>
             <div className="p-4 rounded-lg text-center">
-              <Headphones className="h-8 w-8 text-accent mx-auto mb-3" />
+              <Headphones className="h-8 w-8 text-[#962C5D] mx-auto mb-3" />
               <h3 className="font-semibold mb-1 text-sm">24/7 Support</h3>
               <p className="text-xs text-muted-foreground">Dedicated success team</p>
             </div>
@@ -155,13 +155,6 @@ const Enterprise = () => {
                     <div>
                       <div className="font-semibold mb-1">ISO27001 Certification</div>
                       <div className="text-sm text-muted-foreground">Information security management certified</div>
-                    </div>
-                  </li>
-                  <li className="flex items-start gap-3">
-                    <CheckCircle className="h-5 w-5 text-[#962C5D] flex-shrink-0 mt-0.5" />
-                    <div>
-                      <div className="font-semibold mb-1">SOC 2 Type II</div>
-                      <div className="text-sm text-muted-foreground">Independently audited security controls</div>
                     </div>
                   </li>
                   <li className="flex items-start gap-3">

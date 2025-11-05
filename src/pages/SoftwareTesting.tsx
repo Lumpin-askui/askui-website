@@ -47,7 +47,7 @@ const SoftwareTesting = () => {
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
             <Card>
               <CardHeader>
-                <TestTube className="h-10 w-10 text-accent mb-4" />
+                <TestTube className="h-10 w-10 text-[#962C5D] mb-4" />
                 <CardTitle>Cross-Platform Testing</CardTitle>
                 <CardDescription>
                   Test web, desktop, and mobile applications with a single unified framework. No more juggling multiple tools.
@@ -57,7 +57,7 @@ const SoftwareTesting = () => {
 
             <Card>
               <CardHeader>
-                <Zap className="h-10 w-10 text-accent mb-4" />
+                <Zap className="h-10 w-10 text-[#962C5D] mb-4" />
                 <CardTitle>Visual UI Automation</CardTitle>
                 <CardDescription>
                   AI-powered element detection works even when selectors fail. Test complex UIs without brittle XPath or CSS selectors.
@@ -67,7 +67,7 @@ const SoftwareTesting = () => {
 
             <Card>
               <CardHeader>
-                <Shield className="h-10 w-10 text-accent mb-4" />
+                <Shield className="h-10 w-10 text-[#962C5D] mb-4" />
                 <CardTitle>Self-Healing Tests</CardTitle>
                 <CardDescription>
                   Tests automatically adapt to UI changes, reducing maintenance overhead by up to 70% compared to traditional automation.
@@ -77,7 +77,7 @@ const SoftwareTesting = () => {
 
             <Card>
               <CardHeader>
-                <TrendingUp className="h-10 w-10 text-accent mb-4" />
+                <TrendingUp className="h-10 w-10 text-[#962C5D] mb-4" />
                 <CardTitle>Parallel Execution</CardTitle>
                 <CardDescription>
                   Run hundreds of tests simultaneously across multiple devices and environments. Scale testing without scaling infrastructure costs.
@@ -87,7 +87,7 @@ const SoftwareTesting = () => {
 
             <Card>
               <CardHeader>
-                <CheckCircle className="h-10 w-10 text-accent mb-4" />
+                <CheckCircle className="h-10 w-10 text-[#962C5D] mb-4" />
                 <CardTitle>CI/CD Integration</CardTitle>
                 <CardDescription>
                   Seamlessly integrate with Jenkins, GitLab, GitHub Actions, and all major CI/CD platforms for continuous testing.
@@ -97,7 +97,7 @@ const SoftwareTesting = () => {
 
             <Card>
               <CardHeader>
-                <Shield className="h-10 w-10 text-accent mb-4" />
+                <Shield className="h-10 w-10 text-[#962C5D] mb-4" />
                 <CardTitle>Enterprise Security</CardTitle>
                 <CardDescription>
                   ISO27001 certified with on-premise deployment options. Your test data never leaves your infrastructure.
@@ -178,7 +178,7 @@ const SoftwareTesting = () => {
               </div>
 
               {/* Right Column - Results */}
-              <div className="p-8 lg:p-12 bg-accent/5">
+              <div className="p-8 lg:p-12 bg-[#962C5D]/5">
                 <div className="space-y-8">
                   <div>
                     <h4 className="text-sm font-semibold text-muted-foreground uppercase tracking-wide mb-6">
@@ -186,35 +186,35 @@ const SoftwareTesting = () => {
                     </h4>
                     <ul className="space-y-4">
                       <li className="flex items-start gap-3">
-                        <CheckCircle className="h-6 w-6 text-accent flex-shrink-0 mt-0.5" />
+                        <CheckCircle className="h-6 w-6 text-[#962C5D] flex-shrink-0 mt-0.5" />
                         <div>
                           <div className="font-semibold mb-1">80% reduction in manual testing time</div>
                           <div className="text-sm text-muted-foreground">From 2 weeks to 3 days for full regression suite</div>
                         </div>
                       </li>
                       <li className="flex items-start gap-3">
-                        <CheckCircle className="h-6 w-6 text-accent flex-shrink-0 mt-0.5" />
+                        <CheckCircle className="h-6 w-6 text-[#962C5D] flex-shrink-0 mt-0.5" />
                         <div>
                           <div className="font-semibold mb-1">95% test coverage across 300+ systems</div>
                           <div className="text-sm text-muted-foreground">Including previously untestable legacy interfaces</div>
                         </div>
                       </li>
                       <li className="flex items-start gap-3">
-                        <CheckCircle className="h-6 w-6 text-accent flex-shrink-0 mt-0.5" />
+                        <CheckCircle className="h-6 w-6 text-[#962C5D] flex-shrink-0 mt-0.5" />
                         <div>
                           <div className="font-semibold mb-1">50% faster deployment cycles</div>
                           <div className="text-sm text-muted-foreground">Quarterly to bi-monthly releases</div>
                         </div>
                       </li>
                       <li className="flex items-start gap-3">
-                        <CheckCircle className="h-6 w-6 text-accent flex-shrink-0 mt-0.5" />
+                        <CheckCircle className="h-6 w-6 text-[#962C5D] flex-shrink-0 mt-0.5" />
                         <div>
                           <div className="font-semibold mb-1">Zero critical production bugs in 18 months</div>
                           <div className="text-sm text-muted-foreground">Early detection prevents customer impact</div>
                         </div>
                       </li>
                       <li className="flex items-start gap-3">
-                        <CheckCircle className="h-6 w-6 text-accent flex-shrink-0 mt-0.5" />
+                        <CheckCircle className="h-6 w-6 text-[#962C5D] flex-shrink-0 mt-0.5" />
                         <div>
                           <div className="font-semibold mb-1">70% reduction in test maintenance</div>
                           <div className="text-sm text-muted-foreground">Self-healing tests adapt to UI changes automatically</div>

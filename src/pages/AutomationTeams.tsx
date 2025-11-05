@@ -97,7 +97,7 @@ const AutomationTeams = () => {
 
             <Card>
               <CardHeader>
-                <CheckCircle className="h-10 w-10 text-accent mb-4" />
+                <CheckCircle className="h-10 w-10 text-[#962C5D] mb-4" />
                 <CardTitle>Enterprise Orchestration</CardTitle>
                 <CardDescription>
                   Manage thousands of bots from a centralized platform. Schedule, monitor, and scale automation across teams.
@@ -178,7 +178,7 @@ const AutomationTeams = () => {
               </div>
 
               {/* Right Column - Results */}
-              <div className="p-8 lg:p-12 bg-accent/5">
+              <div className="p-8 lg:p-12 bg-[#962C5D]/5">
                 <div className="space-y-8">
                   <div>
                     <h4 className="text-sm font-semibold text-muted-foreground uppercase tracking-wide mb-6">
@@ -186,35 +186,35 @@ const AutomationTeams = () => {
                     </h4>
                     <ul className="space-y-4">
                       <li className="flex items-start gap-3">
-                        <CheckCircle className="h-6 w-6 text-accent flex-shrink-0 mt-0.5" />
+                        <CheckCircle className="h-6 w-6 text-[#962C5D] flex-shrink-0 mt-0.5" />
                         <div>
                           <div className="font-semibold mb-1">40,000 hours automated annually</div>
                           <div className="text-sm text-muted-foreground">Equivalent to 20 full-time employees reassigned to strategic work</div>
                         </div>
                       </li>
                       <li className="flex items-start gap-3">
-                        <CheckCircle className="h-6 w-6 text-accent flex-shrink-0 mt-0.5" />
+                        <CheckCircle className="h-6 w-6 text-[#962C5D] flex-shrink-0 mt-0.5" />
                         <div>
                           <div className="font-semibold mb-1">92% reduction in processing errors</div>
                           <div className="text-sm text-muted-foreground">From ~8% error rate to less than 0.5%</div>
                         </div>
                       </li>
                       <li className="flex items-start gap-3">
-                        <CheckCircle className="h-6 w-6 text-accent flex-shrink-0 mt-0.5" />
+                        <CheckCircle className="h-6 w-6 text-[#962C5D] flex-shrink-0 mt-0.5" />
                         <div>
                           <div className="font-semibold mb-1">3-day average bot development time</div>
                           <div className="text-sm text-muted-foreground">Down from 3-4 weeks with traditional RPA</div>
                         </div>
                       </li>
                       <li className="flex items-start gap-3">
-                        <CheckCircle className="h-6 w-6 text-accent flex-shrink-0 mt-0.5" />
+                        <CheckCircle className="h-6 w-6 text-[#962C5D] flex-shrink-0 mt-0.5" />
                         <div>
                           <div className="font-semibold mb-1">85% less maintenance overhead</div>
                           <div className="text-sm text-muted-foreground">Self-healing bots adapt to UI changes automatically</div>
                         </div>
                       </li>
                       <li className="flex items-start gap-3">
-                        <CheckCircle className="h-6 w-6 text-accent flex-shrink-0 mt-0.5" />
+                        <CheckCircle className="h-6 w-6 text-[#962C5D] flex-shrink-0 mt-0.5" />
                         <div>
                           <div className="font-semibold mb-1">$2.4M annual cost savings</div>
                           <div className="text-sm text-muted-foreground">Including labor and error reduction costs</div>

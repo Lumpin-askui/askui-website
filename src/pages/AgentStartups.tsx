@@ -97,7 +97,7 @@ const AgentStartups = () => {
 
             <Card>
               <CardHeader>
-                <CheckCircle className="h-10 w-10 text-accent mb-4" />
+                <CheckCircle className="h-10 w-10 text-[#962C5D] mb-4" />
                 <CardTitle>Production-Ready Reliability</CardTitle>
                 <CardDescription>
                   99.9% uptime SLA, automatic failover, and comprehensive monitoring. Built for enterprise scale.
@@ -128,15 +128,15 @@ const AgentStartups = () => {
               </p>
               <ul className="space-y-2 text-sm">
                 <li className="flex items-center gap-2">
-                  <CheckCircle className="h-4 w-4 text-accent flex-shrink-0" />
+                  <CheckCircle className="h-4 w-4 text-[#962C5D] flex-shrink-0" />
                   <span>Access customer data from multiple systems</span>
                 </li>
                 <li className="flex items-center gap-2">
-                  <CheckCircle className="h-4 w-4 text-accent flex-shrink-0" />
+                  <CheckCircle className="h-4 w-4 text-[#962C5D] flex-shrink-0" />
                   <span>Execute actions in admin panels</span>
                 </li>
                 <li className="flex items-center gap-2">
-                  <CheckCircle className="h-4 w-4 text-accent flex-shrink-0" />
+                  <CheckCircle className="h-4 w-4 text-[#962C5D] flex-shrink-0" />
                   <span>Handle 10x more tickets per agent</span>
                 </li>
               </ul>
@@ -149,15 +149,15 @@ const AgentStartups = () => {
               </p>
               <ul className="space-y-2 text-sm">
                 <li className="flex items-center gap-2">
-                  <CheckCircle className="h-4 w-4 text-accent flex-shrink-0" />
+                  <CheckCircle className="h-4 w-4 text-[#962C5D] flex-shrink-0" />
                   <span>Navigate complex multi-step workflows</span>
                 </li>
                 <li className="flex items-center gap-2">
-                  <CheckCircle className="h-4 w-4 text-accent flex-shrink-0" />
+                  <CheckCircle className="h-4 w-4 text-[#962C5D] flex-shrink-0" />
                   <span>Handle dynamic content and pagination</span>
                 </li>
                 <li className="flex items-center gap-2">
-                  <CheckCircle className="h-4 w-4 text-accent flex-shrink-0" />
+                  <CheckCircle className="h-4 w-4 text-[#962C5D] flex-shrink-0" />
                   <span>Adapt to UI changes automatically</span>
                 </li>
               </ul>
@@ -170,15 +170,15 @@ const AgentStartups = () => {
               </p>
               <ul className="space-y-2 text-sm">
                 <li className="flex items-center gap-2">
-                  <CheckCircle className="h-4 w-4 text-accent flex-shrink-0" />
+                  <CheckCircle className="h-4 w-4 text-[#962C5D] flex-shrink-0" />
                   <span>Access data behind login walls</span>
                 </li>
                 <li className="flex items-center gap-2">
-                  <CheckCircle className="h-4 w-4 text-accent flex-shrink-0" />
+                  <CheckCircle className="h-4 w-4 text-[#962C5D] flex-shrink-0" />
                   <span>Cross-reference multiple sources</span>
                 </li>
                 <li className="flex items-center gap-2">
-                  <CheckCircle className="h-4 w-4 text-accent flex-shrink-0" />
+                  <CheckCircle className="h-4 w-4 text-[#962C5D] flex-shrink-0" />
                   <span>Generate structured reports</span>
                 </li>
               </ul>
@@ -191,15 +191,15 @@ const AgentStartups = () => {
               </p>
               <ul className="space-y-2 text-sm">
                 <li className="flex items-center gap-2">
-                  <CheckCircle className="h-4 w-4 text-accent flex-shrink-0" />
+                  <CheckCircle className="h-4 w-4 text-[#962C5D] flex-shrink-0" />
                   <span>Connect disparate systems without APIs</span>
                 </li>
                 <li className="flex items-center gap-2">
-                  <CheckCircle className="h-4 w-4 text-accent flex-shrink-0" />
+                  <CheckCircle className="h-4 w-4 text-[#962C5D] flex-shrink-0" />
                   <span>Handle exceptions intelligently</span>
                 </li>
                 <li className="flex items-center gap-2">
-                  <CheckCircle className="h-4 w-4 text-accent flex-shrink-0" />
+                  <CheckCircle className="h-4 w-4 text-[#962C5D] flex-shrink-0" />
                   <span>Scale to thousands of parallel tasks</span>
                 </li>
               </ul>
@@ -278,7 +278,7 @@ const AgentStartups = () => {
               </div>
 
               {/* Right Column - Results */}
-              <div className="p-8 lg:p-12 bg-accent/5">
+              <div className="p-8 lg:p-12 bg-[#962C5D]/5">
                 <div className="space-y-8">
                   <div>
                     <h4 className="text-sm font-semibold text-muted-foreground uppercase tracking-wide mb-6">
@@ -286,35 +286,35 @@ const AgentStartups = () => {
                     </h4>
                     <ul className="space-y-4">
                       <li className="flex items-start gap-3">
-                        <CheckCircle className="h-6 w-6 text-accent flex-shrink-0 mt-0.5" />
+                        <CheckCircle className="h-6 w-6 text-[#962C5D] flex-shrink-0 mt-0.5" />
                         <div>
                           <div className="font-semibold mb-1">75% faster incident response</div>
                           <div className="text-sm text-muted-foreground">Agents detect and respond to issues in real-time</div>
                         </div>
                       </li>
                       <li className="flex items-start gap-3">
-                        <CheckCircle className="h-6 w-6 text-accent flex-shrink-0 mt-0.5" />
+                        <CheckCircle className="h-6 w-6 text-[#962C5D] flex-shrink-0 mt-0.5" />
                         <div>
                           <div className="font-semibold mb-1">200+ legacy systems automated</div>
                           <div className="text-sm text-muted-foreground">Including apps with no API or database access</div>
                         </div>
                       </li>
                       <li className="flex items-start gap-3">
-                        <CheckCircle className="h-6 w-6 text-accent flex-shrink-0 mt-0.5" />
+                        <CheckCircle className="h-6 w-6 text-[#962C5D] flex-shrink-0 mt-0.5" />
                         <div>
                           <div className="font-semibold mb-1">3-week average agent development time</div>
                           <div className="text-sm text-muted-foreground">From concept to production deployment</div>
                         </div>
                       </li>
                       <li className="flex items-start gap-3">
-                        <CheckCircle className="h-6 w-6 text-accent flex-shrink-0 mt-0.5" />
+                        <CheckCircle className="h-6 w-6 text-[#962C5D] flex-shrink-0 mt-0.5" />
                         <div>
                           <div className="font-semibold mb-1">$12M annual efficiency gains</div>
                           <div className="text-sm text-muted-foreground">Through reduced downtime and faster response</div>
                         </div>
                       </li>
                       <li className="flex items-start gap-3">
-                        <CheckCircle className="h-6 w-6 text-accent flex-shrink-0 mt-0.5" />
+                        <CheckCircle className="h-6 w-6 text-[#962C5D] flex-shrink-0 mt-0.5" />
                         <div>
                           <div className="font-semibold mb-1">99.8% agent reliability</div>
                           <div className="text-sm text-muted-foreground">Production-grade stability at scale</div>

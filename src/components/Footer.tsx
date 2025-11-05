@@ -70,8 +70,6 @@ const Footer = () => {
             <p>© 2024 AskUI. All rights reserved.</p>
             <div className="flex gap-6">
               <span>ISO27001 Certified</span>
-              <span>•</span>
-              <span>SOC 2 Compliant</span>
             </div>
           </div>
         </div>
