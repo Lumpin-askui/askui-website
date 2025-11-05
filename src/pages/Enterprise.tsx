@@ -112,70 +112,70 @@ const Enterprise = () => {
           {/* Two Column Layout */}
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
             {/* Left Column - Benefits & Compliance */}
-            <div className="space-y-8">
-              <div>
-                <h2 className="text-2xl font-bold mb-4">Enterprise Benefits</h2>
-                <ul className="space-y-3">
+            <div className="space-y-6">
+              <div className="bg-background p-6 rounded-lg border border-border">
+                <h2 className="text-2xl font-bold mb-6">Enterprise Benefits</h2>
+                <ul className="space-y-4">
                   <li className="flex items-start gap-3">
                     <CheckCircle className="h-5 w-5 text-[#962C5D] flex-shrink-0 mt-0.5" />
                     <div>
-                      <div className="font-semibold text-sm">Custom SLAs</div>
-                      <div className="text-xs text-muted-foreground">Tailored service level agreements for your business needs</div>
+                      <div className="font-semibold mb-1">Custom SLAs</div>
+                      <div className="text-sm text-muted-foreground">Tailored service level agreements for your business needs</div>
                     </div>
                   </li>
                   <li className="flex items-start gap-3">
                     <CheckCircle className="h-5 w-5 text-[#962C5D] flex-shrink-0 mt-0.5" />
                     <div>
-                      <div className="font-semibold text-sm">Priority Support</div>
-                      <div className="text-xs text-muted-foreground">Direct access to engineering team and 24/7 support</div>
+                      <div className="font-semibold mb-1">Priority Support</div>
+                      <div className="text-sm text-muted-foreground">Direct access to engineering team and 24/7 support</div>
                     </div>
                   </li>
                   <li className="flex items-start gap-3">
                     <CheckCircle className="h-5 w-5 text-[#962C5D] flex-shrink-0 mt-0.5" />
                     <div>
-                      <div className="font-semibold text-sm">Volume Licensing</div>
-                      <div className="text-xs text-muted-foreground">Flexible pricing for large deployments</div>
+                      <div className="font-semibold mb-1">Volume Licensing</div>
+                      <div className="text-sm text-muted-foreground">Flexible pricing for large deployments</div>
                     </div>
                   </li>
                   <li className="flex items-start gap-3">
                     <CheckCircle className="h-5 w-5 text-[#962C5D] flex-shrink-0 mt-0.5" />
                     <div>
-                      <div className="font-semibold text-sm">Custom Integrations</div>
-                      <div className="text-xs text-muted-foreground">Integrate with your existing tools and workflows</div>
+                      <div className="font-semibold mb-1">Custom Integrations</div>
+                      <div className="text-sm text-muted-foreground">Integrate with your existing tools and workflows</div>
                     </div>
                   </li>
                 </ul>
               </div>
 
-              <div>
-                <h2 className="text-2xl font-bold mb-4">Security & Compliance</h2>
-                <ul className="space-y-3">
+              <div className="bg-background p-6 rounded-lg border border-border">
+                <h2 className="text-2xl font-bold mb-6">Security & Compliance</h2>
+                <ul className="space-y-4">
                   <li className="flex items-start gap-3">
                     <CheckCircle className="h-5 w-5 text-[#962C5D] flex-shrink-0 mt-0.5" />
                     <div>
-                      <div className="font-semibold text-sm">ISO27001 Certification</div>
-                      <div className="text-xs text-muted-foreground">Information security management certified</div>
+                      <div className="font-semibold mb-1">ISO27001 Certification</div>
+                      <div className="text-sm text-muted-foreground">Information security management certified</div>
                     </div>
                   </li>
                   <li className="flex items-start gap-3">
                     <CheckCircle className="h-5 w-5 text-[#962C5D] flex-shrink-0 mt-0.5" />
                     <div>
-                      <div className="font-semibold text-sm">SOC 2 Type II</div>
-                      <div className="text-xs text-muted-foreground">Independently audited security controls</div>
+                      <div className="font-semibold mb-1">SOC 2 Type II</div>
+                      <div className="text-sm text-muted-foreground">Independently audited security controls</div>
                     </div>
                   </li>
                   <li className="flex items-start gap-3">
                     <CheckCircle className="h-5 w-5 text-[#962C5D] flex-shrink-0 mt-0.5" />
                     <div>
-                      <div className="font-semibold text-sm">GDPR Compliant</div>
-                      <div className="text-xs text-muted-foreground">Full European data protection compliance</div>
+                      <div className="font-semibold mb-1">GDPR Compliant</div>
+                      <div className="text-sm text-muted-foreground">Full European data protection compliance</div>
                     </div>
                   </li>
                   <li className="flex items-start gap-3">
                     <CheckCircle className="h-5 w-5 text-[#962C5D] flex-shrink-0 mt-0.5" />
                     <div>
-                      <div className="font-semibold text-sm">Air-Gapped Options</div>
-                      <div className="text-xs text-muted-foreground">Deploy in completely isolated environments</div>
+                      <div className="font-semibold mb-1">Air-Gapped Options</div>
+                      <div className="text-sm text-muted-foreground">Deploy in completely isolated environments</div>
                     </div>
                   </li>
                 </ul>
