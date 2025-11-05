@@ -80,7 +80,7 @@ const Products = () => {
               <ul className="space-y-2 mb-6">
                 {product.features.map((feature, idx) => (
                   <li key={idx} className="flex items-center text-sm">
-                    <span className="mr-2 text-accent">✓</span>
+                    <span className="mr-2 text-[#962C5D]">✓</span>
                     {feature}
                   </li>
                 ))}
@@ -110,7 +110,7 @@ const Products = () => {
               <ul className="space-y-1.5 mb-4">
                 {product.features.map((feature, idx) => (
                   <li key={idx} className="flex items-center text-xs">
-                    <span className="mr-2 text-accent">✓</span>
+                    <span className="mr-2 text-[#962C5D]">✓</span>
                     {feature}
                   </li>
                 ))}
