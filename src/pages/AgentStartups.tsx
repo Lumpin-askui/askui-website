@@ -3,7 +3,7 @@ import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { CheckCircle, Rocket, Code, Zap, Globe, ArrowRight, Quote, Layers } from "lucide-react";
-import intelLogo from "@/assets/clients/intel.png";
+import ficusLogo from "@/assets/clients/ficus.svg";
 
 const AgentStartups = () => {
   return (
@@ -217,10 +217,10 @@ const AgentStartups = () => {
         <div className="container mx-auto px-4 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
-              How Intel Built AI Agents for Semiconductor Manufacturing
+              FICUS Health Automates Rehab Documentation with AskUI
             </h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              Global tech leader deploys intelligent agents across factory operations
+              How a healthcare startup uses AskUI to write directly into legacy hospital systems
             </p>
           </div>
 
@@ -230,15 +230,15 @@ const AgentStartups = () => {
               <div className="p-8 lg:p-12 bg-background">
                 <div className="mb-6">
                   <img 
-                    src={intelLogo} 
-                    alt="Intel"
+                    src={ficusLogo} 
+                    alt="FICUS Health"
                     className="h-12 object-contain mb-4"
                   />
                   <div className="text-sm text-muted-foreground mb-2">
-                    Semiconductor Manufacturing • 130,000+ Employees
+                    Healthcare & Rehabilitation • AI Documentation Platform
                   </div>
                   <h3 className="text-2xl md:text-3xl font-bold mb-4">
-                    Intel Corporation
+                    FICUS Health
                   </h3>
                 </div>
 
@@ -248,7 +248,7 @@ const AgentStartups = () => {
                       The Challenge
                     </h4>
                     <p className="text-foreground">
-                      Manufacturing operations relied on hundreds of proprietary desktop applications with no API access. Engineers spent significant time navigating different systems to monitor production, quality metrics, and equipment status.
+                      Clinics loved FICUS Health's AI-generated discharge reports, but staff still had to copy the results into fragmented hospital information systems. Manual re-entry slowed reimbursement-critical documentation and limited product adoption.
                     </p>
                   </div>
 
@@ -257,7 +257,7 @@ const AgentStartups = () => {
                       The Solution
                     </h4>
                     <p className="text-foreground">
-                      Built AI agents using AskUI's infrastructure to monitor manufacturing systems, detect anomalies, and trigger automated responses. Agents interact with legacy desktop apps that were previously impossible to automate.
+                      FICUS integrated AskUI Vision Agents to operate every legacy UI like a human operator. AskUI launches the correct hospital app, navigates to the discharge module, and writes structured notes plus billing codes directly into the system.
                     </p>
                   </div>
                 </div>
@@ -265,16 +265,16 @@ const AgentStartups = () => {
                 <div className="p-6 rounded-lg bg-muted/30 border border-border/50 mb-8">
                   <Quote className="h-8 w-8 text-accent mb-4" />
                   <p className="text-lg italic mb-4">
-                    "AskUI gave us the execution layer we needed to deploy AI agents across our manufacturing operations. What used to take months of custom development now takes days."
+                    "AskUI gave us an execution layer that works with every hospital interface we encounter. Our customers finally have automated documentation that lands in their legacy systems without manual effort."
                   </p>
                   <div className="text-sm">
-                    <div className="font-semibold">Dr. Sarah Chen</div>
-                    <div className="text-muted-foreground">Director of AI Innovation, Intel</div>
+                    <div className="font-semibold">Lena Hoffmann</div>
+                    <div className="text-muted-foreground">Head of Product, FICUS Health</div>
                   </div>
                 </div>
 
                 <Button asChild>
-                  <a href="/case-studies">
+                  <a href="/case-studies/ficus-health-streamlines-rehab-documentation-with-askui">
                     Read Full Case Study
                     <ArrowRight className="ml-2 h-4 w-4" />
                   </a>
@@ -292,36 +292,36 @@ const AgentStartups = () => {
                       <li className="flex items-start gap-3">
                         <CheckCircle className="h-6 w-6 text-[#962C5D] flex-shrink-0 mt-0.5" />
                         <div>
-                          <div className="font-semibold mb-1">75% faster incident response</div>
-                          <div className="text-sm text-muted-foreground">Agents detect and respond to issues in real-time</div>
+                          <div className="font-semibold mb-1">70% reduction in documentation time</div>
+                          <div className="text-sm text-muted-foreground">Discharge reports flow automatically into hospital software</div>
                         </div>
                       </li>
                       <li className="flex items-start gap-3">
                         <CheckCircle className="h-6 w-6 text-[#962C5D] flex-shrink-0 mt-0.5" />
                         <div>
-                          <div className="font-semibold mb-1">200+ legacy systems automated</div>
-                          <div className="text-sm text-muted-foreground">Including apps with no API or database access</div>
+                          <div className="font-semibold mb-1">Zero manual copy-and-paste</div>
+                          <div className="text-sm text-muted-foreground">AskUI handles every UI interaction end-to-end</div>
                         </div>
                       </li>
                       <li className="flex items-start gap-3">
                         <CheckCircle className="h-6 w-6 text-[#962C5D] flex-shrink-0 mt-0.5" />
                         <div>
-                          <div className="font-semibold mb-1">3-week average agent development time</div>
-                          <div className="text-sm text-muted-foreground">From concept to production deployment</div>
+                          <div className="font-semibold mb-1">100% DRV-compliant documentation</div>
+                          <div className="text-sm text-muted-foreground">Structured outputs validated before submission</div>
                         </div>
                       </li>
                       <li className="flex items-start gap-3">
                         <CheckCircle className="h-6 w-6 text-[#962C5D] flex-shrink-0 mt-0.5" />
                         <div>
-                          <div className="font-semibold mb-1">$12M annual efficiency gains</div>
-                          <div className="text-sm text-muted-foreground">Through reduced downtime and faster response</div>
+                          <div className="font-semibold mb-1">12 hours saved per clinic per week</div>
+                          <div className="text-sm text-muted-foreground">Staff focus on patient care instead of retyping notes</div>
                         </div>
                       </li>
                       <li className="flex items-start gap-3">
                         <CheckCircle className="h-6 w-6 text-[#962C5D] flex-shrink-0 mt-0.5" />
                         <div>
-                          <div className="font-semibold mb-1">99.8% agent reliability</div>
-                          <div className="text-sm text-muted-foreground">Production-grade stability at scale</div>
+                          <div className="font-semibold mb-1">Implementation without IT changes</div>
+                          <div className="text-sm text-muted-foreground">No APIs required—AskUI works at the UI layer</div>
                         </div>
                       </li>
                     </ul>
@@ -333,16 +333,16 @@ const AgentStartups = () => {
                     </h4>
                     <div className="grid grid-cols-3 gap-4">
                       <div className="text-center p-4 rounded-lg bg-background">
-                        <div className="text-3xl font-bold text-primary mb-1">75%</div>
-                        <div className="text-xs text-muted-foreground">Faster Response</div>
+                        <div className="text-3xl font-bold text-primary mb-1">70%</div>
+                        <div className="text-xs text-muted-foreground">Time Saved</div>
                       </div>
                       <div className="text-center p-4 rounded-lg bg-background">
-                        <div className="text-3xl font-bold text-primary mb-1">200+</div>
-                        <div className="text-xs text-muted-foreground">Systems</div>
+                        <div className="text-3xl font-bold text-primary mb-1">100%</div>
+                        <div className="text-xs text-muted-foreground">DRV Compliant</div>
                       </div>
                       <div className="text-center p-4 rounded-lg bg-background">
-                        <div className="text-3xl font-bold text-primary mb-1">$12M</div>
-                        <div className="text-xs text-muted-foreground">Saved</div>
+                        <div className="text-3xl font-bold text-primary mb-1">250%</div>
+                        <div className="text-xs text-muted-foreground">ROI</div>
                       </div>
                     </div>
                   </div>

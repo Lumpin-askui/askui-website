@@ -147,8 +147,8 @@ const SoftwareTesting = () => {
                     <h4 className="text-sm font-semibold text-muted-foreground uppercase tracking-wide mb-2">
                       The Challenge
                     </h4>
-                    <p className="text-foreground">
-                      Managing over 300 legacy railway control systems with different HMI interfaces required extensive manual testing. Their QA team spent 70% of time on regression testing, leaving little room for exploratory testing or new features.
+                    <p className="text-foreground leading-relaxed">
+                      Deutsche Bahn relied on manual QA to maintain mission-critical POS and control systems across hundreds of devices. Regression runs took days, coverage remained incomplete, and legacy interfaces resisted browser-based automation.
                     </p>
                   </div>
 
@@ -156,8 +156,8 @@ const SoftwareTesting = () => {
                     <h4 className="text-sm font-semibold text-muted-foreground uppercase tracking-wide mb-2">
                       The Solution
                     </h4>
-                    <p className="text-foreground">
-                      Deployed AskUI Suite across 50+ testing stations with visual automation for railway control systems, passenger displays, and mobile apps. Automated 85% of regression test suite within 6 months.
+                    <p className="text-foreground leading-relaxed">
+                      AskUI Vision Agents were integrated into the Azure DevOps pipeline to automate POS testing end-to-end. The team now executes visual flows that interact with every element exactly as a human would, across all Android devices and enterprise tools.
                     </p>
                   </div>
                 </div>
@@ -165,16 +165,16 @@ const SoftwareTesting = () => {
                 <div className="p-6 rounded-lg bg-muted/30 border border-border/50 mb-8">
                   <Quote className="h-8 w-8 text-accent mb-4" />
                   <p className="text-lg italic mb-4">
-                    "AskUI's visual automation eliminated our dependency on fragile selectors. We can now test legacy systems that were previously impossible to automate."
+                    "Automation with AskUI ended up cutting the testing time by 80% compared to its competitors, significantly boosting efficiency and freeing up resources."
                   </p>
                   <div className="text-sm">
-                    <div className="font-semibold">Klaus Müller</div>
-                    <div className="text-muted-foreground">Head of Quality Assurance, Deutsche Bahn</div>
+                    <div className="font-semibold">Deutsche Bahn QA Team</div>
+                    <div className="text-muted-foreground">Transportation & Logistics</div>
                   </div>
                 </div>
 
                 <Button asChild>
-                  <a href="/case-studies">
+                  <a href="/case-studies/deutsche-bahn-boosts-efficiency-with-askui-test-automation">
                     Read Full Case Study
                     <ArrowRight className="ml-2 h-4 w-4" />
                   </a>
@@ -192,36 +192,36 @@ const SoftwareTesting = () => {
                       <li className="flex items-start gap-3">
                         <CheckCircle className="h-6 w-6 text-[#962C5D] flex-shrink-0 mt-0.5" />
                         <div>
-                          <div className="font-semibold mb-1">80% reduction in manual testing time</div>
-                          <div className="text-sm text-muted-foreground">From 2 weeks to 3 days for full regression suite</div>
+                          <div className="font-semibold mb-1">80% reduction in testing time</div>
+                          <div className="text-sm text-muted-foreground">Regression cycles now run inside Azure DevOps</div>
                         </div>
                       </li>
                       <li className="flex items-start gap-3">
                         <CheckCircle className="h-6 w-6 text-[#962C5D] flex-shrink-0 mt-0.5" />
                         <div>
-                          <div className="font-semibold mb-1">95% test coverage across 300+ systems</div>
-                          <div className="text-sm text-muted-foreground">Including previously untestable legacy interfaces</div>
+                          <div className="font-semibold mb-1">Increased coverage across all systems</div>
+                          <div className="text-sm text-muted-foreground">Legacy HMIs and Android devices under automated test</div>
                         </div>
                       </li>
                       <li className="flex items-start gap-3">
                         <CheckCircle className="h-6 w-6 text-[#962C5D] flex-shrink-0 mt-0.5" />
                         <div>
-                          <div className="font-semibold mb-1">50% faster deployment cycles</div>
-                          <div className="text-sm text-muted-foreground">Quarterly to bi-monthly releases</div>
+                          <div className="font-semibold mb-1">Successful enterprise deployment</div>
+                          <div className="text-sm text-muted-foreground">AskUI integrated with GitLab, Artifactory, Jira, and Xray</div>
                         </div>
                       </li>
                       <li className="flex items-start gap-3">
                         <CheckCircle className="h-6 w-6 text-[#962C5D] flex-shrink-0 mt-0.5" />
                         <div>
-                          <div className="font-semibold mb-1">Zero critical production bugs in 18 months</div>
-                          <div className="text-sm text-muted-foreground">Early detection prevents customer impact</div>
+                          <div className="font-semibold mb-1">Enhanced Android testing capability</div>
+                          <div className="text-sm text-muted-foreground">Visual automation handles every supported device</div>
                         </div>
                       </li>
                       <li className="flex items-start gap-3">
                         <CheckCircle className="h-6 w-6 text-[#962C5D] flex-shrink-0 mt-0.5" />
                         <div>
-                          <div className="font-semibold mb-1">70% reduction in test maintenance</div>
-                          <div className="text-sm text-muted-foreground">Self-healing tests adapt to UI changes automatically</div>
+                          <div className="font-semibold mb-1">Simplified test creation process</div>
+                          <div className="text-sm text-muted-foreground">Teams replaced brittle Selenium flows with AskUI scripts</div>
                         </div>
                       </li>
                     </ul>

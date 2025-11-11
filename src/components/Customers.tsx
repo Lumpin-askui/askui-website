@@ -1,91 +1,124 @@
 import { Link } from "react-router-dom";
 import { BookOpen } from "lucide-react";
-import dbLogo from "@/assets/clients/db.png";
-import sewLogo from "@/assets/clients/sew.png";
-import zucchettiLogo from "@/assets/clients/zucchetti.png";
-import soluteLogo from "@/assets/clients/solute.png";
-import intelLogo from "@/assets/clients/intel.png";
+import { Card } from "@/components/ui/card";
 import { cms } from "@/services/cms";
 
-const customers = [
-  { name: "Deutsche Bahn", logo: dbLogo },
-  { name: "SEW Eurodrive", logo: sewLogo },
-  { name: "Zucchetti", logo: zucchettiLogo },
-  { name: "Solute", logo: soluteLogo },
-  { name: "Intel Software", logo: intelLogo }
-];
-
 const Customers = () => {
-  const caseStudies = cms.getAllCaseStudies();
-  
-  // Create a map of company names to case study slugs
-  const companyToCaseStudy = new Map(
-    caseStudies.map(study => [study.company, study.slug])
-  );
+  const caseStudies = cms
+    .getAllCaseStudies()
+    .sort((a, b) => a.company.localeCompare(b.company));
 
   return (
     <section id="customers" className="py-20 md:py-32 bg-muted/30">
       <div className="container mx-auto px-4 lg:px-8">
-        <div className="text-center mb-16">
+        <div className="text-center mb-10">
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4">
-            Trusted by Industry Leaders
+            Customer Success at a Glance
           </h2>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Enterprise customers rely on AskUI for production-grade automation
+          <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
+            Browse every live case study in one compact view. Click any customer to explore the full story.
           </p>
         </div>
 
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8 items-center justify-items-center">
-          {customers.map((customer, index) => {
-            const caseStudySlug = companyToCaseStudy.get(customer.name);
-            const hasCaseStudy = !!caseStudySlug;
-            
-            const content = (
-              <div className="relative flex items-center justify-center p-6 rounded-lg hover:bg-background transition-colors group cursor-pointer">
-                <img
-                  src={customer.logo}
-                  alt={customer.name}
-                  className="h-12 md:h-16 w-auto object-contain opacity-70 group-hover:opacity-100 transition-opacity grayscale group-hover:grayscale-0"
-                />
-                {hasCaseStudy && (
-                  <div className="absolute -top-1 -right-1 bg-accent text-primary rounded-full p-1.5 shadow-lg group-hover:scale-110 transition-transform">
-                    <BookOpen className="h-3 w-3 md:h-4 md:w-4" />
-                  </div>
-                )}
-                {hasCaseStudy && (
-                  <div className="absolute -bottom-2 left-1/2 transform -translate-x-1/2 bg-accent text-primary text-xs px-2 py-0.5 rounded-full opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap">
-                    Case Study
-                  </div>
-                )}
-              </div>
-            );
+        <Card className="overflow-hidden shadow-sm border-border/60">
+          <div className="overflow-x-auto">
+            <table className="min-w-full divide-y divide-border text-sm">
+              <thead className="bg-muted/50">
+                <tr>
+                  <th className="px-6 py-4 text-left font-semibold text-muted-foreground uppercase tracking-wider">
+                    Customer
+                  </th>
+                  <th className="px-6 py-4 text-left font-semibold text-muted-foreground uppercase tracking-wider">
+                    Highlights
+                  </th>
+                  <th className="px-6 py-4 text-left font-semibold text-muted-foreground uppercase tracking-wider whitespace-nowrap">
+                    Key Metrics
+                  </th>
+                  <th className="px-6 py-4 text-left font-semibold text-muted-foreground uppercase tracking-wider">
+                    Link
+                  </th>
+                </tr>
+              </thead>
+              <tbody className="divide-y divide-border bg-background">
+                {caseStudies.map((study) => {
+                  const highlightResults = study.results.slice(0, 2);
+                  const metrics = [
+                    study.metrics?.timeSaved
+                      ? { badge: study.metrics.timeSaved, label: "Time Saved" }
+                      : null,
+                    study.metrics?.coverage
+                      ? { badge: study.metrics.coverage, label: "Coverage" }
+                      : null,
+                    study.metrics?.roi ? { badge: study.metrics.roi, label: "ROI" } : null,
+                  ].filter((metric): metric is { badge: string; label: string } => Boolean(metric));
 
-            return hasCaseStudy ? (
-              <Link key={index} to={`/case-studies/${caseStudySlug}`} className="block">
-                {content}
-              </Link>
-            ) : (
-              <div key={index}>
-                {content}
-              </div>
-            );
-          })}
-        </div>
+                  return (
+                    <tr key={study.slug} className="hover:bg-muted/40 transition-colors">
+                      <td className="px-6 py-5 align-top">
+                        <div className="flex items-center gap-4">
+                          <img
+                            src={study.logo}
+                            alt={study.company}
+                            className="h-10 w-10 object-contain rounded bg-white p-2 border border-border/50"
+                          />
+                          <div>
+                            <Link
+                              to={`/case-studies/${study.slug}`}
+                              className="text-base font-semibold text-foreground hover:text-[#962C5D] transition-colors"
+                            >
+                              {study.company}
+                            </Link>
+                            <p className="text-xs text-muted-foreground uppercase tracking-wide mt-1">
+                              {study.industry}
+                            </p>
+                          </div>
+                        </div>
+                      </td>
 
-        <div className="mt-20 grid grid-cols-1 md:grid-cols-3 gap-8">
-          <div className="text-center p-8 rounded-lg bg-background border border-border">
-            <div className="text-4xl font-bold text-primary mb-2">Leading</div>
-            <div className="text-sm text-muted-foreground">Android World Benchmark</div>
+                      <td className="px-6 py-5 align-top">
+                        <ul className="space-y-2 text-muted-foreground">
+                          {highlightResults.map((result, idx) => (
+                            <li key={idx} className="leading-relaxed">
+                              {result}
+                            </li>
+                          ))}
+                        </ul>
+                      </td>
+
+                      <td className="px-6 py-5 align-top">
+                        <div className="flex flex-wrap gap-2">
+                          {metrics.length > 0 ? (
+                            metrics.map((metric) => (
+                              <span
+                                key={metric.label}
+                                className="inline-flex items-center gap-1 rounded-full bg-[#962C5D]/10 px-3 py-1 text-xs font-semibold text-[#962C5D]"
+                              >
+                                {metric.badge}
+                                <span className="text-muted-foreground/80 font-medium">{metric.label}</span>
+                              </span>
+                            ))
+                          ) : (
+                            <span className="text-xs text-muted-foreground">—</span>
+                          )}
+                        </div>
+                      </td>
+
+                      <td className="px-6 py-5 align-top">
+                        <Link
+                          to={`/case-studies/${study.slug}`}
+                          className="inline-flex items-center gap-2 rounded-md border border-border px-3 py-1.5 text-xs font-semibold text-foreground hover:bg-background"
+                        >
+                          Read Case Study
+                          <BookOpen className="h-4 w-4" />
+                        </Link>
+                      </td>
+                    </tr>
+                  );
+                })}
+              </tbody>
+            </table>
           </div>
-          <div className="text-center p-8 rounded-lg bg-background border border-border">
-            <div className="text-4xl font-bold text-primary mb-2">ISO27001</div>
-            <div className="text-sm text-muted-foreground">Security Certified</div>
-          </div>
-          <div className="text-center p-8 rounded-lg bg-background border border-border">
-            <div className="text-4xl font-bold text-primary mb-2">5+</div>
-            <div className="text-sm text-muted-foreground">Supported Platforms</div>
-          </div>
-        </div>
+        </Card>
       </div>
     </section>
   );

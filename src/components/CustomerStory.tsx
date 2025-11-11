@@ -1,137 +1,114 @@
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, CheckCircle, Quote } from "lucide-react";
-import dbLogo from "@/assets/clients/db.png";
+import { cms } from "@/services/cms";
 
 const CustomerStory = () => {
+  const caseStudy = cms.getCaseStudyBySlug(
+    "deutsche-bahn-boosts-efficiency-with-askui-test-automation"
+  );
+
+  if (!caseStudy) {
+    return null;
+  }
+
+  const keyResults = caseStudy.results.slice(0, 4);
+
+  const impactMetrics = (
+    [
+      caseStudy.metrics?.timeSaved
+        ? { label: "Time Saved", value: caseStudy.metrics.timeSaved }
+        : null,
+      caseStudy.metrics?.coverage
+        ? { label: "Coverage", value: caseStudy.metrics.coverage }
+        : null,
+      caseStudy.metrics?.roi
+        ? { label: "ROI", value: caseStudy.metrics.roi }
+        : null,
+    ] as Array<{ label: string; value: string } | null>
+  ).filter((metric): metric is { label: string; value: string } => Boolean(metric));
+
   return (
-    <section id="customers" className="py-20 md:py-32 bg-muted/30">
+    <section className="py-16 md:py-24 bg-muted/30">
       <div className="container mx-auto px-4 lg:px-8">
-        <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4">
-            Customer Success Story
-          </h2>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            See how enterprises transform their testing with AskUI
-          </p>
-        </div>
-
-        <Card className="overflow-hidden border-border/50 max-w-6xl mx-auto">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-0">
-            {/* Left Column - Story */}
-            <div className="p-8 lg:p-12 bg-background">
-              <div className="mb-6">
-                <img 
-                  src={dbLogo} 
-                  alt="Deutsche Bahn"
-                  className="h-12 object-contain mb-4"
+        <Card className="max-w-5xl mx-auto shadow-lg border-border/40">
+          <div className="grid grid-cols-1 lg:grid-cols-[1.3fr_1fr]">
+            <div className="p-6 sm:p-10 bg-background flex flex-col gap-8">
+              <div className="flex flex-col gap-4">
+                <img
+                  src={caseStudy.logo}
+                  alt={caseStudy.company}
+                  className="h-14 w-auto object-contain bg-white p-3 rounded-md shadow-sm"
                 />
-                <div className="text-sm text-muted-foreground mb-2">
-                  Transportation & Logistics
+                <div className="text-xs font-semibold uppercase tracking-wider text-muted-foreground">
+                  {caseStudy.industry}
                 </div>
-                <h3 className="text-2xl md:text-3xl font-bold mb-4">
-                  Deutsche Bahn
-                </h3>
+                <h2 className="text-2xl sm:text-3xl font-bold text-foreground">
+                  {caseStudy.company}
+                </h2>
               </div>
 
-              <div className="space-y-6 mb-8">
-                <div>
-                  <h4 className="text-sm font-semibold text-muted-foreground uppercase tracking-wide mb-2">
-                    Challenge
-                  </h4>
-                  <p className="text-foreground">
-                    Complex HMI testing across railway infrastructure with multiple legacy systems requiring extensive manual testing effort.
+              {caseStudy.quote && (
+                <div className="rounded-lg border border-border/50 bg-muted/40 p-5">
+                  <Quote className="h-5 w-5 text-[#962C5D] mb-3" />
+                  <p className="text-sm sm:text-base italic text-foreground/90 mb-3">
+                    “{caseStudy.quote}”
                   </p>
+                  {caseStudy.author && (
+                    <div className="text-xs font-semibold text-muted-foreground uppercase tracking-wide">
+                      {caseStudy.author}
+                    </div>
+                  )}
                 </div>
+              )}
 
-                <div>
-                  <h4 className="text-sm font-semibold text-muted-foreground uppercase tracking-wide mb-2">
-                    Solution
-                  </h4>
-                  <p className="text-foreground">
-                    Implemented AskUI Suite for automated testing of railway control systems and passenger information displays across their infrastructure.
-                  </p>
-                </div>
-              </div>
-
-              <div className="p-6 rounded-lg bg-muted/30 border border-border/50 mb-8">
-                <Quote className="h-8 w-8 text-accent mb-4" />
-                <p className="text-lg italic mb-4">
-                  "AskUI has transformed how we approach testing in our railway infrastructure. The ability to automate complex HMI interactions has been game-changing."
-                </p>
-                <div className="text-sm">
-                  <div className="font-semibold">Klaus Müller</div>
-                  <div className="text-muted-foreground">Head of Quality Assurance</div>
-                </div>
-              </div>
-
-              <Button asChild>
-                <a href="/case-studies">
+              <Button size="lg" className="w-full sm:w-auto bg-primary hover:bg-primary/90 text-accent" asChild>
+                <a href={`/case-studies/${caseStudy.slug}`}>
                   Read Full Story
                   <ArrowRight className="ml-2 h-4 w-4" />
                 </a>
               </Button>
             </div>
 
-            {/* Right Column - Results */}
-            <div className="p-8 lg:p-12 bg-accent/5">
-              <div className="space-y-8">
+            <div className="p-6 sm:p-10 bg-[#f8fbe7] dark:bg-[#241d27] flex flex-col gap-8 border-t lg:border-t-0 lg:border-l border-border/30">
+              {keyResults.length > 0 && (
                 <div>
-                  <h4 className="text-sm font-semibold text-muted-foreground uppercase tracking-wide mb-6">
+                  <h3 className="text-sm font-semibold uppercase tracking-wide text-muted-foreground mb-4">
                     Key Results
-                  </h4>
-                  <ul className="space-y-4">
-                    <li className="flex items-start gap-3">
-                      <CheckCircle className="h-6 w-6 text-accent flex-shrink-0 mt-0.5" />
-                      <div>
-                        <div className="font-semibold mb-1">80% reduction in manual testing time</div>
-                        <div className="text-sm text-muted-foreground">Automated complex workflows across systems</div>
-                      </div>
-                    </li>
-                    <li className="flex items-start gap-3">
-                      <CheckCircle className="h-6 w-6 text-accent flex-shrink-0 mt-0.5" />
-                      <div>
-                        <div className="font-semibold mb-1">95% test coverage achieved</div>
-                        <div className="text-sm text-muted-foreground">Comprehensive testing across all HMI systems</div>
-                      </div>
-                    </li>
-                    <li className="flex items-start gap-3">
-                      <CheckCircle className="h-6 w-6 text-accent flex-shrink-0 mt-0.5" />
-                      <div>
-                        <div className="font-semibold mb-1">50% faster deployment cycles</div>
-                        <div className="text-sm text-muted-foreground">Rapid testing enables quicker releases</div>
-                      </div>
-                    </li>
-                    <li className="flex items-start gap-3">
-                      <CheckCircle className="h-6 w-6 text-accent flex-shrink-0 mt-0.5" />
-                      <div>
-                        <div className="font-semibold mb-1">Zero critical bugs in production</div>
-                        <div className="text-sm text-muted-foreground">Early detection and prevention</div>
-                      </div>
-                    </li>
+                  </h3>
+                  <ul className="space-y-3">
+                    {keyResults.map((result, index) => (
+                      <li key={index} className="flex items-start gap-3 text-sm text-foreground">
+                        <CheckCircle className="h-5 w-5 text-[#92c51e] flex-shrink-0 mt-0.5" />
+                        <span>{result}</span>
+                      </li>
+                    ))}
                   </ul>
                 </div>
+              )}
 
-                <div className="pt-8 border-t border-border">
-                  <h4 className="text-sm font-semibold text-muted-foreground uppercase tracking-wide mb-4">
+              {impactMetrics.length > 0 && (
+                <div>
+                  <h3 className="text-sm font-semibold uppercase tracking-wide text-muted-foreground mb-4">
                     Impact Metrics
-                  </h4>
-                  <div className="grid grid-cols-3 gap-4">
-                    <div className="text-center p-4 rounded-lg bg-background">
-                      <div className="text-3xl font-bold text-primary mb-1">80%</div>
-                      <div className="text-xs text-muted-foreground">Time Saved</div>
-                    </div>
-                    <div className="text-center p-4 rounded-lg bg-background">
-                      <div className="text-3xl font-bold text-primary mb-1">95%</div>
-                      <div className="text-xs text-muted-foreground">Coverage</div>
-                    </div>
-                    <div className="text-center p-4 rounded-lg bg-background">
-                      <div className="text-3xl font-bold text-primary mb-1">300%</div>
-                      <div className="text-xs text-muted-foreground">ROI</div>
-                    </div>
+                  </h3>
+                  <div className="grid grid-cols-3 gap-3">
+                    {impactMetrics.map((metric) => (
+                      <div
+                        key={metric.label}
+                        className="rounded-lg bg-white/70 dark:bg-white/10 p-4 text-center shadow-sm"
+                      >
+                        <div className="text-xl font-bold text-[#7ab310] mb-1">
+                          {metric.value}
+                        </div>
+                        <div className="text-[11px] font-semibold uppercase tracking-wide text-muted-foreground">
+                          {metric.label}
+                        </div>
+                      </div>
+                    ))}
                   </div>
                 </div>
-              </div>
+              )}
             </div>
           </div>
         </Card>

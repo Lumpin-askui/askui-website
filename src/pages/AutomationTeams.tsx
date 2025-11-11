@@ -3,7 +3,7 @@ import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { CheckCircle, Workflow, Clock, Database, Cpu, ArrowRight, Quote, BarChart } from "lucide-react";
-import soluteLogo from "@/assets/clients/solute.png";
+import bankCitrixLogo from "@/assets/clients/bank-citrix.svg";
 
 const AutomationTeams = () => {
   return (
@@ -117,10 +117,10 @@ const AutomationTeams = () => {
         <div className="container mx-auto px-4 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
-              How Solute Automated 40,000 Hours of Manual Work
+              How a Leading Financial Institution Automated 40,000 Hours of Manual Work
             </h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              E-commerce leader transforms operations with intelligent automation
+              Financial services leader transforms operations with intelligent automation
             </p>
           </div>
 
@@ -130,15 +130,15 @@ const AutomationTeams = () => {
               <div className="p-8 lg:p-12 bg-background">
                 <div className="mb-6">
                   <img 
-                    src={soluteLogo} 
-                    alt="Solute"
+                    src={bankCitrixLogo} 
+                    alt="Financial Institution"
                     className="h-12 object-contain mb-4"
                   />
                   <div className="text-sm text-muted-foreground mb-2">
-                    E-Commerce & Retail • 1,200+ Employees
+                    Financial Services • 1,200+ Employees
                   </div>
                   <h3 className="text-2xl md:text-3xl font-bold mb-4">
-                    Solute GmbH
+                    Leading Financial Institution
                   </h3>
                 </div>
 
@@ -148,7 +148,7 @@ const AutomationTeams = () => {
                       The Challenge
                     </h4>
                     <p className="text-foreground">
-                      Processing product data across 15 different legacy systems required extensive manual data entry. Their team spent 40,000+ hours annually on repetitive tasks that couldn't be automated with traditional RPA due to constantly changing vendor portals.
+                      Processing transaction data across 15 different legacy systems required extensive manual data entry. Their team spent 40,000+ hours annually on repetitive tasks that couldn't be automated with traditional RPA due to constantly changing vendor portals.
                     </p>
                   </div>
 
@@ -157,7 +157,7 @@ const AutomationTeams = () => {
                       The Solution
                     </h4>
                     <p className="text-foreground">
-                      Implemented AskUI's visual automation to interact with vendor portals, extract product data, and sync with internal systems. Built 50+ automation workflows that adapt to UI changes automatically.
+                      Implemented AskUI's visual automation to interact with vendor portals, extract transaction data, and sync with internal systems. Built 50+ automation workflows that adapt to UI changes automatically.
                     </p>
                   </div>
                 </div>
@@ -168,8 +168,8 @@ const AutomationTeams = () => {
                     "Traditional RPA broke every time a vendor updated their portal. AskUI's visual automation just works, saving us countless hours of bot maintenance."
                   </p>
                   <div className="text-sm">
-                    <div className="font-semibold">Michael Schmidt</div>
-                    <div className="text-muted-foreground">VP of Operations, Solute GmbH</div>
+                    <div className="font-semibold">VP of Operations</div>
+                    <div className="text-muted-foreground">Leading Financial Institution</div>
                   </div>
                 </div>
 

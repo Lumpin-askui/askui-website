@@ -33,10 +33,16 @@ const Header = () => {
 
             {/* Desktop Navigation - Left Aligned */}
             <div className="hidden md:flex md:items-center md:gap-6">
-              <NavigationMenu>
+              <NavigationMenu disableHover delayDuration={999999}>
                 <NavigationMenuList>
                   <NavigationMenuItem>
-                    <NavigationMenuTrigger className="text-sm font-medium bg-transparent">Products</NavigationMenuTrigger>
+                    <NavigationMenuTrigger
+                      className="text-sm font-medium bg-transparent"
+                      onPointerMove={(event) => event.preventDefault()}
+                      onPointerLeave={(event) => event.preventDefault()}
+                    >
+                      Products
+                    </NavigationMenuTrigger>
                     <NavigationMenuContent>
                       <div className="w-[400px] p-4 bg-background">
                         <div className="space-y-3">
@@ -76,7 +82,13 @@ const Header = () => {
                   </NavigationMenuItem>
 
                   <NavigationMenuItem>
-                    <NavigationMenuTrigger className="text-sm font-medium bg-transparent">Solutions</NavigationMenuTrigger>
+                    <NavigationMenuTrigger
+                      className="text-sm font-medium bg-transparent"
+                      onPointerMove={(event) => event.preventDefault()}
+                      onPointerLeave={(event) => event.preventDefault()}
+                    >
+                      Solutions
+                    </NavigationMenuTrigger>
                     <NavigationMenuContent>
                       <div className="w-[400px] p-4 bg-background">
                         <div className="space-y-3">

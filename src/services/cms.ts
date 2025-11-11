@@ -69,6 +69,7 @@ import pickertLogo from "@/assets/clients/pickert.png";
 import bankCitrixLogo from "@/assets/clients/bank-citrix.svg";
 import automotiveLogo from "@/assets/clients/automotive.svg";
 import casinoLogo from "@/assets/clients/casino.svg";
+import ficusLogo from "@/assets/clients/ficus.svg";
 
 // Helper to map logo paths to imported images
 const logoMap: Record<string, string> = {
@@ -79,6 +80,7 @@ const logoMap: Record<string, string> = {
   '/src/assets/clients/bank-citrix.svg': bankCitrixLogo,
   '/src/assets/clients/automotive.svg': automotiveLogo,
   '/src/assets/clients/casino.svg': casinoLogo,
+  '/src/assets/clients/ficus.svg': ficusLogo,
 };
 
 // Process case studies to resolve logo paths
