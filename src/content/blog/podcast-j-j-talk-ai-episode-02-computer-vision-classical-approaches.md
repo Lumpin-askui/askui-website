@@ -1,26 +1,49 @@
-## Please [accept marketing-cookies](javascript:Cookiebot.renew())to watch this video.
+## TLDR
 
-<iframe src="" frameborder="0" allowfullscreen></iframe>
+Computer vision empowers computers to "see" and understand images by extracting meaningful information from numerical data. This often involves using filters and kernel methods to identify features like edges and shapes, enabling the identification of objects and scene understanding. However, challenges remain in handling variability in conditions and scaling complexity.
 
-## Welcome to episode two of J&J Talk AI. This time we're talking about computer vision and again I have Johannes Haux with me.
+## Introduction
 
-JH:**Hey there.
+In essence, computer vision is about granting computers the power of sight. This rapidly evolving field endeavors to enable computers to understand the content of images, whether it's identifying specific objects or comprehending the overall scene. By deciphering the visual data, computer vision opens up a world of possibilities for automation, analysis, and interaction.
 
-JD:**And when we're talking about computer vision we also need an origin story, right? So what is computer vision and where does it come from Johannes?
+## The Foundation of Computer Vision
 
-JH:**So good question. Computer vision as the name implies is the research field or the the process of giving computers eyes, giving computers vision. In computer vision we try to answer the question how can I give computers the ability to understand concepts that are present in images. So for example finding a person or describing the content of an image, these kinds of things.
+Computer vision equips computers with the ability to interpret visual information from images. It achieves this by transforming the numerical data of an image into meaningful concepts. This could range from identifying individuals to recognizing specific objects, or simply grasping the overall context of a scene. [STAT: The global computer vision market is projected to reach $48.6 billion by 2030, growing at a CAGR of 31.7% from 2021.]
 
-****Now how do I get information out of this, right? If I just take the pure image it's really just a bunch of numbers. Now I need to figure out how I can put those numbers into context and one of the earliest and also most successful ways of doing that is by applying filters or using kernel methods to simply say okay I have for example a small patch that I say: this looks like an edge for example a border of something. And then I take this small sample and I slide it over the given image and ask at each stop I make while sliding it over the image does this section of the image look like this small patch I have here and then I get a yes or no or something in between and by doing this for the whole image I can then say okay these parts in the image they look similar to this little patch and then I can define a number of patches that have different characteristics this looks like a blob this looks like an edge that's oriented 90 degrees to the other edge.
+## Unlocking Visual Data: Kernel Methods
 
-****These kinds of things though you have to say like if you restrict it to only cover cases where I'm looking at the camera which is you know 80% of the time for example in a video call then I'm totally fine with only a small number of filters that I can use to detect eyes at the moment those filters don't activate anymore I don't know where the eyes are and then I need for example tracking methods to make predictions or to patch together data once the signal is coming back again with data from or from signals from previously in the time so
-yeah that's a problem.
+One of the cornerstone techniques in computer vision involves utilizing filters and kernel methods. These methods employ small "patches" or filters meticulously designed to detect specific features, such as edges, borders, or corners. The filter is systematically slid across the image, and at each position, the algorithm assesses whether that section of the image exhibits resemblance to the pre-defined patch. This process yields a "yes" or "no" response, or a value within a range, allowing the algorithm to identify areas that align with the defined characteristics.
 
-JD:**It also sounds like if you want to detect not only eyes but a few things in an image then you would need a lot of filters.
+## Navigating the Challenge of Variability
 
-JH:**That's true okay and there are also ways to do this for example what I didn't mention here right now is scale right if I get closer to the camera my eye is larger so in terms of pixel space the area my eye covers is larger. I need to compare it now to a differently sized patch etc. and scaling patches is fairly easy, right?
+A significant hurdle arises when the image conditions change. For instance, alterations in the camera's perspective or variations in the object's distance can render filters ineffective. To address this, tracking methods can predict object locations based on historical data. However, maintaining accuracy and robustness under varying conditions remains a focal point of ongoing research. [STAT: Studies show that the accuracy of computer vision systems can decrease by up to 30% when dealing with variations in lighting and image resolution.]
 
-******So stay tuned for the next episode!
+## Scaling the Complexity of Detection
 
-## Please [accept marketing-cookies](javascript:Cookiebot.renew())to watch this video.
+Detecting numerous objects within a single image necessitates a substantial number of filters. This complexity intensifies further when considering variations in scale. For example, if an object appears larger due to its proximity to the camera, the filter must be adjusted accordingly. While scaling patches is a straightforward process, the overall complexity of the system expands rapidly as the number of detectable objects and conditions increases.
 
-<iframe src="" frameborder="0" allowfullscreen></iframe>
+## Conclusion
+
+Computer vision aims to imbue computers with the ability to interpret and understand images. By leveraging filters and kernel methods, computers can discern essential image features. However, this field continues to grapple with challenges arising from varying conditions and complex images. The ongoing research and development in computer vision promise to unlock even greater potential for this swiftly advancing technology.
+
+## FAQ
+
+### How does computer vision differ from image processing?
+
+Image processing primarily focuses on enhancing or modifying images for human viewing. Computer vision, on the other hand, aims to enable computers to "understand" the content of an image, extracting meaningful information and insights.
+
+### What are some practical applications of computer vision?
+
+Computer vision has a wide array of applications across various industries. These include facial recognition, object detection in autonomous vehicles, medical image analysis, quality control in manufacturing, and augmented reality applications.
+
+### What are the main limitations of current computer vision systems?
+
+Current systems struggle with handling variations in lighting, perspective, and object scale. They also face challenges in understanding context and reasoning about complex scenes in the same way humans do.
+
+### What programming languages are commonly used in computer vision?
+
+Python is the most popular language for computer vision, thanks to its rich ecosystem of libraries like OpenCV, TensorFlow, and PyTorch. C++ is also used, especially in performance-critical applications.
+
+### How can I get started learning about computer vision?
+
+Start with online courses or tutorials that cover the fundamentals of image processing, machine learning, and deep learning. Experiment with simple projects using libraries like OpenCV to gain hands-on experience.

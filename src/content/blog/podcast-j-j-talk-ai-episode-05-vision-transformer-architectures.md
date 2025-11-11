@@ -1,62 +1,53 @@
-## Please [accept marketing-cookies](javascript:Cookiebot.renew())to watch this video.
+## TLDR
 
-<iframe src="" frameborder="0" allowfullscreen></iframe>
+Vision Transformer architectures adapt transformer models, initially used for language, to computer vision by dividing images into patches treated as a sequence. This allows the model to leverage attention mechanisms and understand contextual relationships within the image, enabling strong performance on tasks like image classification and object detection.
 
-## Welcome back to J&J Talk AI.
+## Introduction
 
-Let's talk about vision transformer architectures because they sound really futuristic.
+This blog post explores vision transformer architectures, explaining how they apply the concepts of transformer models, which were initially designed for language tasks, to the field of computer vision. By treating images as sequences of patches, vision transformers can effectively capture contextual information and relationships within an image.
 
-JH:**Yeah, I mean, I wouldn't probably call it futuristic.
+## From Language to Vision: Adapting the Transformer
 
-JD:**I think it's just a fancy name.
+Transformers were initially developed for language modeling, particularly for translation tasks. They excel at understanding context within sequences of words, which is crucial because language is inherently contextual and often ambiguous. A word's meaning can change depending on the surrounding words and even the speaker. [STAT: According to a study by Vaswani et al., the transformer architecture significantly outperformed previous models in machine translation tasks.] Vision Transformers adapt this by dividing images into a sequence of patches.
 
-JH:**Proven to be, yeah, the name you're getting at the name. Yeah, true. I mean, transformers, of course, it's good that they didn't call them. What are the other ones called?
+## The Image as a Sequence: A Paradigm Shift
 
-JD:**Not the Autobots, but the Perceptrons.
+While an image is not inherently a sequence, vision transformers adapt the transformer architecture by dividing images into a sequence of patches. Each patch is treated as a "word," and positional information (e.g., top-left corner, bottom-right corner) is added to each patch. This allows the model to understand the spatial relationships between different parts of the image. [STAT: A 2020 paper by Google researchers demonstrated that Vision Transformers (ViTs) could achieve state-of-the-art results on image classification tasks, surpassing traditional CNNs in certain benchmarks.]
 
-JH:**Perceptrons, yeah.
+## The Power of Attention: Focusing on What Matters
 
-JD:**That's another architecture.
+Attention mechanisms are central to how transformers function. They enable the model to focus on the most relevant parts of the input sequence when making predictions. In the context of images, attention mechanisms allow the model to determine which patches are most important for understanding the overall scene. This is achieved through matrix multiplication, where attention weights are learned to prioritize specific values in the input sequence. [STAT: Self-attention mechanisms in transformers have been shown to capture long-range dependencies in sequences, which is particularly useful for understanding complex relationships in images, as noted in the original Transformer paper.]
 
-JH:**Oh, man. Oh, man. Now it's on the internet. We don't know too much about the transformer franchise.
+## Self-Attention: Understanding Relationships Within the Image
 
-They treat or they, let's put it differently. Transformers expect as inputs a sequence of any sort, right? So the origin of transformer architectures is from language modeling, especially from translation tasks.
-So I have a sequence of words and I want to turn the sequence into a different sequence of words, French to English or whatever you want to do. So you need the context basically, because language is always contextual, that the meaning is all in the context.
+Self-attention is a specific type of attention where the model attends to different parts of the same input sequence. This allows the model to understand how different parts of the image relate to each other. For example, in an image of a car, self-attention could help the model understand the relationship between the wheels, the body, and the windows. The model asks itself, "Given this set of inputs, which of those inputs is the most relevant in this context?". [STAT: Research indicates that self-attention layers can learn complex relationships between different parts of an image, enabling the model to understand the overall structure and context.]
 
-JD:**Exactly.
+## ViTs vs. CNNs: A New Era in Computer Vision
 
-JH:**Language is also really ambiguous. So word can mean various things depending on the context it's spoken in. And sometimes even the context of the other words is not enough. Sometimes if I say it to my mother, it's something different if I say it to a friend, but that's a whole different topic.
+Convolutional Neural Networks (CNNs) have traditionally been the dominant architecture for computer vision tasks. However, vision transformers have emerged as a competitive alternative, leveraging their ability to capture long-range dependencies and contextual information more effectively. [STAT: Vision transformers have shown strong performance on image classification, object detection, and image segmentation tasks, often achieving comparable or superior results to CNNs, as shown in the ImageNet benchmark.] The motivation for using Vision Transformers stems from their success in natural language processing, prompting researchers to explore their applicability to computer vision.
 
-Now why is that also interesting for computer vision? An image itself is not a sequence. And that's true, but I can take the inputs I give to a transformer and I can append more information to it. I can take each sequence element, I can say this comes from the top left corner, this comes from the top right corner, bottom left, bottom right. So you slice the image.
+## Conclusion
 
-JD:**We slice the image. So you get basically words.
+Vision transformer architectures offer a novel approach to computer vision by applying the principles of transformers from language modeling. By treating images as sequences of patches and utilizing attention mechanisms, these models can effectively capture contextual information and relationships within an image. While CNNs have been the standard, vision transformers present a compelling alternative with the potential to achieve state-of-the-art results in various computer vision tasks.
 
-JH:**Exactly. I take the image, turn it into words, into small patches, and I supply the information where this patch is coming from. And then the putting-into-context process can respect this information and then can decide if this is relevant information for the question.
+## FAQ
 
-**So that's how we humans would do it, like conversion neural networks, just okay, there's something and then okay, there's a cow, for example, or there's a human.
+### How do Vision Transformers handle positional information?
 
-JH:**Yeah, to be honest, I really cannot comment on this because I'm not a neurologist. I don't really know.
+Vision Transformers divide an image into patches and treat these patches as a sequence. Positional information, such as the location of the patch within the original image, is added to each patch embedding. This allows the model to understand the spatial relationships between different parts of the image.
 
-JD:**Yeah, okay. I obviously also don't know. But that's how I perceive it.
+### What are the advantages of Vision Transformers over CNNs?
 
-JH:**Yeah, exactly. I would probably perceive it quite similarly.
+Vision Transformers excel at capturing long-range dependencies and contextual information more effectively than CNNs. This allows them to better understand the relationships between different parts of an image, which can lead to improved performance on tasks like image classification and object detection.
 
-But that's where the strength of the combination of the two approaches is. I can aggregate information and I can put it into context more reasonably. And to extend this a little bit more into the philosophical, that's also where I see the parallels to how we work as brain and eye interface, right?
+### What role does the attention mechanism play in Vision Transformers?
 
-******Yeah, you mentioned something which is maybe hard to understand.
+Attention mechanisms allow the model to focus on the most relevant parts of the input sequence (i.e., image patches) when making predictions. This helps the model prioritize the most important features and relationships within the image, leading to more accurate and efficient processing.
 
-**So for example, if you want to attend to a sequence or a number of values, you would do this through simple matrix multiplication, where the matrix then is the set of attention weights. It's a learned set of weights that says, okay, if my input looks like this, the important value is this. So if I have a sequence of 10 examples or 10 values, the attention mechanism would then decide which of those 10 values is the most important at this point in time or in this given context or whatever.
+### Can Vision Transformers be used for tasks other than image classification?
 
-I can ask the question over the sequence of given inputs, how do I want to attend to those values which are important to put into context with each other? And that's where self-attention comes in. I can then say, given this set of inputs, if I only have this context, which of those inputs is the most relevant? And the more general formulation of attention is given two sequences, which values would I want to put into context with each other? So that's a very rough explanation of what attention is.
+Yes, Vision Transformers have shown strong performance on a variety of computer vision tasks, including object detection and image segmentation. Their ability to capture contextual information makes them versatile for different applications.
 
-**So now we have CNNs. They work well, as you described, and now we're doing vision transformer architectures because they work well in language domains. They also work well in computer vision domains.
+### Why are images divided into patches in Vision Transformers?
 
-**I don't really know a better reasoning right now, right? It's a scientific process, and you can interpret or, yeah, find reasons why you would do this that are maybe, yeah, because our brain is structured this way and that, like we did.
-
-**Thanks for all the explanations, Johannes, and I hope we see you next season.
-
-JH:**I would hope so, too. It was really fun. Thanks, Johannes.
-
-## Please [accept marketing-cookies](javascript:Cookiebot.renew())to watch this video.
-
-<iframe src="" frameborder="0" allowfullscreen></iframe>
+Dividing the image into patches allows the transformer architecture, initially designed for sequential data like text, to be applied to images. Each patch is treated as a token in a sequence, enabling the transformer to process the image in a way that captures both local and global relationships.
