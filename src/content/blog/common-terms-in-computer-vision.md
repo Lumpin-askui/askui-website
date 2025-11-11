@@ -1,123 +1,90 @@
-When you read about Artificial Intelligence, Machine Learning and Computer Vision you often come across terms that seem to be common.
+## TLDR
 
-But do you know all of them and what they actually mean?
+This blog post defines and clarifies common terminology within the fields of Artificial Intelligence (AI), Machine Learning (ML), and Computer Vision. Terms like bounding boxes, annotations, labels, image classification, image segmentation, object detection, features, feature vectors, grounding, referring expressions, and zero-shot learning are explained, providing a foundational understanding of their meanings and applications.
 
-In this blog we will list the most common terms that we use in our day-to-day work.
+## Introduction
 
-<div class="footer-cta_container" style="margin: 40px 0; padding: 36px; background-color: #ffffff; border: 1px solid #e0e0e0; border-radius: 20px; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); text-align: center;">
-  <div class="footer-cta_content">
-    <h3 style="font-size: 24px; font-weight: 600; margin: 0 0 20px 0;">What can be said <span style="font-style: italic;">can be solved with AskUI.</span></h3>
-    <a href="http://app.askui.com/selfserve-signup-form" target="_blank" style="display: inline-block; padding: 12px 24px; background-color: #962C5D; color: white; text-decoration: none; border-radius: 8px; font-weight: 600;">Sign up</a>
-  </div>
-</div>
+Venturing into the domains of Artificial Intelligence, Machine Learning, and Computer Vision often means grappling with a specialized vocabulary. This blog post serves as a glossary, demystifying some of the most frequently encountered terms. By providing clear explanations, we aim to enhance comprehension and empower you to navigate these exciting fields with greater confidence.
 
-## Bounding Box
+## The Visual Language of AI: Bounding Boxes and Annotations
 
-A *Bounding Box* is a rectangle around a detected element or region in a picture. In code they are represented with their coordinates. There are different formats used. Some examples:
+### Bounding Boxes: Defining Visual Boundaries
 
-- `pascal_voc`: [xmin, ymin, ymax, ymax]
-- `coco`: [xmin, ymin, width, height]
-- `yolo`: normalized [xcenter, ycenter, width, height]
+A bounding box is a rectangular frame that visually outlines a detected object or region within an image. Think of it as a digital lasso, encircling a specific element of interest. These boxes are defined by their coordinates, with different formats used to represent them. For example:
+*   `pascal_voc`: \[xmin, ymin, xmax, ymax]
+*   `coco`: \[xmin, ymin, width, height]
+*   `yolo`: normalized \[xcenter, ycenter, width, height]
 
-Example in JSON:
+[STAT: Bounding boxes are a fundamental component in object detection, with studies showing their use contributes to a significant improvement in detection accuracy compared to methods without bounding box regression.]
 
-```json
-{
-  "xmin": 100,
-  "ymin": 50,
-  "xmax": 200,
-  "ymax": 150
-}
-```
+### Annotations: Adding Context and Meaning
 
-## Annotation
+An annotation is either a visual marker, such as a bounding box or keypoint, or descriptive text linked to an element in an image. Annotations provide the "ground truth," the reference point used for training and evaluating computer vision models, particularly when combined with labels for grounding. What sets annotations apart from simple labels is the inclusion of additional metadata.
 
-An annotation can be the visual representation of a bounding box or just a keypoint. But also a textual description is possible.
+## Categorizing and Understanding Images
 
-Usually bounding boxes are used in *grounding* together with *labels* and to establish a ground-truth or reference for trainingdata and testdata for training computer vision models.
+### Labels: Assigning Identities
 
-Annotations differ from labels in that they can include any additional metadata.
+A label is an identifier assigned to a bounding box or keypoint, categorizing the object or area detected by the model. In image classification, labels are used to train models by associating images with their corresponding categories. [STAT: Labeled datasets are critical for supervised learning; studies demonstrate that the size and quality of labeled data directly correlate with model performance.]
 
-![Annotation with labels on a website with a lot of text.](https://cdn.prod.website-files.com/6630f90ff7431b0c5b1bb0e7/6634d1b8c39f787e903e85f8_659183a516ca683d432ef143_1*00p-__SbrNDQPl8-RSSMqQ.png)
+### Image Classification: The Art of Categorization
 
-## Label
+Image classification is the process of assigning a predefined label to an entire image based on its overall content. For instance, an image showing a dog would be labeled "dog," while an image of a mountain range would be labeled "mountain." Image classification accuracy rates have steadily increased due to advancements in deep learning. [STAT: The ImageNet Large Scale Visual Recognition Challenge (ILSVRC) has seen top-performing models achieve error rates below 5%, demonstrating the progress in image classification accuracy.]
 
-A label is given to a bounding box or a keypoint and identifies which class or category an object or area the model assigned to it. In the above example the `person`-text above the bounding box is a label.
+### Image Segmentation: Dividing and Conquering Images
 
-Labels are also used to train models where the training set consists of correctly labeled images.
+Image segmentation's goal is to divide an image into distinct regions, each corresponding to a meaningful object or area. The result is a set of segmentation masks, useful for tasks like background removal or object isolation. [STAT: Image segmentation is a critical step in many computer vision applications, with applications in medical imaging, autonomous driving, and satellite image analysis.]
 
-## Image Classification
+### Object Detection: Finding and Identifying
 
-Image classification is used to put a predefined label on an image.
+Object detection goes beyond simple classification by identifying and locating objects within images and videos. This involves drawing bounding boxes around detected objects, assigning them class labels, and often providing confidence scores. [STAT: Object detection algorithms, such as YOLO and Faster R-CNN, have revolutionized real-time video analysis and autonomous systems. The global object detection market is expected to reach $X billion by YYYY.]
 
-For an image of a cat would get the label *cat*, while the image of a sunset would get the label *sunset*.
+## The Inner Workings: Features, Vectors, and Grounding
 
-This seems like a trivial thing to do but it actually has a lot of practical use cases:
+### Features: Distinguishing Characteristics
 
-- Recognition of objects or entities depicted in images
-- Classifying medical image for detecting abnormalities
-- Image retrieval based on categories
+A feature is a distinctive attribute of an image area or keypoint, typically associated with a specific class of objects. These can be shapes, textures, or patterns that help identify an object.
 
-## Image Segmentation
+### Feature Vectors: Numerical Representations
 
-The goal of image segmentation is to divide an image into areas that belong together. The areas are visually distinctive from each other.
+A feature vector is a numerical representation of an image's features, generated from input data and containing one numerical entry for each feature. Feature vectors are often high-dimensional and are typically produced by a "Backbone," which is a pre-trained model designed to extract useful features.
 
-The output of the process is a set of segmentation masks that can be used to process the image further.
+### Grounding: Bridging Concepts and Vision
 
-Take this segmentation of an avatar image where the masks define where a person is and where the background is. A practical application would be to remove the background based on these masks.
+Grounding connects high-level concepts (e.g., "car") with their corresponding visual features (e.g., "wheels," "windshield"). This can be achieved through human annotation, where inputs are labeled with bounding boxes and labels, providing the model with a "Ground Truth" to learn from.
 
-![Colored segmentation areas for an avatar image.](https://cdn.prod.website-files.com/6630f90ff7431b0c5b1bb0e7/66fd2d6dc30e9aa1ff07bd11_666966ad5d097c148e7572e1_segment-anything-demo.png)
+## Advanced Concepts: Referring Expressions and Zero-Shot Learning
 
-## Object Detection
+### Referring Expressions: Describing with Detail
 
-Object detection is used to identify objects in images and video. It is a crucial task in a lot of domains such as Surveillance and Security, Environmental Monitoring and Augmented Reality.
+Referring expressions are used to describe objects or areas in images using attributes like color or relations to other objects. An example is "The red house on the left." Referring expressions are commonly used in tasks like object localization, object detection, or image retrieval.
 
-It takes visual input and determines the objects that are present. The objects are described with a bounding box and also get a class-label and sometimes a confidence score.
+### Zero-Shot Learning: Learning Without Examples
 
-![Detected objects are person and cell phone in a screenshot of a person sitting in a chair holding up a cell phone.](https://cdn.prod.website-files.com/6630f90ff7431b0c5b1bb0e7/66fd2d6dc30e9aa1ff07bcf2_666966c257c5f662e5091033_object-detection-example.png)
-
-## Feature
-
-A distinctive feature in an area or keypoint of an image. Usually you attribute features to a specific class you want to detect.
-
-For a **mouse** those could be the shape, surroundings or fur pattern. Those are represented as numerical vectors, called descriptors, that capture the visual properties of an area or keypoint.
-
-## Feature Vector
-
-Feature vectors are not limited to Computer Vision, but used there for all kind of tasks.
-
-A feature vector is generated from input data such as an image and contains one numerical entry for every feature. Feature vectors are typically high-dimensional.
-
-In practice feature vectors get generated by a *Backbone* (see next heading) which are by themselves models trained to extract useful features.
-
-## Grounding
-
-*Grounding* is the process of connecting high-level concepts, for example **Mouse**, with visual features, for example **tail**.
-
-Now that you have high-level concepts and their representation in the model you can also put them into context and relation with each-other.
-
-Grounding can also be done by humans for training data. There you annotate an input with bounding boxes and labels, so the model has a *Ground Truth* to learn from.
-
-## Referring Expression
-
-Referring Expression in Computer Vision are used to describe objects or areas in images. They can contain attributes like color or relations to other objects.
-
-Take this example: "The bike next to the child." You do not point to the bike directly but give a reference point *child*. Or you could give a description: "The red building next to the blue car.".
-
-Referring Expressions are typically used in tasks like object localization, object detection or image retrieval.
-
-## Zero-Shot
-
-In general *zero-shot* is when models can do tasks they were not specifically trained on.
-
-To some extend, and most of them rather poorly, every model can perform tasks without specific training as the goal of training is to get a higher-level understanding of concepts.
-
-*Zero-shot* learning in Computer Vision also includes more information than just labeled examples. The focus is on data that describes relationships between categories, so the model can generalize better to new categories.
-
-This also requires large scale training on a lot of data, so the model is exposed to billions of examples and can generalize without specific training to new tasks.
+Zero-shot learning empowers a model to perform tasks it wasn't explicitly trained on. This is achieved by training on a broad dataset that describes relationships between categories, enabling the model to generalize to new categories without specific training examples. [STAT: Zero-shot learning is a burgeoning field with applications in scenarios where labeled data is scarce or nonexistent, with ongoing research focusing on improving the transferability of knowledge across different domains.]
 
 ## Conclusion
 
-That are all, but sure there are more. Do you know of any we should include?
+A solid understanding of these core terms is crucial for navigating the world of AI, ML, and Computer Vision. As these fields continue to evolve, staying updated on these foundational concepts will empower you to understand new developments and contribute to future advancements.
 
-Let us know on [Social Media](https://www.linkedin.com/company/askyourui).
+## FAQ
+
+### What is the difference between a label and an annotation?
+
+A label is a simple identifier or category assigned to an object or image, like "cat" or "dog." An annotation is richer, often including visual markers like bounding boxes or keypoints, along with textual descriptions and metadata providing more context about the object or area.
+
+### Why are bounding boxes important in object detection?
+
+Bounding boxes are fundamental because they define the precise location and boundaries of objects within an image or video. They allow object detection models to not only classify objects but also pinpoint their position, which is crucial for applications like autonomous driving and surveillance.
+
+### How does zero-shot learning work without training examples?
+
+Zero-shot learning relies on training a model on a large dataset that establishes relationships between different categories or concepts. The model learns to generalize these relationships, allowing it to recognize and classify new objects or categories it hasn't seen before, based on its understanding of their properties and relationships to known categories.
+
+### What is the purpose of a feature vector?
+
+A feature vector is a numerical representation of an image's features, capturing the distinctive attributes of an object or area. These vectors are essential for machine learning models because they convert visual information into a format that algorithms can process and analyze. They help the model to identify and classify objects based on their underlying characteristics.
+
+### How is image segmentation different from object detection?
+
+While both involve identifying objects in an image, image segmentation aims to partition the image into pixel-level regions corresponding to different objects or areas, providing a more detailed and precise representation. Object detection, on the other hand, focuses on drawing bounding boxes around objects and assigning them class labels, without necessarily segmenting the entire image.

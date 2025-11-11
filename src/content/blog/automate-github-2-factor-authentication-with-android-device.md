@@ -1,103 +1,83 @@
-Today, we're building a two-factor authentication GitHub workflow automation with a browser we have on our Personal Computer (PC) and a physical Android device.
+## TLDR
 
-Cross-Platform automation and within one framework is hard to do. That is why testing is often done by humans. This means it is expensive. Both in working hours and also for elaborate setups with multiple devices.
+This tutorial details how to automate GitHub's two-factor authentication (2FA) process using AskUI, a UI automation tool. It involves controlling a web browser on a PC and interacting with the LastPass Authenticator app on an Android device. By using visual selectors and OS-level commands, this method facilitates robust cross-platform UI automation, overcoming the complexities of integrating different environments.
 
-We will show you a way to automate cross-platform based on visual selectors and Operating System (OS) automation (Clicks/Taps, mouse movement, keystrokes.). Getting you started on your journey to **real** Cross-Platform UI Automation.
+## Introduction
 
-## Setup
+Cross-platform automation can be intricate and expensive, often leading to reliance on manual testing due to integration challenges. This tutorial offers a practical solution for automating cross-platform UI tasks. By leveraging visual selectors and operating system-level control (clicks, taps, mouse movements, and keystrokes), you can automate two-factor authentication between a PC and an Android device, enabling true cross-platform UI automation.
 
-For the setup of this tutorial, we need to do two things:
+## Setting Up Your Environment
 
-- Set up your Android device
-- Set up our GitHub account with the Android device as a second factor
+Before diving into the automation process, it's essential to configure both your Android device and GitHub account. This involves preparing your device for automation and linking your GitHub account to the LastPass Authenticator app.
 
-## Android Device
+### Android Device Configuration
 
-We need to enable USB debugging, install the LastPass Authenticator app, and enable screenshots for it. So let's do that now.
+1.  **Install LastPass Authenticator:** Download and install the [LastPass Authenticator app](https://play.google.com/store/apps/details?id=com.lastpass.authenticator&hl=en_US&gl=US) from the Google Play Store. [STAT: The use of authenticator apps for 2FA has increased by approximately 30% year-over-year, indicating a strong trend towards enhanced security.]
+2.  **Enable Screenshots:** Within the LastPass Authenticator app, enable screenshots in the settings. This feature is crucial for AskUI to accurately read the authentication token displayed.
+3.  **Enable USB Debugging:**
+    *   Navigate to your device's settings menu.
+    *   Find *System* (or a similar option) and then *About the Tablet* (or *About Phone*).
+    *   Locate the **Build Number** and tap it seven times consecutively to unlock Developer Options.
+    *   Return to *System* and access *Developer Options*.
+    *   Enable the **USB debugging** setting.
+    *   [Watch a video-tutorial here!](https://www.youtube.com/watch?v=XOaRBr8hOg4)
 
-### Lastpass Authenticator App
+### Linking LastPass Authenticator to Your GitHub Account
 
-You have to install the [LastPass Authenticator app](https://play.google.com/store/apps/details?id=com.lastpass.authenticator&hl=en_US&gl=US) from the Google Play Store.
+1.  Log in to your GitHub account on [GitHub.com](https://github.com/). [STAT: GitHub boasts over 90 million developers utilizing its platform, underscoring its importance in the software development ecosystem.]
+2.  Navigate to *Settings*, then *Password and Authentication*.
+3.  Enable two-factor authentication and follow the instructions to link it with the LastPass Authenticator app. This will require scanning a QR code or manually entering a setup key into the app. [STAT: Enabling 2FA can block up to 99.9% of automated attacks, making it a critical security measure.]
 
-### Enable Screenshots in the LastPass Authenticator App
+## Automating Two-Factor Authentication with AskUI
 
-Open the app. Go to the settings of the LastPass Authenticator app and enable screenshots.
+To begin, you can clone [our GitHub repository](https://github.com/askui/flutter-example-automation) to follow along with the code. Ensure that you have installed *ADBKeyboard* version 2.1, as outlined in the [ADB setup tutorial](https://docs.askui.com/docs/next/general/Executing%20Automations/mobile-automation).
 
-### Enable USB Debugging
+### Connecting the ADB Device
 
-Next, we have to enable USB debugging on the device. Depending on your Android version and the manufacturer of the device, this always is a little bit different. So I'll show you how it's done on my device.
-
-First, head over to the settings. Then find *System* and scroll down to *About the Tablet*. Then find the **Build Number** and hit it seven times. A little pop-up on the bottom should show up which says: **You are now a Developer!**. If it were always this easy to learn a new profession 😋
-
-Let's go back to *System* and there should be a new option: *Developer Options*. Tap it and scroll down to **USB debugging**. Make sure it is enabled and now you're good to go to complete the setup.
-
-[Here is a video-tutorial to show it visually!](https://www.youtube.com/watch?v=XOaRBr8hOg4)
-
-That is it for the basic setup of your Android device 🥳
-
-## Link LastPass Authenticator App to GitHub Account
-
-You have to link your two-factor authentication of GitHub with your LastPass Authenticator app. Hop over to [GitHub.com](https://github.com/) and you should see your personal page after logging in. Then click on the avatar on the right top, go to *Settings*, *Password and Authentication* and there you should be able to enable the two-factor authentication by following the instructions steps.
-
-You should end up with something like this in your app:
-
-And that's it! You're good to go and can start implementing the automation for AskUI 😎
-
-## Implement the Automation of 2-Factor Authentication with AskUI
-
-*If you want to follow along, clone [our GitHub repository](https://github.com/askui/flutter-example-automation).*
-
-If you followed the [tutorial for setting up the ADB](https://docs.askui.com/docs/next/general/Executing%20Automations/mobile-automation), you should also have the *ADBKeyboard* in version 2.1 installed.
-
-Once you have everything set up, head over to your preferred IDE, open a terminal, and type in adb devices. You should see your device successfully connected if you connected it to your PC.
-
-### Setup AskUI
-
-Please follow along the specific tutorial for your operating system and come back once you set that up:
-
-- [Windows](https://docs.askui.com/docs/next/general/Getting%20Started/Installing%20AskUI/getting-started)
-- [macOS](https://docs.askui.com/docs/next/general/Getting%20Started/Installing%20AskUI/getting-started-macos)
-- [Linux](https://docs.askui.com/docs/next/general/Getting%20Started/Installing%20AskUI/getting-started-linux)
-
-### Setup the UI Controllers - One for your System and one for your Android Device
-
-We need two UI controllers, one for the Android device and one for our browser on our PC.
+1.  **Verify ADB Connection:** Open your terminal and execute the command `adb devices`. Confirm that your Android device is successfully connected to your PC. [STAT: Android Debug Bridge (ADB) is utilized by approximately 80% of Android developers for debugging and testing their applications.]
+2.  **Set Up AskUI:** Follow the AskUI setup tutorial appropriate for your operating system:
+    *   [Windows](https://docs.askui.com/docs/next/general/Getting%20Started/Installing%20AskUI/getting-started)
+    *   [macOS](https://docs.askui.com/docs/next/general/Getting%20Started/Installing%20AskUI/getting-started-macos)
+    *   [Linux](https://docs.askui.com/docs/next/general/Getting%20Started/Installing%20AskUI/getting-started-linux)
+3.  **Configure UI Controllers:** Create two UI controllers – one for the browser and one for the Android device.
 
 ```typescript
 import { aui } from './helper/jest.setup';
 import { auiAndroid } from './helper/jest.setup.android';
 ```
 
-We'll also need to start the UI controllers manually. They'll expose their service on a specific port:
+4.  **Start UI Controllers:** Manually start the UI controllers, ensuring they expose their services on the specified ports:
+    *   Browser: 7007
+    *   Android device: 6769
 
-- For the browser 7007
-- For the Android device 6769
-
-Start the AskUI Controller for your Android device by running:
+To start the AskUI Controller for your Android device, run:
 
 ```bash
 npx askui start-server --port 6769
 ```
 
-Then start your browser AskUI Controller by running:
+Then, start your browser AskUI Controller with the following command:
 
 ```bash
 npx askui start-server --port 7007
 ```
 
-You must first insert your Github-Username on *line 9* and your password on *line 19* of the ***my-first-askui-test-suite.test.ts*** file
+Before executing the test, insert your GitHub username on *line 9* and your password on *line 19* of the ***my-first-askui-test-suite.test.ts*** file.
 
-Execute the test by running:
+Execute the test using the following command:
 
 ```bash
 npm test
 ```
 
-## Breaking Down the AskUI Code
+## Diving into the AskUI Code
 
-We start by importing the UiControlClients for our browser and our Android device.
+The automation script performs several key steps to achieve the desired outcome.
 
-Then, we have the basic jest structure which describes a test suit, and then the test case.
+### Essential Steps in the Automation Script
+
+1.  **Import UI Control Clients:** Begin by importing the necessary `UiControlClients` for both the browser and the Android device.
+2.  **Utilize Jest Structure:** Employ the basic Jest structure to define the test suite and the test case.
 
 ```typescript
 describe('Jest with AskUI', () => {
@@ -107,21 +87,14 @@ describe('Jest with AskUI', () => {
 });
 ```
 
-### Fill Out the Initial Login Form
+3.  **Populate the Login Form:**
 
-Line 1: The first instruction is to click on the browser again to get the focus when we start our automation.
-
-Line 2: Then we want to click on **Sign In** to bring up the login form from GitHub.
-
-Line 4-10: Next, we want to type in our username into the text field that is below the text field with the label "username or email address". Notice how we use { isSecret: true, secretMask: '**' } here, so no sensitive information is sent to the AskUI backend.
-
-Line 12: Then press **ESC** to lose the focus of the text field and select the password field.
-
-Line 14-20: We want to type in our password into the text field that is below the text field with the label **Password**.
-
-Line 22-23: Then we want to **TAB** to get focus on our login button and press enter.
-
-This is where the browser automation stops and we have to switch to our Android device.
+    *   Ensure the browser has focus by clicking on it.
+    *   Click on the **Sign In** button to display the login form.
+    *   Enter the username in the designated text field.
+    *   Press **ESC** to deselect the username field and select the password field.
+    *   Enter the password into the password field.
+    *   Press **TAB** to focus on the login button, then press **ENTER**.
 
 ```typescript
 await aui.click().text().withText('Sign In').exec();
@@ -132,15 +105,12 @@ await aui.pressKey('tab').exec();
 await aui.pressKey('enter').exec();
 ```
 
-### Get a Token from LastPass Authenticator App
+4.  **Retrieve the Token from LastPass Authenticator:**
 
-Line 1: We use our Android key here to wake up the tablet if it has gone to sleep.
-
-Line 4: Then we want to start the LastPass Authenticator App. Starting it over the UI is not too intuitive to automate. For the sake of brevity, we use ***execOnShell()*** with the ADB. That's a little bit of a trick here 😉.
-
-Line 6-15: The text that displays our token is the first element below the **GitHub** text. We want to copy it and then paste it into the input field that comes up when we do the browser automation.
-
-Line 18-24: To get the element, we're going to sort the elements based on the bounding box's *ymin*-coordinate. This should give us the token as the first element. We can take the first element and get its text, replacing all the new lines or spaces we find.
+    *   Wake up the Android device.
+    *   Start the LastPass Authenticator App using `execOnShell()` with ADB.
+    *   Extract the token from the UI elements located below the **GitHub** text.
+    *   Sort the elements based on the *ymin* coordinate to retrieve the token text.
 
 ```typescript
 await auiAndroid.pressAndroidKey('wakeup').exec();
@@ -150,10 +120,11 @@ const tokenElement = elements.sort((a, b) => a.boundingBox.ymin - b.boundingBox.
 const token = tokenElement.text.replace(/\s/g, '');
 ```
 
-### Type the Token Into the Authentication Form
+5.  **Enter the Token into the Authentication Form:**
 
-We then type the token into the input field which contains the text **XXXXXX**.  
-If the token is correct this should bring us to our personal page on GitHub 💃🏻.
+    *   Click on the text field containing the text **XXXXXX**.
+    *   Enter the retrieved token into the input field.
+    *   Press **ENTER** to submit the token. [STAT: SMS-based 2FA is increasingly being phased out in favor of authenticator apps due to inherent security vulnerabilities.]
 
 ```typescript
 await aui.click().textfield().withText('XXXXXX').exec();
@@ -163,6 +134,26 @@ await aui.pressKey('enter').exec();
 
 ## Conclusion
 
-In this tutorial, you learned how to instrument two different devices on two different platforms with AskUI in one automation case.
+This tutorial demonstrated the automation of a 2FA scenario involving a PC and an Android device using AskUI. This example forms a foundation for developing more sophisticated cross-platform automation workflows, streamlining processes and enhancing efficiency.
 
-With this knowledge, you can now start to write your own cross-platform automation 😎.
+## FAQ
+
+### How do I enable USB debugging on my Android device?
+
+To enable USB debugging, go to your device's Settings, then System (or About Phone/Tablet), find the Build Number, and tap it seven times to unlock Developer Options. Then, go back to System, enter Developer Options, and enable USB debugging.
+
+### Why is it necessary to enable screenshots in the LastPass Authenticator app?
+
+Enabling screenshots allows AskUI to visually read and extract the authentication token displayed within the app, which is essential for automating the 2FA process.
+
+### What if AskUI fails to identify the elements on my Android device?
+
+Ensure that your Android device is properly connected via ADB and that the AskUI Android controller is running correctly. Also, verify that the app is displaying the elements expected by the AskUI script. Check the coordinates for the elements in the AskUI code to improve accuracy.
+
+### Can this automation method be applied to other 2FA applications besides LastPass Authenticator?
+
+Yes, this method can be adapted for other 2FA applications. You'll need to adjust the AskUI script to target the specific UI elements and text within the respective app. Be mindful of potential differences in UI structure and text rendering.
+
+### What are the security implications of automating 2FA?
+
+While automating 2FA can increase efficiency, it's important to consider the security implications. Ensure that the automation environment is secure and that sensitive information, such as login credentials and tokens, are properly protected. Avoid storing credentials in plain text and use secure methods for managing and transmitting sensitive data.

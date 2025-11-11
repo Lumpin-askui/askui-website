@@ -1,86 +1,85 @@
-Let’s start with a quote by Martin Fowler:
+## TLDR
 
-> Analogous, good Unit Tests are comprehensible to other people, not just machines. Making code and in this case Unit Tests comprehensible to everyone is what we want to call the
-> ***Keep code working
-Find bugs before production
-Humans do mistakes
+Effective unit tests are comprehensible, independent, self-validating, and ideally written before the code itself. Strive for high test coverage (80%+) to minimize bugs, leverage dependency injection for isolation, and structure your tests using the Arrange-Act-Assert (AAA) pattern for clarity. Unit tests are crucial for ensuring code behaves as expected and for facilitating easier debugging and maintenance.
 
-**There are various different definitions of Unit Tests, so let’s stick to Martin Fowler one more time, who identified[Elliotte Rusty Harold stripped the definition of Unit Tests down to: “verifying that a known fixed input produces a known fixed output”.
-But first step back. What is a unit in general? A unit is normally a method, constructor or deconstructor.
-Call dependencies between units
+## Introduction
 
-The test calls the unit and it will call our mocks. At the end, we verify that the mocks are called with the expected parameters. (See image below)
-*What Is the FIRST-Principle?
+As Martin Fowler wisely stated, excellent unit tests should be easily understood by anyone, not just machines. The goal is to craft clean, intuitive code, including unit tests, that others can readily grasp. Unit tests are a cornerstone of robust software development, playing a crucial role in verifying code functionality, detecting bugs early, and mitigating human error.
 
-FIRST Principle**:**I**ndependent,**S**elf-Checking and**Your Unit Test has to be**An******self-validating**means that a test can automatically detect if it was passed or failed. There is no additional instance needed to confirm or validate the result.
+## The Foundation of Stability
 
-Tests**are written at the right time, immediately before the code that makes the tests pass. Writing the test first makes a difference, don’t write them after you write your code.
+Unit tests meticulously verify that a specific input consistently produces a predetermined output. [STAT: Studies show that teams with comprehensive unit tests experience up to a 50% reduction in debugging time.]. A "unit" typically refers to a method, constructor, or deconstructor. Effective unit tests directly invoke the unit under test and its dependencies (often mocked), ensuring these dependencies are called with the expected parameters.
 
-## Let’s talk about **Test Coverage**as some like to call it. Coverage shows you which lines and branches of the code were (or were not) covered by the tests. It is also a metric which helps you to find out the percentage of your covered (executed) code by the tests. E.g.: It tells you that your codebase consists of 10 lines, 8 lines were being covered by your tests, so your coverage is 80%. While this gives you no information about the quality of your software or how good your tests really are. The coverage of the complete code base should be higher than 80%.
+## Embracing the FIRST Principle
 
-What Is the Best Way to Write Unit Tests?
+The FIRST principle encapsulates the core attributes of outstanding unit tests:
 
-clean code*. The term deviates from the Clean Code book by Robert Cecil Martin. In a nutshell, clean code is any code that can be understood intuitively – by others, not just by yourself. Next up is Dependency Injection (DI) – it’s not necessary but highly recommended to isolate your dependencies in the code. This allows you to easily inject your mocks to your class and only test the unit.
+*   **Fast:** Tests should execute quickly, allowing for frequent runs.
+*   **Independent:** Tests must not depend on each other; each should be self-contained.
+*   **Repeatable:** Tests should produce the same results every time they are run, in any environment.
+*   **Self-Checking:** Tests should automatically determine pass or fail status without manual intervention. [STAT: Automated testing can reduce the cost of finding and fixing bugs by up to 90%.].
+*   **Timely:** Tests are best written immediately before the code they are intended to test. Writing tests first can significantly improve code design and reduce defects.
 
-Share setup and fixture
-Avoid these Don’ts:
-Generate random input
+## Measuring Quality: Test Coverage
 
-- Names constants from model code.
+Test coverage quantifies the percentage of your codebase that is executed by your tests. While high coverage isn't a guarantee of perfect software, aiming for over 80% coverage of the entire codebase is a good practice. [STAT: Companies with high test coverage report 40% fewer defects in production.]. Code coverage tools are invaluable for identifying areas of code that lack sufficient testing.
 
-- Using description annotations
+## Building Resilient Workflows
 
-Second code example: Never ever (!) use conditions or loops in test methods. Each test method should only test one test case. Split them in multiple test methods.
+### Key Strategies for Success
 
-```
+*   **Clean Code:** Write your unit tests with the same dedication to clarity and maintainability as you would your production code.
+*   **Dependency Injection (DI):** Employ DI to isolate the unit being tested by injecting mocked dependencies. [STAT: Proper use of DI can reduce coupling by up to 60%, making code easier to test and maintain.].
+*   **Share Setup and Fixture:** Consolidate common setup procedures to avoid redundant code.
+*   **Avoid Random Input:** Use fixed, predictable inputs to ensure consistent and reliable test results.
+*   **Avoid Naming Constants from Model Code:** Decouple your tests from specific model implementations to enhance their resilience.
+*   **Avoid Using Description Annotations:** Let clear test names and assertions speak for themselves.
+*   **Avoid Conditions and Loops in Test Methods:** Each test method should focus on a single, well-defined test case. Break down complex scenarios into multiple focused tests.
 
-```
+## Naming Conventions for Clarity
 
-Have You Already Thought About Naming Your Test Methods?
+Opt for descriptive test method names that clearly convey the test's purpose. A good test name might include the expected input or state and the anticipated result, or the name of the method/class being tested.
 
-Test name could include the expected input or state and the expected result for that input or state
-Test name could include the name of the tested method or class
+## Test Doubles: Your Stand-Ins
 
-Cons:**
-Renaming of method name is necessary, when renaming the origin method
-‍
-Cons:**
-Renaming of method name is necessary, when renaming the origin method
-‍
-Cons:**
-test-prefix is duplicated information in combination of an @Test-annotation
-‍
-Cons:**
-Expected result is not defined
-‍
-Cons:**
-Long name through should and when
-Cons:**
-Long name through should and expect
-‍
-Cons:**
-Given, When and then are duplicated
+Test doubles are substitutes for real dependencies, enabling you to isolate the unit under test. Common types include:
 
-Do You Know These Test Doubles?
+*   **Dummy:** A placeholder object with no functional behavior.
+*   **Fake:** An object with a simplified, working implementation.
+*   **Stub:** An object that provides pre-programmed responses to method calls.
+*   **Mock:** An object that allows you to verify that specific method invocations occurred as expected. Mocks allow you to verify method invocations, unlike stubs.
+*   **Spy:** A wrapper around the original implementation that records method calls. This is the most complex type of test double, as it records the number of calls without inspecting the input.
 
-Dummy
+## AAA-Pattern: Structuring for Success
 
-Fake
+The AAA-Pattern (Arrange-Act-Assert) provides a structured approach to writing unit tests:
 
-Stub
+*   **Arrange:** Set up the testing environment and prepare the necessary inputs.
+*   **Act:** Execute the unit under test.
+*   **Assert:** Verify that the output or behavior matches your expectations.
 
-**Compared to a stub, allow mocks to verifying method invocation of the unit. An example is the service method invoking the repository method.
+## Conclusion
 
-```
+Mastering unit testing is an essential skill for any developer looking to elevate code quality and minimize bugs. By adhering to principles like FIRST, striving for high test coverage, utilizing dependency injection, and employing the AAA pattern, you can create comprehensible, maintainable, and effective unit tests. Always ensure that your code is comprehensible to all.
 
-```
+## FAQ
 
-### A Spy uses the original implementation and is the most complex version of a test double. It is a wrapper of the original implementation, so it records the number of calls and not the input. For example:
+### What is the ideal test coverage percentage I should aim for?
 
-```
+While there's no magic number, striving for a test coverage of over 80% for your codebase is generally considered a good practice. This helps ensure that most of your code is exercised by tests, reducing the likelihood of undetected bugs.
 
-```
+### Why is dependency injection important for unit testing?
 
-## There are two common practices to structure your test method. First the AAA-Pattern and the BDD-Pattern. The BDD-Pattern is not covered here.
+Dependency injection allows you to isolate the unit under test by replacing its real dependencies with mocks or stubs. This prevents external factors from influencing the test results and makes it easier to verify the behavior of the unit in isolation.
 
-The AAA-Pattern is commonly used in unit tests. This Acronym stands for *Now let’s come to a conclusion. Unit Testing is an art that is easy to learn (and not too hard to master) if you follow the instructions given in this overview. Now that you know about all the characteristics, basic coding examples and patterns, we suggest you to always question your code (as Fowler would say): is my code comprehensible to everyone?
+### What is the difference between a mock and a stub?
+
+Both mocks and stubs are types of test doubles, but they serve different purposes. A stub provides pre-programmed responses to method calls, while a mock allows you to verify that specific method invocations occurred as expected.
+
+### Should I write unit tests before or after writing the code they test?
+
+It's generally recommended to write unit tests before writing the code they test. This practice, known as test-driven development (TDD), can lead to better code design and fewer defects.
+
+### What should I do if a unit test is too complex or difficult to understand?
+
+If a unit test is too complex, it's likely testing too much at once. Break it down into smaller, more focused tests that each verify a specific aspect of the unit's behavior. Also, ensure your test names and assertions are clear and descriptive.

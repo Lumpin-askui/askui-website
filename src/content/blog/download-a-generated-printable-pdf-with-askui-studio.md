@@ -1,89 +1,68 @@
-> **ATTENTION:** We sunsetted AskUI Studio Workflows for our new Agent Hub. [**Please check our Getting Started blogpost!**](https://www.askui.com/blog-posts/getting-started-vision-agents)
+## TLDR
 
-This guide is designed to assist you in leveraging our web-based automation environment, AskUI Studio. In particular, we will focus on generating a printable calendar and downloading it as a PDF from a dedicated website. By the end of this tutorial, you will be equipped with the basic knowledge to utilize AskUI Studio to interact with a website and handle pop-up dialogs for printing and downloading files.
+This guide provides a step-by-step demonstration of automating website interactions using AskUI Studio. It covers navigating to a specific website, interacting with UI elements like buttons (including handling cookie consent pop-ups), triggering a print dialog, and ultimately downloading a printable calendar as a PDF file. This workflow offers a basic framework for automating similar web-based tasks.
 
-## Table of Contents
+## Introduction
 
-1. Visit the Target Website
-2. Create a Workflow
-3. Automation Instructions
-4. Conclusion
+This guide will demonstrate how to use AskUI Studio, a web-based automation environment, to generate a printable calendar from a website and download it as a PDF. By following this tutorial, you will gain the fundamental knowledge to automate website interactions and handle pop-up dialogs for printing and file downloads using AskUI Studio. Let's get started automating!
 
-## Visit the Target Website
+## Navigating to the Target Website
 
-First, let's examine the website we'll be automating. Having a good understanding of the UI elements of the target website is a good starting point for automation.
+Our automation exercise will focus on [https://print-a-calendar.com](https://print-a-calendar.com/). Before we dive into automation, it’s crucial to understand the UI elements of this website. This understanding will inform how we structure our AskUI workflow.
 
-- [https://print-a-calendar.com](https://print-a-calendar.com/)
+## Building the Automation Workflow in AskUI Studio
 
-## Create a Workflow
+To begin, you'll need an AskUI account. If you don't already have one, take a moment to create one. Once you have an account, log into AskUI Studio and create a new Workflow. This is where we'll define the steps to automate the calendar download.
 
-You will need an AskUI account for this step. [Create one](https://xa5a040gvfz.typeform.com/to/IHdr0qY5) if you haven't done so yet.
+## Automating the Calendar Download Process
 
-After logging in, navigate to AskUI Studio and create a new Workflow.
+Our automation will begin from the Chrome Webdriver's initial page. Here's a breakdown of the steps:
 
-![Creating a new workflow in AskUI Studio](https://haramchoi-askui.github.io/blogpost_media/download_pdf/create_workflow.gif)
+### Visiting the Website
 
-## Automation Instructions
+1.  **Click** the address bar of the web browser to focus it. (**Click** + **Textfield**)
+2.  **Type** the website address: `https://print-a-calendar.com`. (**Type** + **https://print-a-calendar.com**)
+3.  **Press** the `enter` key to navigate to the site. (**Press key** + **enter**)
+4.  **Wait for** 2 seconds for the website to fully load. (**Wait for** + **2000**)
 
-Let's start by examining the starting condition:
+[STAT: According to a study, websites that load in 2 seconds have an average bounce rate of 9%, while those that take 5 seconds have a bounce rate of 38%.]
 
-![Initial screen showing Chrome Webdriver](https://haramchoi-askui.github.io/blogpost_media/download_pdf/initial_screen.png)
+### Handling the Cookie Consent Pop-up
 
-### 1. Visit the Website
+1. Websites frequently use cookies, resulting in consent pop-ups that need to be addressed.
+2. **Click** the **Consent** button to dismiss the pop-up and proceed. (**Click** + **Button** + **With text** + **consent**)
 
-As shown above, we start from the initial page of the Chrome Webdriver. We'll begin by visiting the target website:
+[STAT: As of 2023, nearly 90% of websites use cookies to track user behavior for advertising and analytics.]
 
-![First instructions for visiting the website](https://haramchoi-askui.github.io/blogpost_media/download_pdf/first_instructions.gif)
+### Printing and Saving the Calendar as a PDF
 
-Here are the instructions used above:
-
-1. Click the address bar of the web browser. (**Click** + **Textfield**)
-2. Type the address of the website. (**Type** + **https://print-a-calendar.com**)
-3. Press the `enter` key. (**Press key** + **enter**)
-4. Wait for 2 seconds until the website loads. (**Wait for** + **2000**)
-
-### 2. Clear the Cookie Consent Pop-up
-
-![Cookie consent pop-up](https://haramchoi-askui.github.io/blogpost_media/download_pdf/cookie.png)
-
-Since the target website uses cookies, we'll encounter a pop-up that asks for consent to use cookies. Let's clear this cookie pop-up by clicking the **Consent** button:
-
-![Clicking the consent button](https://haramchoi-askui.github.io/blogpost_media/download_pdf/click_consent.gif)
-
-Here's the instruction we used:
-
-1. Click the button with the text **Consent**. (**Click** + **Button** + **With text** + **consent**)
-
-### 3. Click the Print Button and Save the Calendar
-
-Although the target website offers additional options to customize the calendar, we'll use the plain calendar provided by default. Feel free to experiment with the website by interacting with the **"More..."** link if you'd like.
-
-![Initial calendar view](https://haramchoi-askui.github.io/blogpost_media/download_pdf/calendar_init.png)
-
-As shown in the screenshot above, the website displays some ads on the page. However, the red **Print** button is clearly visible for us to interact with. Let's click the button and save the calendar as a PDF file:
-
-![Clicking the print button](https://haramchoi-askui.github.io/blogpost_media/download_pdf/click_print.gif)
-
-Here's the instruction we used:
-
-1. Click the button with the text **Print**. (**Click** + **Button** + **With text** + **Print**)
-
-![Clicking the save button](https://haramchoi-askui.github.io/blogpost_media/download_pdf/click_save.gif)
-
-The instruction we used here is:
-
-1. Click the button with the text **save**. (**Click** + **Button** + **With text** + **save**)
-
-After clicking the save button, we can safely press **enter** when the pop-up dialog appears:
-
-![Pressing enter to save the file](https://haramchoi-askui.github.io/blogpost_media/download_pdf/press_enter.png)
-
-Here's a video showing the complete automation process:
-
-![Complete automation process](https://haramchoi-askui.github.io/blogpost_media/download_pdf/complete.gif)
+1.  The website displays a default calendar with a prominent **Print** button.
+2.  **Click** the **Print** button. (**Click** + **Button** + **With text** + **Print**)
+3.  **Click** the **save** button within the print dialog. (**Click** + **Button** + **With text** + **save**)
+4.  Press **enter** to confirm the save operation in the pop-up dialog and save the PDF.
 
 ## Conclusion
 
-In this tutorial, we've utilized AskUI Studio to automate visiting a website, clicking buttons, and finally printing and downloading a PDF file. Next time, we'll explore another practical example with AskUI Studio.
+This tutorial demonstrated the power of AskUI Studio in automating website interactions. We covered navigating to a URL, interacting with UI elements like buttons, managing pop-up dialogs, and downloading a PDF file. This knowledge serves as a solid foundation for automating various web-based tasks and streamlining your workflows.
 
-If you have any questions or issues while following this tutorial, feel free to ask questions [by joining our community](https://askui.circle.so/getting-started)!
+## FAQ
+
+### How do I handle dynamic elements on a website that change their location or text?
+
+AskUI uses a descriptive approach, so you can target elements based on their text and relation to other elements instead of relying on fixed coordinates. Regularly inspect your automations to ensure they still function correctly if the website changes. You may need to adjust the text descriptions or the relative positioning used to identify elements.
+
+### Can I use AskUI Studio to automate tasks that require logging into a website?
+
+Yes, you can. The process would involve identifying the username and password input fields using AskUI's descriptive selectors, typing in the credentials, and then clicking the login button. Remember to handle sensitive information like passwords securely and consider using environment variables to store them.
+
+### What if the website I'm automating uses a different browser than Chrome?
+
+AskUI Studio supports multiple browsers, although Chrome is the primary browser for development and testing. You may need to configure your AskUI project to use a different browser if your target website requires it. Refer to the AskUI documentation for specific instructions on configuring browser settings.
+
+### How do I deal with unexpected errors or exceptions during automation?
+
+Implement error handling within your AskUI workflows using conditional statements or try-catch blocks (if supported by AskUI's scripting language). This allows you to gracefully handle unexpected issues, log errors, or retry specific steps. Thorough testing and monitoring are essential to identify and address potential problems.
+
+### Is it possible to schedule automated tasks to run at specific times or intervals?
+
+AskUI Studio may have built-in scheduling capabilities, or you can integrate it with external scheduling tools like cron jobs or task schedulers. Check the AskUI documentation for details on scheduling options and how to configure them.

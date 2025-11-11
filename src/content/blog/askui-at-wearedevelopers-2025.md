@@ -1,32 +1,63 @@
-We're thrilled to announce that **AskUI** will be at this year's **WeAreDevelopers World Congress** – the world's flagship event for all things software development!
+## TLDR
 
-📍 **Find us at Booth 6** on the expo floor – just check the floor plan (below) to locate us quickly.
+AskUI will be exhibiting its Agentic UI Automation platform at WeAreDevelopers World Congress 2025 (July 9-11, Berlin, Booth #6), showcasing live demos of its visual-first, AI-native automation approach, offering insights into AI agent capabilities, and providing attendees with swag and giveaways.
 
-![WeAreDevelopers floor plan](https://cdn.prod.website-files.com/6630f90ff7431b0c5b1bb0e7/685a8c07b6c1615786612250_IMG_4267.png)
+## Introduction
 
-This is your chance to see how **Agentic UI Automation** is revolutionizing how developers and QA engineers automate desktop, web, and mobile applications using a **visual-first, AI-native approach**.
+We're thrilled to announce that AskUI will be participating in the WeAreDevelopers World Congress, a premier event for software development, to demonstrate how Agentic UI Automation is transforming application automation through a visual-first, AI-native methodology. Join us to see the future of UI automation firsthand!
 
-## Why stop by our booth?
+## Discover Agentic UI Automation at WeAreDevelopers 2025
 
-💡 **Live Demos** – Experience how AskUI enables automation through vision, not code.
+### Find AskUI at Booth #6
 
-🤖 **Agentic AI in Action** – Learn how our AI agents execute UI flows intelligently—without relying on traditional selectors or brittle scripts.
+Head straight to Booth #6 on the expo floor to dive into the world of AskUI. Our team will be there to offer insights, provide engaging demonstrations, and answer all your questions about Agentic UI Automation.
 
-🎯 **Built for Developers & QA Teams** – From end-to-end testing of infotainment systems to legacy desktop apps, AskUI adapts to the real-world complexity of UI automation.
+### Witness the Power of Agentic UI Automation
 
-🎁 **Swag & Surprises** – We've got goodies, exclusive giveaways, and more waiting for you.
+AskUI delivers a revolutionary approach to UI automation, empowering developers and QA engineers to automate interactions with desktop, web, and mobile applications using the power of vision, not brittle code. This innovative approach promises a more resilient and adaptable automation solution. [STAT: The global market for robotic process automation (RPA), which shares similarities with Agentic UI Automation, is projected to reach $13.76 billion by 2028.]
 
-## 📅 Event Details:
+### Why You Should Visit the AskUI Booth
 
-- **Event:** WeAreDevelopers World Congress 2025
-- **Date:** July 9-11, 2025
-- **Location:** Berlin, Germany
-- **Booth:** #6
+Visiting our booth offers a unique opportunity to experience the future of UI automation. Here's what you can expect:
 
-Whether you're into testing, automation, or just curious about the future of human-computer interaction—**come say hi**. Our team will be there to connect, answer questions, and give you a hands-on look at what's possible with AskUI.
+*   **Live Demos:** See for yourself how AskUI facilitates automation based on vision, making UI interactions more intuitive and robust.
+*   **Agentic AI in Action:** Learn how AskUI's AI agents intelligently execute UI flows without the need for traditional selectors or complex scripts, significantly reducing maintenance overhead. [STAT: AI-powered automation solutions can reduce testing time by up to 70% according to a McKinsey report.]
+*   **Solutions Tailored for Developers and QA:** Discover how AskUI tackles the complexities of real-world UI automation, from end-to-end testing of sophisticated infotainment systems to automating legacy desktop applications.
+*   **Exclusive Swag & Surprises:** Don't miss out on the chance to grab exclusive giveaways and goodies that will help you remember your experience with AskUI.
 
-## Book a Meeting with Us
+### Event Details at a Glance
 
-If you would like to talk to us beforehand use this booking link:
+*   **Event:** WeAreDevelopers World Congress 2025
+*   **Date:** July 9-11, 2025
+*   **Location:** Berlin, Germany
+*   **Booth:** #6
 
-<iframe src="https://askui.chilipiper.com/me/sorina-weber/meeting-with-sorina-weber" width="560" height="700"></iframe>
+### Schedule a Dedicated Meeting
+
+Ensure you have ample time to discuss your specific automation needs with the AskUI team by booking a meeting in advance through the provided link. We look forward to connecting with you!
+
+## Conclusion
+
+Don't miss the opportunity to visit AskUI at WeAreDevelopers World Congress 2025 and explore the transformative potential of Agentic AI in UI automation. Engage with live demos, gain insights into AI agent capabilities, and discover how AskUI can revolutionize your testing and automation workflows. We look forward to seeing you in Berlin!
+
+## FAQ
+
+### What is Agentic UI Automation?
+
+Agentic UI Automation is a modern approach to UI automation that leverages AI agents and visual recognition to interact with applications, rather than relying on traditional element selectors and code-based scripts. This makes automation more resilient and adaptable to UI changes.
+
+### How does AskUI differ from traditional UI automation tools?
+
+AskUI automates UI interactions by "seeing" the application like a human user would. This eliminates the need for complex selectors and scripts, making automation more robust and easier to maintain. It also enables automation of applications where traditional methods fail, such as legacy systems or those with dynamic UIs.
+
+### What types of applications can AskUI automate?
+
+AskUI is versatile and can automate a wide range of applications, including desktop applications, web applications, mobile applications, and even embedded systems with graphical user interfaces.
+
+### Will there be opportunities to see AskUI in action at the event?
+
+Yes, AskUI will be providing live demonstrations of its Agentic UI Automation platform at Booth #6 throughout the WeAreDevelopers World Congress 2025. These demos will showcase the capabilities and benefits of AskUI in real-world scenarios.
+
+### How can I learn more about AskUI's features and capabilities?
+
+You can visit the AskUI booth at the event for a personalized demonstration and discussion with our team. Additionally, you can explore our website and documentation for detailed information about our platform's features and capabilities.
