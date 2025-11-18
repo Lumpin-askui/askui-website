@@ -5,7 +5,8 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
-import { CheckCircle, Upload, Mail, Link as LinkIcon, FileSpreadsheet, Globe } from "lucide-react";
+import { CheckCircle, Upload, Mail, Link as LinkIcon, FileSpreadsheet, Globe, Smartphone, Monitor } from "lucide-react";
+import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
 
 const ZAPIER_WEBHOOK_URL = import.meta.env.VITE_ZAPIER_WEBHOOK_URL || "https://hooks.zapier.com/hooks/catch/15603221/uzbs47d/";
 
@@ -13,7 +14,12 @@ const CSVUpload = () => {
   const [csvFile, setCsvFile] = useState<File | null>(null);
   const [email, setEmail] = useState("");
   const [linkedinUrl, setLinkedinUrl] = useState("https://");
-  const [targetUrl, setTargetUrl] = useState("https://");
+  const [applicationType, setApplicationType] = useState<"mobile" | "desktop" | "web" | "">("");
+  const [mobileStoreType, setMobileStoreType] = useState<"appstore" | "playstore" | "">("");
+  const [appStoreUrl, setAppStoreUrl] = useState("https://");
+  const [playStoreUrl, setPlayStoreUrl] = useState("https://");
+  const [downloadUrl, setDownloadUrl] = useState("https://");
+  const [webUrl, setWebUrl] = useState("https://");
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
 
@@ -77,14 +83,44 @@ const CSVUpload = () => {
       return;
     }
 
-    if (!targetUrl.trim()) {
-      alert("Please enter the target URL of the application to automate.");
+    if (!applicationType) {
+      alert("Please select an application type.");
       return;
     }
 
-    if (!validateUrl(targetUrl.trim())) {
-      alert("Please enter a valid URL (must start with http:// or https://).");
-      return;
+    // Validate based on application type
+    if (applicationType === "mobile") {
+      if (!mobileStoreType) {
+        alert("Please select App Store or Play Store.");
+        return;
+      }
+      const mobileUrl = mobileStoreType === "appstore" ? appStoreUrl : playStoreUrl;
+      if (!mobileUrl.trim() || mobileUrl.trim() === "https://") {
+        alert(`Please enter a valid ${mobileStoreType === "appstore" ? "App Store" : "Play Store"} URL.`);
+        return;
+      }
+      if (!validateUrl(mobileUrl.trim())) {
+        alert(`Please enter a valid ${mobileStoreType === "appstore" ? "App Store" : "Play Store"} URL.`);
+        return;
+      }
+    } else if (applicationType === "desktop") {
+      if (!downloadUrl.trim() || downloadUrl.trim() === "https://") {
+        alert("Please enter a valid download URL.");
+        return;
+      }
+      if (!validateUrl(downloadUrl.trim())) {
+        alert("Please enter a valid download URL (must start with http:// or https://).");
+        return;
+      }
+    } else if (applicationType === "web") {
+      if (!webUrl.trim() || webUrl.trim() === "https://") {
+        alert("Please enter a valid web URL.");
+        return;
+      }
+      if (!validateUrl(webUrl.trim())) {
+        alert("Please enter a valid web URL (must start with http:// or https://).");
+        return;
+      }
     }
 
     setIsSubmitting(true);
@@ -94,7 +130,18 @@ const CSVUpload = () => {
       formData.append("csvFile", csvFile);
       formData.append("email", email.trim());
       formData.append("linkedinUrl", linkedinUrl.trim());
-      formData.append("targetUrl", targetUrl.trim());
+      formData.append("applicationType", applicationType);
+      
+      // Add the appropriate URL based on application type
+      if (applicationType === "mobile") {
+        formData.append("mobileStoreType", mobileStoreType);
+        formData.append("storeUrl", (mobileStoreType === "appstore" ? appStoreUrl : playStoreUrl).trim());
+      } else if (applicationType === "desktop") {
+        formData.append("downloadUrl", downloadUrl.trim());
+      } else if (applicationType === "web") {
+        formData.append("webUrl", webUrl.trim());
+      }
+      
       formData.append("timestamp", new Date().toISOString());
 
       const response = await fetch(ZAPIER_WEBHOOK_URL, {
@@ -110,7 +157,12 @@ const CSVUpload = () => {
       setCsvFile(null);
       setEmail("");
       setLinkedinUrl("https://");
-      setTargetUrl("https://");
+      setApplicationType("");
+      setMobileStoreType("");
+      setAppStoreUrl("https://");
+      setPlayStoreUrl("https://");
+      setDownloadUrl("https://");
+      setWebUrl("https://");
       // Reset file input
       const fileInput = document.getElementById("csvFile") as HTMLInputElement;
       if (fileInput) {
@@ -129,7 +181,12 @@ const CSVUpload = () => {
     setCsvFile(null);
     setEmail("");
     setLinkedinUrl("https://");
-    setTargetUrl("https://");
+    setApplicationType("");
+    setMobileStoreType("");
+    setAppStoreUrl("https://");
+    setPlayStoreUrl("https://");
+    setDownloadUrl("https://");
+    setWebUrl("https://");
     const fileInput = document.getElementById("csvFile") as HTMLInputElement;
     if (fileInput) {
       fileInput.value = "";
@@ -189,25 +246,152 @@ const CSVUpload = () => {
                       </p>
                     </div>
 
-                    {/* Target Application URL */}
-                    <div className="space-y-2">
-                      <Label htmlFor="targetUrl" className="flex items-center gap-2">
-                        <Globe className="h-4 w-4" />
-                        Target Application URL
-                      </Label>
-                      <Input
-                        id="targetUrl"
-                        type="url"
-                        value={targetUrl}
-                        onChange={(e) => setTargetUrl(e.target.value)}
-                        placeholder="https://example.com"
-                        required
-                        disabled={isSubmitted}
-                      />
-                      <p className="text-xs text-muted-foreground">
-                        Enter the URL where we can find the application to automate
-                      </p>
+                    {/* Application Type Selection */}
+                    <div className="space-y-3">
+                      <Label className="text-base font-semibold">Application Type</Label>
+                      <RadioGroup
+                        value={applicationType}
+                        onValueChange={(value) => {
+                          setApplicationType(value as "mobile" | "desktop" | "web");
+                          setMobileStoreType("");
+                        }}
+                        className="grid grid-cols-1 md:grid-cols-3 gap-4"
+                      >
+                        <div className="flex items-center space-x-2">
+                          <RadioGroupItem value="mobile" id="mobile" disabled={isSubmitted} />
+                          <Label
+                            htmlFor="mobile"
+                            className="flex items-center gap-2 cursor-pointer font-normal"
+                          >
+                            <Smartphone className="h-4 w-4" />
+                            Mobile
+                          </Label>
+                        </div>
+                        <div className="flex items-center space-x-2">
+                          <RadioGroupItem value="desktop" id="desktop" disabled={isSubmitted} />
+                          <Label
+                            htmlFor="desktop"
+                            className="flex items-center gap-2 cursor-pointer font-normal"
+                          >
+                            <Monitor className="h-4 w-4" />
+                            Desktop
+                          </Label>
+                        </div>
+                        <div className="flex items-center space-x-2">
+                          <RadioGroupItem value="web" id="web" disabled={isSubmitted} />
+                          <Label
+                            htmlFor="web"
+                            className="flex items-center gap-2 cursor-pointer font-normal"
+                          >
+                            <Globe className="h-4 w-4" />
+                            Web
+                          </Label>
+                        </div>
+                      </RadioGroup>
                     </div>
+
+                    {/* Conditional URL Fields based on Application Type */}
+                    {applicationType === "mobile" && (
+                      <div className="space-y-4 p-4 border border-border rounded-lg bg-muted/30">
+                        <div className="space-y-2">
+                          <Label className="text-sm font-semibold">Store Type</Label>
+                          <RadioGroup
+                            value={mobileStoreType}
+                            onValueChange={(value) => setMobileStoreType(value as "appstore" | "playstore")}
+                            className="flex gap-6"
+                          >
+                            <div className="flex items-center space-x-2">
+                              <RadioGroupItem value="appstore" id="appstore" disabled={isSubmitted} />
+                              <Label htmlFor="appstore" className="cursor-pointer font-normal">
+                                App Store
+                              </Label>
+                            </div>
+                            <div className="flex items-center space-x-2">
+                              <RadioGroupItem value="playstore" id="playstore" disabled={isSubmitted} />
+                              <Label htmlFor="playstore" className="cursor-pointer font-normal">
+                                Play Store
+                              </Label>
+                            </div>
+                          </RadioGroup>
+                        </div>
+                        {mobileStoreType === "appstore" && (
+                          <div className="space-y-2">
+                            <Label htmlFor="appStoreUrl" className="flex items-center gap-2">
+                              <LinkIcon className="h-4 w-4" />
+                              App Store URL
+                            </Label>
+                            <Input
+                              id="appStoreUrl"
+                              type="url"
+                              value={appStoreUrl}
+                              onChange={(e) => setAppStoreUrl(e.target.value)}
+                              placeholder="https://apps.apple.com/app/..."
+                              required
+                              disabled={isSubmitted}
+                            />
+                          </div>
+                        )}
+                        {mobileStoreType === "playstore" && (
+                          <div className="space-y-2">
+                            <Label htmlFor="playStoreUrl" className="flex items-center gap-2">
+                              <LinkIcon className="h-4 w-4" />
+                              Play Store URL
+                            </Label>
+                            <Input
+                              id="playStoreUrl"
+                              type="url"
+                              value={playStoreUrl}
+                              onChange={(e) => setPlayStoreUrl(e.target.value)}
+                              placeholder="https://play.google.com/store/apps/details?id=..."
+                              required
+                              disabled={isSubmitted}
+                            />
+                          </div>
+                        )}
+                      </div>
+                    )}
+
+                    {applicationType === "desktop" && (
+                      <div className="space-y-2 p-4 border border-border rounded-lg bg-muted/30">
+                        <Label htmlFor="downloadUrl" className="flex items-center gap-2">
+                          <LinkIcon className="h-4 w-4" />
+                          Download URL
+                        </Label>
+                        <Input
+                          id="downloadUrl"
+                          type="url"
+                          value={downloadUrl}
+                          onChange={(e) => setDownloadUrl(e.target.value)}
+                          placeholder="https://example.com/download"
+                          required
+                          disabled={isSubmitted}
+                        />
+                        <p className="text-xs text-muted-foreground">
+                          Enter the URL where the desktop application can be downloaded
+                        </p>
+                      </div>
+                    )}
+
+                    {applicationType === "web" && (
+                      <div className="space-y-2 p-4 border border-border rounded-lg bg-muted/30">
+                        <Label htmlFor="webUrl" className="flex items-center gap-2">
+                          <Globe className="h-4 w-4" />
+                          Web URL
+                        </Label>
+                        <Input
+                          id="webUrl"
+                          type="url"
+                          value={webUrl}
+                          onChange={(e) => setWebUrl(e.target.value)}
+                          placeholder="https://example.com"
+                          required
+                          disabled={isSubmitted}
+                        />
+                        <p className="text-xs text-muted-foreground">
+                          Enter the URL of the web application to automate
+                        </p>
+                      </div>
+                    )}
 
                     {/* Contact Information */}
                     <div className="grid md:grid-cols-2 gap-4">
@@ -249,7 +433,17 @@ const CSVUpload = () => {
                         type="submit"
                         size="lg"
                         className="bg-primary hover:bg-primary/90 text-accent px-8"
-                        disabled={!csvFile || !email.trim() || !linkedinUrl.trim() || linkedinUrl.trim() === "https://" || !targetUrl.trim() || targetUrl.trim() === "https://" || isSubmitting}
+                        disabled={
+                          !csvFile ||
+                          !email.trim() ||
+                          !linkedinUrl.trim() ||
+                          linkedinUrl.trim() === "https://" ||
+                          !applicationType ||
+                          (applicationType === "mobile" && (!mobileStoreType || (mobileStoreType === "appstore" ? (!appStoreUrl.trim() || appStoreUrl.trim() === "https://") : (!playStoreUrl.trim() || playStoreUrl.trim() === "https://")))) ||
+                          (applicationType === "desktop" && (!downloadUrl.trim() || downloadUrl.trim() === "https://")) ||
+                          (applicationType === "web" && (!webUrl.trim() || webUrl.trim() === "https://")) ||
+                          isSubmitting
+                        }
                       >
                         {isSubmitting ? (
                           "Uploading..."
