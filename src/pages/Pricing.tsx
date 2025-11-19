@@ -2,7 +2,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
-import { CheckCircle, ArrowRight, Terminal, MessageSquare, Cloud, Code, Monitor, Calculator } from "lucide-react";
+import { CheckCircle, ArrowRight, Terminal, MessageSquare, Cloud, Code, Monitor, Calculator, Users, Building, Laptop } from "lucide-react";
 import { Link } from "react-router-dom";
 
 const Pricing = () => {
@@ -14,10 +14,10 @@ const Pricing = () => {
       <section className="pt-20 pb-16 md:pt-32 md:pb-24 bg-secondary/30 border-b border-border">
         <div className="container mx-auto px-4 lg:px-8 text-center">
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-foreground">
-            Flexible Pricing for Every Stage
+            Control Every Pixel. On Any Device.
           </h1>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto mb-8">
-            From individual developers to enterprise automation teams. Choose the plan that scales with your needs.
+            From legacy desktop software to modern mobile apps. Chat with Caesr to automate workflows across your entire tech stack.
           </p>
         </div>
       </section>
@@ -52,93 +52,88 @@ const Pricing = () => {
         <div className="container mx-auto px-4 lg:px-8">
           <div className="grid lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
             
-            {/* AskUI Caesr */}
+            {/* Develop (Free) */}
             <Card className="flex flex-col border-border shadow-lg hover:shadow-xl transition-all">
               <CardHeader>
                 <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center mb-4">
-                  <MessageSquare className="h-6 w-6 text-primary" />
+                  <Laptop className="h-6 w-6 text-primary" />
                 </div>
-                <CardTitle className="text-2xl">AskUI Caesr</CardTitle>
-                <CardDescription>For individuals & professionals</CardDescription>
+                <CardTitle className="text-2xl">Develop</CardTitle>
+                <CardDescription>Community</CardDescription>
               </CardHeader>
               <CardContent className="flex-1 flex flex-col">
                 <div className="mb-6">
                   <p className="text-sm text-muted-foreground mb-4">
-                    Agentic chat interface for automation. Perfect for non-technical users to automate tasks through conversation.
+                    For building agents on your laptop. Perfect for developers and hackers.
                   </p>
-                  <div className="text-3xl font-bold">Free <span className="text-sm font-normal text-muted-foreground">/ basic usage</span></div>
+                  <div className="text-3xl font-bold">Free <span className="text-sm font-normal text-muted-foreground">/ forever</span></div>
                 </div>
                 <div className="space-y-3 mb-8 flex-1">
                   <div className="flex items-center gap-2">
                     <CheckCircle className="h-4 w-4 text-primary" />
-                    <span className="text-sm">Agentic chat interface</span>
+                    <span className="text-sm"><strong>Controller:</strong> AskUI CLI</span>
                   </div>
                   <div className="flex items-center gap-2">
                     <CheckCircle className="h-4 w-4 text-primary" />
-                    <span className="text-sm">Configure models</span>
+                    <span className="text-sm"><strong>Brain:</strong> BYOK (Any LLM)</span>
                   </div>
                   <div className="flex items-center gap-2">
                     <CheckCircle className="h-4 w-4 text-primary" />
-                    <span className="text-sm">Device management</span>
+                    <span className="text-sm">Local Logging</span>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <CheckCircle className="h-4 w-4 text-primary" />
+                    <span className="text-sm">Runs on Localhost</span>
                   </div>
                 </div>
-                <Button className="w-full" asChild>
-                  <a href="https://app.caesr.ai" target="_blank" rel="noopener noreferrer">
-                    Get Started
+                <Button className="w-full" variant="outline" asChild>
+                  <a href="https://docs.askui.com/docs/general/Cli/GettingStarted" target="_blank" rel="noopener noreferrer">
+                    Start Building
                   </a>
                 </Button>
               </CardContent>
             </Card>
 
-            {/* AskUI Cloud (The main priced item) */}
+            {/* Automate (Cloud) */}
             <Card className="flex flex-col border-primary shadow-xl relative scale-105 z-10">
               <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-primary text-primary-foreground px-4 py-1 rounded-full text-sm font-medium">
                 Most Popular
               </div>
               <CardHeader>
                 <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center mb-4">
-                  <Cloud className="h-6 w-6 text-primary" />
+                  <Users className="h-6 w-6 text-primary" />
                 </div>
-                <CardTitle className="text-2xl">AskUI Cloud</CardTitle>
-                <CardDescription>Hosted inference & scaling</CardDescription>
+                <CardTitle className="text-2xl">AskUI Caesr</CardTitle>
+                <CardDescription>Universal Co-Pilot</CardDescription>
               </CardHeader>
               <CardContent className="flex-1 flex flex-col">
                 <div className="mb-6">
                   <p className="text-sm text-muted-foreground mb-4">
-                    Managed cloud infrastructure for running computer use agents without managing your own models.
+                    Plug and play mobile & desktop automation. Chat with your infrastructure.
                   </p>
-                  <div className="text-3xl font-bold">€29.00 <span className="text-sm font-normal text-muted-foreground">/ month</span></div>
-                  <p className="text-xs text-muted-foreground mt-1">Starts at 1,500 credits</p>
+                  <div className="text-3xl font-bold">€49 <span className="text-sm font-normal text-muted-foreground">/ seat / month</span></div>
                 </div>
                 
-                <div className="space-y-4 mb-8 flex-1">
-                  <div className="p-3 bg-secondary/50 rounded-lg border border-border">
-                    <div className="flex justify-between items-center text-sm mb-1">
-                      <span>Professional</span>
-                      <span className="font-bold">€29</span>
-                    </div>
-                    <div className="text-xs text-muted-foreground">1,500 credits/mo</div>
+                <div className="space-y-3 mb-8 flex-1">
+                  <div className="flex items-center gap-2">
+                    <CheckCircle className="h-4 w-4 text-primary" />
+                    <span className="text-sm"><strong>Controls:</strong> Desktop, Web, Mobile</span>
                   </div>
-                  <div className="p-3 bg-secondary/50 rounded-lg border border-border">
-                    <div className="flex justify-between items-center text-sm mb-1">
-                      <span>Starter</span>
-                      <span className="font-bold">€94</span>
-                    </div>
-                    <div className="text-xs text-muted-foreground">5,000 credits/mo</div>
+                  <div className="flex items-center gap-2">
+                    <CheckCircle className="h-4 w-4 text-primary" />
+                    <span className="text-sm"><strong>Brain:</strong> Managed LLMs (Claude, GPT-4)</span>
                   </div>
-                  <div className="p-3 bg-secondary/50 rounded-lg border border-border">
-                    <div className="flex justify-between items-center text-sm mb-1">
-                      <span>Business</span>
-                      <span className="font-bold">€549</span>
-                    </div>
-                    <div className="text-xs text-muted-foreground">30,000 credits/mo</div>
+                  <div className="flex items-center gap-2">
+                    <CheckCircle className="h-4 w-4 text-primary" />
+                    <span className="text-sm">1,000 Cloud Steps included (then €0.05 / step)</span>
                   </div>
-                  <div className="p-3 bg-secondary/50 rounded-lg border border-border">
-                    <div className="flex justify-between items-center text-sm mb-1">
-                      <span>Scale</span>
-                      <span className="font-bold">€1,000</span>
-                    </div>
-                    <div className="text-xs text-muted-foreground">100,000 credits/mo</div>
+                  <div className="flex items-center gap-2">
+                    <CheckCircle className="h-4 w-4 text-primary" />
+                    <span className="text-sm">Team Dashboard & Traces</span>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <CheckCircle className="h-4 w-4 text-primary" />
+                    <span className="text-sm">Attended Execution (GUI)</span>
                   </div>
                 </div>
 
@@ -150,42 +145,42 @@ const Pricing = () => {
               </CardContent>
             </Card>
 
-            {/* AskUI Suite / Enterprise */}
+            {/* Scale (Agent OS) */}
             <Card className="flex flex-col border-border shadow-lg hover:shadow-xl transition-all">
               <CardHeader>
                 <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center mb-4">
-                  <Monitor className="h-6 w-6 text-primary" />
+                  <Building className="h-6 w-6 text-primary" />
                 </div>
-                <CardTitle className="text-2xl">AskUI Suite</CardTitle>
-                <CardDescription>For Enterprise Teams</CardDescription>
+                <CardTitle className="text-2xl">Agent OS</CardTitle>
+                <CardDescription>Universal Worker</CardDescription>
               </CardHeader>
               <CardContent className="flex-1 flex flex-col">
                 <div className="mb-6">
                   <p className="text-sm text-muted-foreground mb-4">
-                    The complete platform for managing your digital workforce at scale. Unified control plane, user management, and analytics.
+                    For unattended production workloads. Deploy digital workers on servers or edge devices.
                   </p>
                   <div className="text-3xl font-bold">Custom</div>
                 </div>
                 <div className="space-y-3 mb-8 flex-1">
                   <div className="flex items-center gap-2">
                     <CheckCircle className="h-4 w-4 text-primary" />
-                    <span className="text-sm">Everything in Cloud</span>
+                    <span className="text-sm"><strong>Controller:</strong> Agent OS License</span>
                   </div>
                   <div className="flex items-center gap-2">
                     <CheckCircle className="h-4 w-4 text-primary" />
-                    <span className="text-sm">SSO & SAML</span>
+                    <span className="text-sm"><strong>Deployment:</strong> On-Prem / Private Cloud</span>
                   </div>
                   <div className="flex items-center gap-2">
                     <CheckCircle className="h-4 w-4 text-primary" />
-                    <span className="text-sm">Dedicated Support</span>
+                    <span className="text-sm">Headless / Background Service</span>
                   </div>
                   <div className="flex items-center gap-2">
                     <CheckCircle className="h-4 w-4 text-primary" />
-                    <span className="text-sm">On-premise Deployment</span>
+                    <span className="text-sm">Unlimited Duration (24/7)</span>
                   </div>
                   <div className="flex items-center gap-2">
                     <CheckCircle className="h-4 w-4 text-primary" />
-                    <span className="text-sm">AskUI CLI & SDK included</span>
+                    <span className="text-sm">SLA & Dedicated Support</span>
                   </div>
                 </div>
                 <Button className="w-full" variant="outline" asChild>
@@ -199,8 +194,63 @@ const Pricing = () => {
         </div>
       </section>
 
-      {/* Developer Tools Section */}
+      {/* Feature Comparison Matrix */}
       <section className="py-16 bg-secondary/20">
+        <div className="container mx-auto px-4 lg:px-8">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-bold mb-4">Compare Plans</h2>
+            <p className="text-muted-foreground">Find the right fit for your automation needs</p>
+          </div>
+          
+          <div className="max-w-5xl mx-auto overflow-x-auto">
+            <table className="w-full border-collapse">
+              <thead>
+                <tr className="border-b border-border">
+                  <th className="text-left p-4 font-semibold text-foreground">Feature</th>
+                  <th className="text-left p-4 font-semibold text-foreground">Develop (CLI)</th>
+                  <th className="text-left p-4 font-semibold text-primary">AskUI Caesr</th>
+                  <th className="text-left p-4 font-semibold text-foreground">Agent OS</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr className="border-b border-border/50">
+                  <td className="p-4 text-sm font-medium">Environment</td>
+                  <td className="p-4 text-sm text-muted-foreground">Localhost</td>
+                  <td className="p-4 text-sm text-foreground">Desktop, Web, Mobile</td>
+                  <td className="p-4 text-sm text-muted-foreground">Headless / Background Service</td>
+                </tr>
+                <tr className="border-b border-border/50">
+                  <td className="p-4 text-sm font-medium">Session Limit</td>
+                  <td className="p-4 text-sm text-muted-foreground">Manual</td>
+                  <td className="p-4 text-sm text-foreground">Auto-timeout (2h)</td>
+                  <td className="p-4 text-sm text-muted-foreground">Unlimited Duration (24/7)</td>
+                </tr>
+                <tr className="border-b border-border/50">
+                  <td className="p-4 text-sm font-medium">Triggering</td>
+                  <td className="p-4 text-sm text-muted-foreground">Manual / Local Script</td>
+                  <td className="p-4 text-sm text-foreground">Manual / Local Script</td>
+                  <td className="p-4 text-sm text-muted-foreground">Webhook / API / CI/CD</td>
+                </tr>
+                <tr className="border-b border-border/50">
+                  <td className="p-4 text-sm font-medium">Intelligence</td>
+                  <td className="p-4 text-sm text-muted-foreground">BYOK (Any LLM)</td>
+                  <td className="p-4 text-sm text-foreground">Managed LLMs</td>
+                  <td className="p-4 text-sm text-muted-foreground">Private / Custom LLMs</td>
+                </tr>
+                <tr>
+                  <td className="p-4 text-sm font-medium">Support</td>
+                  <td className="p-4 text-sm text-muted-foreground">Community</td>
+                  <td className="p-4 text-sm text-foreground">Email</td>
+                  <td className="p-4 text-sm text-muted-foreground">Dedicated & SLA</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      {/* Developer Tools Section */}
+      <section className="py-16 bg-background">
         <div className="container mx-auto px-4 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold mb-4">Developer Tools</h2>

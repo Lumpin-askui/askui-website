@@ -44,65 +44,53 @@ const Header = () => {
                       Products
                     </NavigationMenuTrigger>
                     <NavigationMenuContent>
-                      <div className="w-[500px] p-4 bg-background" style={{ backgroundColor: 'var(--bg-card)', border: '1px solid var(--border-subtle)' }}>
-                        <div className="grid gap-2">
-                          <NavigationMenuLink asChild>
-                            <a href="/#products" className="flex items-start gap-3 p-3 rounded-lg hover:bg-accent/10 transition-colors group">
-                              <div className="mt-1 p-1.5 bg-muted rounded-md group-hover:bg-primary/10 transition-colors" style={{ backgroundColor: 'var(--bg-secondary)' }}>
-                                <MessageSquare className="h-5 w-5 text-foreground/70 group-hover:text-primary transition-colors" style={{ color: 'var(--text-secondary)' }} />
-                              </div>
-                              <div>
-                                <div className="font-semibold mb-1 text-foreground group-hover:text-primary transition-colors" style={{ color: 'var(--text-primary)' }}>AskUI Caesr</div>
-                                <div className="text-sm text-muted-foreground" style={{ color: 'var(--text-secondary)' }}>Chat interface for automation</div>
-                              </div>
-                            </a>
-                          </NavigationMenuLink>
-                          <NavigationMenuLink asChild>
-                            <a href="/#products" className="flex items-start gap-3 p-3 rounded-lg hover:bg-accent/10 transition-colors group">
-                              <div className="mt-1 p-1.5 bg-muted rounded-md group-hover:bg-primary/10 transition-colors" style={{ backgroundColor: 'var(--bg-secondary)' }}>
-                                <Terminal className="h-5 w-5 text-foreground/70 group-hover:text-primary transition-colors" style={{ color: 'var(--text-secondary)' }} />
-                              </div>
-                              <div>
-                                <div className="font-semibold mb-1 text-foreground group-hover:text-primary transition-colors" style={{ color: 'var(--text-primary)' }}>AskUI CLI</div>
-                                <div className="text-sm text-muted-foreground" style={{ color: 'var(--text-secondary)' }}>Command-line orchestration</div>
-                              </div>
-                            </a>
-                          </NavigationMenuLink>
-                          <NavigationMenuLink asChild>
-                            <a href="/#products" className="flex items-start gap-3 p-3 rounded-lg hover:bg-accent/10 transition-colors group">
-                              <div className="mt-1 p-1.5 bg-muted rounded-md group-hover:bg-primary/10 transition-colors" style={{ backgroundColor: 'var(--bg-secondary)' }}>
-                                <Monitor className="h-5 w-5 text-foreground/70 group-hover:text-primary transition-colors" style={{ color: 'var(--text-secondary)' }} />
-                              </div>
-                              <div>
-                                <div className="font-semibold mb-1 text-foreground group-hover:text-primary transition-colors" style={{ color: 'var(--text-primary)' }}>AskUI Suite</div>
-                                <div className="text-sm text-muted-foreground" style={{ color: 'var(--text-secondary)' }}>Universal device infrastructure</div>
-                              </div>
-                            </a>
-                          </NavigationMenuLink>
-                          <NavigationMenuLink asChild>
-                            <a href="/#products" className="flex items-start gap-3 p-3 rounded-lg hover:bg-accent/10 transition-colors group">
-                              <div className="mt-1 p-1.5 bg-muted rounded-md group-hover:bg-primary/10 transition-colors" style={{ backgroundColor: 'var(--bg-secondary)' }}>
-                                <Code className="h-5 w-5 text-foreground/70 group-hover:text-primary transition-colors" style={{ color: 'var(--text-secondary)' }} />
-                              </div>
-                              <div>
-                                <div className="font-semibold mb-1 text-foreground group-hover:text-primary transition-colors" style={{ color: 'var(--text-primary)' }}>AskUI SDK</div>
-                                <div className="text-sm text-muted-foreground" style={{ color: 'var(--text-secondary)' }}>Open source developer library</div>
-                              </div>
-                            </a>
-                          </NavigationMenuLink>
-                          <NavigationMenuLink asChild>
-                            <a href="/#products" className="flex items-start gap-3 p-3 rounded-lg hover:bg-accent/10 transition-colors group">
-                              <div className="mt-1 p-1.5 bg-muted rounded-md group-hover:bg-primary/10 transition-colors" style={{ backgroundColor: 'var(--bg-secondary)' }}>
-                                <Cloud className="h-5 w-5 text-foreground/70 group-hover:text-primary transition-colors" style={{ color: 'var(--text-secondary)' }} />
-                              </div>
-                              <div>
-                                <div className="font-semibold mb-1 text-foreground group-hover:text-primary transition-colors" style={{ color: 'var(--text-primary)' }}>AskUI Cloud</div>
-                                <div className="text-sm text-muted-foreground" style={{ color: 'var(--text-secondary)' }}>Hosted inference & scaling</div>
-                              </div>
-                            </a>
-                          </NavigationMenuLink>
-                        </div>
-                      </div>
+                                  <div className="w-[500px] p-4 bg-background" style={{ backgroundColor: 'var(--bg-card)', border: '1px solid var(--border-subtle)' }}>
+                                    <div className="grid gap-2">
+                                      <div className="text-xs font-semibold text-muted-foreground px-2 mb-1 mt-2 uppercase tracking-wider">Interactive Agents</div>
+                                      <NavigationMenuLink asChild>
+                                        <a href="/#products" className="flex items-start gap-3 p-3 rounded-lg hover:bg-accent/10 transition-colors group">
+                                          <div className="mt-1 p-1.5 bg-muted rounded-md group-hover:bg-primary/10 transition-colors" style={{ backgroundColor: 'var(--bg-secondary)' }}>
+                                            <MessageSquare className="h-5 w-5 text-foreground/70 group-hover:text-primary transition-colors" style={{ color: 'var(--text-secondary)' }} />
+                                          </div>
+                                          <div>
+                                            <div className="font-semibold mb-1 text-foreground group-hover:text-primary transition-colors" style={{ color: 'var(--text-primary)' }}>AskUI Caesr</div>
+                                            <div className="text-sm text-muted-foreground" style={{ color: 'var(--text-secondary)' }}>Universal chat assistant for automation</div>
+                                            <div className="flex gap-2 mt-1.5">
+                                              <span className="text-[10px] px-1.5 py-0.5 rounded bg-secondary text-secondary-foreground border border-border">Desktop</span>
+                                              <span className="text-[10px] px-1.5 py-0.5 rounded bg-secondary text-secondary-foreground border border-border">Web</span>
+                                              <span className="text-[10px] px-1.5 py-0.5 rounded bg-secondary text-secondary-foreground border border-border">Mobile</span>
+                                            </div>
+                                          </div>
+                                        </a>
+                                      </NavigationMenuLink>
+
+                                      <div className="text-xs font-semibold text-muted-foreground px-2 mb-1 mt-3 uppercase tracking-wider">Unattended Infrastructure</div>
+                                      <NavigationMenuLink asChild>
+                                        <a href="/#products" className="flex items-start gap-3 p-3 rounded-lg hover:bg-accent/10 transition-colors group">
+                                          <div className="mt-1 p-1.5 bg-muted rounded-md group-hover:bg-primary/10 transition-colors" style={{ backgroundColor: 'var(--bg-secondary)' }}>
+                                            <Monitor className="h-5 w-5 text-foreground/70 group-hover:text-primary transition-colors" style={{ color: 'var(--text-secondary)' }} />
+                                          </div>
+                                          <div>
+                                            <div className="font-semibold mb-1 text-foreground group-hover:text-primary transition-colors" style={{ color: 'var(--text-primary)' }}>Agent OS</div>
+                                            <div className="text-sm text-muted-foreground" style={{ color: 'var(--text-secondary)' }}>Headless OS for scalable device fleets</div>
+                                          </div>
+                                        </a>
+                                      </NavigationMenuLink>
+
+                                      <div className="text-xs font-semibold text-muted-foreground px-2 mb-1 mt-3 uppercase tracking-wider">Developer Tools</div>
+                                      <NavigationMenuLink asChild>
+                                        <a href="/#products" className="flex items-start gap-3 p-3 rounded-lg hover:bg-accent/10 transition-colors group">
+                                          <div className="mt-1 p-1.5 bg-muted rounded-md group-hover:bg-primary/10 transition-colors" style={{ backgroundColor: 'var(--bg-secondary)' }}>
+                                            <Terminal className="h-5 w-5 text-foreground/70 group-hover:text-primary transition-colors" style={{ color: 'var(--text-secondary)' }} />
+                                          </div>
+                                          <div>
+                                            <div className="font-semibold mb-1 text-foreground group-hover:text-primary transition-colors" style={{ color: 'var(--text-primary)' }}>CLI & SDK</div>
+                                            <div className="text-sm text-muted-foreground" style={{ color: 'var(--text-secondary)' }}>Code-first automation libraries</div>
+                                          </div>
+                                        </a>
+                                      </NavigationMenuLink>
+                                    </div>
+                                  </div>
                     </NavigationMenuContent>
                   </NavigationMenuItem>
 
