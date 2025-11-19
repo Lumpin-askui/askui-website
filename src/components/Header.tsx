@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
-import { Menu, X, ChevronDown, MessageSquare, Terminal, Monitor, Code, Cloud, Shield, Zap, Rocket } from "lucide-react";
+import { Menu, X, ChevronDown, MessageSquare, Terminal, Monitor, Code, Cloud, Shield, Zap, Rocket, Briefcase, Landmark, ShoppingCart, Heart, Phone, Factory, Car, Cpu, AppWindow, Layers, Github } from "lucide-react";
 import {
   NavigationMenu,
   NavigationMenuContent,
@@ -41,102 +41,149 @@ const Header = () => {
                       className="text-sm font-medium bg-transparent"
                       style={{ color: 'var(--text-primary)' }}
                     >
-                      Products
-                    </NavigationMenuTrigger>
-                    <NavigationMenuContent>
-                                  <div className="w-[500px] p-4 bg-background" style={{ backgroundColor: 'var(--bg-card)', border: '1px solid var(--border-subtle)' }}>
-                                    <div className="grid gap-2">
-                                      <div className="text-xs font-semibold text-muted-foreground px-2 mb-1 mt-2 uppercase tracking-wider">Interactive Agents</div>
-                                      <NavigationMenuLink asChild>
-                                        <a href="/#products" className="flex items-start gap-3 p-3 rounded-lg hover:bg-accent/10 transition-colors group">
-                                          <div className="mt-1 p-1.5 bg-muted rounded-md group-hover:bg-primary/10 transition-colors" style={{ backgroundColor: 'var(--bg-secondary)' }}>
-                                            <MessageSquare className="h-5 w-5 text-foreground/70 group-hover:text-primary transition-colors" style={{ color: 'var(--text-secondary)' }} />
-                                          </div>
-                                          <div>
-                                            <div className="font-semibold mb-1 text-foreground group-hover:text-primary transition-colors" style={{ color: 'var(--text-primary)' }}>AskUI Caesr</div>
-                                            <div className="text-sm text-muted-foreground" style={{ color: 'var(--text-secondary)' }}>Universal chat assistant for automation</div>
-                                            <div className="flex gap-2 mt-1.5">
-                                              <span className="text-[10px] px-1.5 py-0.5 rounded bg-secondary text-secondary-foreground border border-border">Desktop</span>
-                                              <span className="text-[10px] px-1.5 py-0.5 rounded bg-secondary text-secondary-foreground border border-border">Web</span>
-                                              <span className="text-[10px] px-1.5 py-0.5 rounded bg-secondary text-secondary-foreground border border-border">Mobile</span>
-                                            </div>
-                                          </div>
-                                        </a>
-                                      </NavigationMenuLink>
-
-                                      <div className="text-xs font-semibold text-muted-foreground px-2 mb-1 mt-3 uppercase tracking-wider">Unattended Infrastructure</div>
-                                      <NavigationMenuLink asChild>
-                                        <a href="/#products" className="flex items-start gap-3 p-3 rounded-lg hover:bg-accent/10 transition-colors group">
-                                          <div className="mt-1 p-1.5 bg-muted rounded-md group-hover:bg-primary/10 transition-colors" style={{ backgroundColor: 'var(--bg-secondary)' }}>
-                                            <Monitor className="h-5 w-5 text-foreground/70 group-hover:text-primary transition-colors" style={{ color: 'var(--text-secondary)' }} />
-                                          </div>
-                                          <div>
-                                            <div className="font-semibold mb-1 text-foreground group-hover:text-primary transition-colors" style={{ color: 'var(--text-primary)' }}>Agent OS</div>
-                                            <div className="text-sm text-muted-foreground" style={{ color: 'var(--text-secondary)' }}>Headless OS for scalable device fleets</div>
-                                          </div>
-                                        </a>
-                                      </NavigationMenuLink>
-
-                                      <div className="text-xs font-semibold text-muted-foreground px-2 mb-1 mt-3 uppercase tracking-wider">Developer Tools</div>
-                                      <NavigationMenuLink asChild>
-                                        <a href="/#products" className="flex items-start gap-3 p-3 rounded-lg hover:bg-accent/10 transition-colors group">
-                                          <div className="mt-1 p-1.5 bg-muted rounded-md group-hover:bg-primary/10 transition-colors" style={{ backgroundColor: 'var(--bg-secondary)' }}>
-                                            <Terminal className="h-5 w-5 text-foreground/70 group-hover:text-primary transition-colors" style={{ color: 'var(--text-secondary)' }} />
-                                          </div>
-                                          <div>
-                                            <div className="font-semibold mb-1 text-foreground group-hover:text-primary transition-colors" style={{ color: 'var(--text-primary)' }}>CLI & SDK</div>
-                                            <div className="text-sm text-muted-foreground" style={{ color: 'var(--text-secondary)' }}>Code-first automation libraries</div>
-                                          </div>
-                                        </a>
-                                      </NavigationMenuLink>
-                                    </div>
-                                  </div>
-                    </NavigationMenuContent>
-                  </NavigationMenuItem>
-
-                  <NavigationMenuItem>
-                    <NavigationMenuTrigger
-                      className="text-sm font-medium bg-transparent"
-                      style={{ color: 'var(--text-primary)' }}
-                    >
                       Solutions
                     </NavigationMenuTrigger>
                     <NavigationMenuContent>
-                      <div className="w-[500px] p-4 bg-background" style={{ backgroundColor: 'var(--bg-card)', border: '1px solid var(--border-subtle)' }}>
-                        <div className="grid gap-2">
-                          <NavigationMenuLink asChild>
-                            <Link to="/solutions/software-testing" className="flex items-start gap-3 p-3 rounded-lg hover:bg-accent/10 transition-colors group">
-                              <div className="mt-1 p-1.5 bg-muted rounded-md group-hover:bg-primary/10 transition-colors" style={{ backgroundColor: 'var(--bg-secondary)' }}>
-                                <Shield className="h-5 w-5 text-foreground/70 group-hover:text-primary transition-colors" style={{ color: 'var(--text-secondary)' }} />
-                              </div>
-                              <div>
-                                <div className="font-semibold mb-1 text-foreground group-hover:text-primary transition-colors" style={{ color: 'var(--text-primary)' }}>Software Testing</div>
-                                <div className="text-sm text-muted-foreground" style={{ color: 'var(--text-secondary)' }}>Automated testing at scale</div>
-                              </div>
-                            </Link>
-                          </NavigationMenuLink>
-                          <NavigationMenuLink asChild>
-                            <Link to="/solutions/automation-teams" className="flex items-start gap-3 p-3 rounded-lg hover:bg-accent/10 transition-colors group">
-                              <div className="mt-1 p-1.5 bg-muted rounded-md group-hover:bg-primary/10 transition-colors" style={{ backgroundColor: 'var(--bg-secondary)' }}>
-                                <Zap className="h-5 w-5 text-foreground/70 group-hover:text-primary transition-colors" style={{ color: 'var(--text-secondary)' }} />
-                              </div>
-                              <div>
-                                <div className="font-semibold mb-1 text-foreground group-hover:text-primary transition-colors" style={{ color: 'var(--text-primary)' }}>Automation Teams</div>
-                                <div className="text-sm text-muted-foreground" style={{ color: 'var(--text-secondary)' }}>RPA and workflow automation</div>
-                              </div>
-                            </Link>
-                          </NavigationMenuLink>
-                          <NavigationMenuLink asChild>
-                            <Link to="/solutions/agent-startups" className="flex items-start gap-3 p-3 rounded-lg hover:bg-accent/10 transition-colors group">
-                              <div className="mt-1 p-1.5 bg-muted rounded-md group-hover:bg-primary/10 transition-colors" style={{ backgroundColor: 'var(--bg-secondary)' }}>
-                                <Rocket className="h-5 w-5 text-foreground/70 group-hover:text-primary transition-colors" style={{ color: 'var(--text-secondary)' }} />
-                              </div>
-                              <div>
-                                <div className="font-semibold mb-1 text-foreground group-hover:text-primary transition-colors" style={{ color: 'var(--text-primary)' }}>Agent Startups</div>
-                                <div className="text-sm text-muted-foreground" style={{ color: 'var(--text-secondary)' }}>Build AI agent products</div>
-                              </div>
-                            </Link>
-                          </NavigationMenuLink>
+                      <div className="w-[900px] p-0 bg-background overflow-hidden rounded-lg shadow-xl" style={{ backgroundColor: 'var(--bg-card)', border: '1px solid var(--border-subtle)' }}>
+                        <div className="grid grid-cols-12 min-h-[320px]">
+                          {/* Column 1: Platform (Highlighted) */}
+                          <div className="col-span-3 p-6 bg-muted/30 border-r border-border/50" style={{ backgroundColor: 'var(--bg-secondary)' }}>
+                            <div className="text-xs font-bold text-muted-foreground mb-4 uppercase tracking-wider">Platform</div>
+                            <div className="grid gap-3">
+                              <NavigationMenuLink asChild>
+                                <a href="/#products" className="block group">
+                                  <div className="flex items-center gap-2 mb-1">
+                                    <MessageSquare className="h-4 w-4 text-primary" />
+                                    <div className="font-semibold text-foreground group-hover:text-primary transition-colors" style={{ color: 'var(--text-primary)' }}>AskUI Caesr</div>
+                                  </div>
+                                  <div className="text-xs text-muted-foreground line-clamp-2" style={{ color: 'var(--text-secondary)' }}>Universal chat assistant</div>
+                                </a>
+                              </NavigationMenuLink>
+                              <NavigationMenuLink asChild>
+                                <a href="/#products" className="block group">
+                                  <div className="flex items-center gap-2 mb-1">
+                                    <Monitor className="h-4 w-4 text-primary" />
+                                    <div className="font-semibold text-foreground group-hover:text-primary transition-colors" style={{ color: 'var(--text-primary)' }}>Agent OS</div>
+                                  </div>
+                                  <div className="text-xs text-muted-foreground line-clamp-2" style={{ color: 'var(--text-secondary)' }}>Headless infrastructure</div>
+                                </a>
+                              </NavigationMenuLink>
+                              <NavigationMenuLink asChild>
+                                <a href="/#products" className="block group">
+                                  <div className="flex items-center gap-2 mb-1">
+                                    <Terminal className="h-4 w-4 text-primary" />
+                                    <div className="font-semibold text-foreground group-hover:text-primary transition-colors" style={{ color: 'var(--text-primary)' }}>CLI & SDK</div>
+                                  </div>
+                                  <div className="text-xs text-muted-foreground line-clamp-2" style={{ color: 'var(--text-secondary)' }}>For developers</div>
+                                </a>
+                              </NavigationMenuLink>
+                            </div>
+                          </div>
+
+                          {/* Column 2: By Use Case */}
+                          <div className="col-span-3 p-6 border-r border-border/50">
+                            <div className="text-xs font-bold text-muted-foreground mb-4 uppercase tracking-wider">By Use Case</div>
+                            <div className="grid gap-4 mb-8">
+                              <NavigationMenuLink asChild>
+                                <Link to="/solutions/software-testing" className="flex items-start gap-3 group">
+                                  <Shield className="h-5 w-5 text-muted-foreground group-hover:text-primary transition-colors mt-0.5" />
+                                  <div>
+                                    <div className="font-medium text-sm text-foreground group-hover:text-primary transition-colors" style={{ color: 'var(--text-primary)' }}>Software Testing</div>
+                                    <div className="text-xs text-muted-foreground mt-0.5" style={{ color: 'var(--text-secondary)' }}>QA automation</div>
+                                  </div>
+                                </Link>
+                              </NavigationMenuLink>
+                              <NavigationMenuLink asChild>
+                                <Link to="/solutions/automation-teams" className="flex items-start gap-3 group">
+                                  <Zap className="h-5 w-5 text-muted-foreground group-hover:text-primary transition-colors mt-0.5" />
+                                  <div>
+                                    <div className="font-medium text-sm text-foreground group-hover:text-primary transition-colors" style={{ color: 'var(--text-primary)' }}>Automation Teams</div>
+                                    <div className="text-xs text-muted-foreground mt-0.5" style={{ color: 'var(--text-secondary)' }}>RPA & Workflows</div>
+                                  </div>
+                                </Link>
+                              </NavigationMenuLink>
+                              <NavigationMenuLink asChild>
+                                <Link to="/solutions/agent-startups" className="flex items-start gap-3 group">
+                                  <Rocket className="h-5 w-5 text-muted-foreground group-hover:text-primary transition-colors mt-0.5" />
+                                  <div>
+                                    <div className="font-medium text-sm text-foreground group-hover:text-primary transition-colors" style={{ color: 'var(--text-primary)' }}>Agent Startups</div>
+                                    <div className="text-xs text-muted-foreground mt-0.5" style={{ color: 'var(--text-secondary)' }}>Build with AskUI</div>
+                                  </div>
+                                </Link>
+                              </NavigationMenuLink>
+                            </div>
+
+                            <div className="text-xs font-bold text-muted-foreground mb-4 uppercase tracking-wider">Technologies</div>
+                            <div className="grid gap-4">
+                              <NavigationMenuLink asChild>
+                                <Link to="/solutions/citrix" className="flex items-start gap-3 group">
+                                  <AppWindow className="h-5 w-5 text-muted-foreground group-hover:text-primary transition-colors mt-0.5" />
+                                  <div>
+                                    <div className="font-medium text-sm text-foreground group-hover:text-primary transition-colors" style={{ color: 'var(--text-primary)' }}>Citrix Automation</div>
+                                    <div className="text-xs text-muted-foreground mt-0.5" style={{ color: 'var(--text-secondary)' }}>Visual automation</div>
+                                  </div>
+                                </Link>
+                              </NavigationMenuLink>
+                              <NavigationMenuLink asChild>
+                                <Link to="/solutions/sap" className="flex items-start gap-3 group">
+                                  <Layers className="h-5 w-5 text-muted-foreground group-hover:text-primary transition-colors mt-0.5" />
+                                  <div>
+                                    <div className="font-medium text-sm text-foreground group-hover:text-primary transition-colors" style={{ color: 'var(--text-primary)' }}>SAP Automation</div>
+                                    <div className="text-xs text-muted-foreground mt-0.5" style={{ color: 'var(--text-secondary)' }}>GUI & Fiori</div>
+                                  </div>
+                                </Link>
+                              </NavigationMenuLink>
+                            </div>
+                          </div>
+
+                          {/* Column 3: Industries (Wide) */}
+                          <div className="col-span-6 p-6">
+                            <div className="text-xs font-bold text-muted-foreground mb-4 uppercase tracking-wider">Industries</div>
+                            <div className="grid grid-cols-2 gap-x-6 gap-y-4">
+                              <NavigationMenuLink asChild>
+                                <Link to="/solutions/finance" className="flex items-center gap-3 group">
+                                  <Landmark className="h-4 w-4 text-muted-foreground group-hover:text-primary transition-colors" />
+                                  <span className="text-sm font-medium text-foreground group-hover:text-primary transition-colors" style={{ color: 'var(--text-primary)' }}>Banking & Finance</span>
+                                </Link>
+                              </NavigationMenuLink>
+                              <NavigationMenuLink asChild>
+                                <Link to="/solutions/retail" className="flex items-center gap-3 group">
+                                  <ShoppingCart className="h-4 w-4 text-muted-foreground group-hover:text-primary transition-colors" />
+                                  <span className="text-sm font-medium text-foreground group-hover:text-primary transition-colors" style={{ color: 'var(--text-primary)' }}>Retail & E-commerce</span>
+                                </Link>
+                              </NavigationMenuLink>
+                              <NavigationMenuLink asChild>
+                                <Link to="/solutions/healthcare" className="flex items-center gap-3 group">
+                                  <Heart className="h-4 w-4 text-muted-foreground group-hover:text-primary transition-colors" />
+                                  <span className="text-sm font-medium text-foreground group-hover:text-primary transition-colors" style={{ color: 'var(--text-primary)' }}>Healthcare</span>
+                                </Link>
+                              </NavigationMenuLink>
+                              <NavigationMenuLink asChild>
+                                <Link to="/solutions/telecom" className="flex items-center gap-3 group">
+                                  <Phone className="h-4 w-4 text-muted-foreground group-hover:text-primary transition-colors" />
+                                  <span className="text-sm font-medium text-foreground group-hover:text-primary transition-colors" style={{ color: 'var(--text-primary)' }}>Telecom</span>
+                                </Link>
+                              </NavigationMenuLink>
+                              <NavigationMenuLink asChild>
+                                <Link to="/solutions/manufacturing" className="flex items-center gap-3 group">
+                                  <Factory className="h-4 w-4 text-muted-foreground group-hover:text-primary transition-colors" />
+                                  <span className="text-sm font-medium text-foreground group-hover:text-primary transition-colors" style={{ color: 'var(--text-primary)' }}>Manufacturing</span>
+                                </Link>
+                              </NavigationMenuLink>
+                              <NavigationMenuLink asChild>
+                                <Link to="/solutions/consumer-electronics" className="flex items-center gap-3 group">
+                                  <Cpu className="h-4 w-4 text-muted-foreground group-hover:text-primary transition-colors" />
+                                  <span className="text-sm font-medium text-foreground group-hover:text-primary transition-colors" style={{ color: 'var(--text-primary)' }}>Consumer Electronics</span>
+                                </Link>
+                              </NavigationMenuLink>
+                              <NavigationMenuLink asChild>
+                                <Link to="/solutions/automotive" className="flex items-center gap-3 group">
+                                  <Car className="h-4 w-4 text-muted-foreground group-hover:text-primary transition-colors" />
+                                  <span className="text-sm font-medium text-foreground group-hover:text-primary transition-colors" style={{ color: 'var(--text-primary)' }}>Automotive</span>
+                                </Link>
+                              </NavigationMenuLink>
+                            </div>
+                          </div>
                         </div>
                       </div>
                     </NavigationMenuContent>
@@ -161,6 +208,9 @@ const Header = () => {
 
           {/* Desktop CTA Buttons - Right Aligned */}
           <div className="hidden md:flex md:items-center md:gap-3">
+            <a href="https://github.com/askui/vision-agent" target="_blank" rel="noopener noreferrer" className="text-foreground/80 hover:text-foreground transition-colors mr-2">
+              <Github className="h-5 w-5" style={{ color: 'var(--text-secondary)' }} />
+            </a>
             <a href="https://app.caesr.ai" target="_blank" rel="noopener noreferrer">
               <Button variant="ghost" size="sm" className="text-foreground/80 hover:text-foreground hover:bg-accent/10" style={{ color: 'var(--text-primary)' }}>
                 Log in
@@ -186,53 +236,91 @@ const Header = () => {
         {/* Mobile Navigation */}
         {isMenuOpen && (
           <div className="md:hidden py-4 space-y-4 border-t border-border/40 mt-4 animate-in slide-in-from-top-5 duration-200" style={{ borderColor: 'var(--border-subtle)' }}>
-            <Collapsible open={productsOpen} onOpenChange={setProductsOpen}>
-              <CollapsibleTrigger className="flex items-center justify-between w-full text-sm font-medium text-foreground/80 hover:text-foreground transition-colors p-2" style={{ color: 'var(--text-primary)' }}>
-                Products
-                <ChevronDown className={`h-4 w-4 transition-transform ${productsOpen ? 'rotate-180' : ''}`} />
-              </CollapsibleTrigger>
-              <CollapsibleContent className="mt-2 space-y-2 pl-4">
-                <a href="/#products" className="flex items-center gap-3 p-2 text-sm text-muted-foreground hover:text-foreground transition-colors rounded-md hover:bg-accent/5">
-                  <MessageSquare className="h-4 w-4" style={{ color: 'var(--text-secondary)' }} />
-                  <span className="font-medium" style={{ color: 'var(--text-primary)' }}>AskUI Caesr</span>
-                </a>
-                <a href="/#products" className="flex items-center gap-3 p-2 text-sm text-muted-foreground hover:text-foreground transition-colors rounded-md hover:bg-accent/5">
-                  <Terminal className="h-4 w-4" style={{ color: 'var(--text-secondary)' }} />
-                  <span className="font-medium" style={{ color: 'var(--text-primary)' }}>AskUI CLI</span>
-                </a>
-                <a href="/#products" className="flex items-center gap-3 p-2 text-sm text-muted-foreground hover:text-foreground transition-colors rounded-md hover:bg-accent/5">
-                  <Monitor className="h-4 w-4" style={{ color: 'var(--text-secondary)' }} />
-                  <span className="font-medium" style={{ color: 'var(--text-primary)' }}>AskUI Suite</span>
-                </a>
-                <a href="/#products" className="flex items-center gap-3 p-2 text-sm text-muted-foreground hover:text-foreground transition-colors rounded-md hover:bg-accent/5">
-                  <Code className="h-4 w-4" style={{ color: 'var(--text-secondary)' }} />
-                  <span className="font-medium" style={{ color: 'var(--text-primary)' }}>AskUI SDK</span>
-                </a>
-                <a href="/#products" className="flex items-center gap-3 p-2 text-sm text-muted-foreground hover:text-foreground transition-colors rounded-md hover:bg-accent/5">
-                  <Cloud className="h-4 w-4" style={{ color: 'var(--text-secondary)' }} />
-                  <span className="font-medium" style={{ color: 'var(--text-primary)' }}>AskUI Cloud</span>
-                </a>
-              </CollapsibleContent>
-            </Collapsible>
-
             <Collapsible open={solutionsOpen} onOpenChange={setSolutionsOpen}>
               <CollapsibleTrigger className="flex items-center justify-between w-full text-sm font-medium text-foreground/80 hover:text-foreground transition-colors p-2" style={{ color: 'var(--text-primary)' }}>
                 Solutions
                 <ChevronDown className={`h-4 w-4 transition-transform ${solutionsOpen ? 'rotate-180' : ''}`} />
               </CollapsibleTrigger>
-              <CollapsibleContent className="mt-2 space-y-2 pl-4">
-                <Link to="/solutions/software-testing" className="flex items-center gap-3 p-2 text-sm text-muted-foreground hover:text-foreground transition-colors rounded-md hover:bg-accent/5">
-                  <Shield className="h-4 w-4" style={{ color: 'var(--text-secondary)' }} />
-                  <span className="font-medium" style={{ color: 'var(--text-primary)' }}>Software Testing</span>
-                </Link>
-                <Link to="/solutions/automation-teams" className="flex items-center gap-3 p-2 text-sm text-muted-foreground hover:text-foreground transition-colors rounded-md hover:bg-accent/5">
-                  <Zap className="h-4 w-4" style={{ color: 'var(--text-secondary)' }} />
-                  <span className="font-medium" style={{ color: 'var(--text-primary)' }}>Automation Teams</span>
-                </Link>
-                <Link to="/solutions/agent-startups" className="flex items-center gap-3 p-2 text-sm text-muted-foreground hover:text-foreground transition-colors rounded-md hover:bg-accent/5">
-                  <Rocket className="h-4 w-4" style={{ color: 'var(--text-secondary)' }} />
-                  <span className="font-medium" style={{ color: 'var(--text-primary)' }}>Agent Startups</span>
-                </Link>
+              <CollapsibleContent className="mt-2 space-y-4 pl-4">
+                {/* Platform Section */}
+                <div className="space-y-1">
+                  <div className="text-xs font-semibold text-muted-foreground px-2 mb-2 uppercase tracking-wider">Platform</div>
+                  <a href="/#products" className="flex items-center gap-3 p-2 text-sm text-muted-foreground hover:text-foreground transition-colors rounded-md hover:bg-accent/5">
+                    <MessageSquare className="h-4 w-4" style={{ color: 'var(--text-secondary)' }} />
+                    <span className="font-medium" style={{ color: 'var(--text-primary)' }}>AskUI Caesr</span>
+                  </a>
+                  <a href="/#products" className="flex items-center gap-3 p-2 text-sm text-muted-foreground hover:text-foreground transition-colors rounded-md hover:bg-accent/5">
+                    <Monitor className="h-4 w-4" style={{ color: 'var(--text-secondary)' }} />
+                    <span className="font-medium" style={{ color: 'var(--text-primary)' }}>Agent OS</span>
+                  </a>
+                  <a href="/#products" className="flex items-center gap-3 p-2 text-sm text-muted-foreground hover:text-foreground transition-colors rounded-md hover:bg-accent/5">
+                    <Terminal className="h-4 w-4" style={{ color: 'var(--text-secondary)' }} />
+                    <span className="font-medium" style={{ color: 'var(--text-primary)' }}>CLI & SDK</span>
+                  </a>
+                </div>
+
+                {/* Use Case Section */}
+                <div className="space-y-1">
+                  <div className="text-xs font-semibold text-muted-foreground px-2 mb-2 uppercase tracking-wider">By Use Case</div>
+                  <Link to="/solutions/software-testing" className="flex items-center gap-3 p-2 text-sm text-muted-foreground hover:text-foreground transition-colors rounded-md hover:bg-accent/5">
+                    <Shield className="h-4 w-4" style={{ color: 'var(--text-secondary)' }} />
+                    <span className="font-medium" style={{ color: 'var(--text-primary)' }}>Software Testing</span>
+                  </Link>
+                  <Link to="/solutions/automation-teams" className="flex items-center gap-3 p-2 text-sm text-muted-foreground hover:text-foreground transition-colors rounded-md hover:bg-accent/5">
+                    <Zap className="h-4 w-4" style={{ color: 'var(--text-secondary)' }} />
+                    <span className="font-medium" style={{ color: 'var(--text-primary)' }}>Automation Teams</span>
+                  </Link>
+                  <Link to="/solutions/agent-startups" className="flex items-center gap-3 p-2 text-sm text-muted-foreground hover:text-foreground transition-colors rounded-md hover:bg-accent/5">
+                    <Rocket className="h-4 w-4" style={{ color: 'var(--text-secondary)' }} />
+                    <span className="font-medium" style={{ color: 'var(--text-primary)' }}>Agent Startups</span>
+                  </Link>
+                </div>
+
+                {/* Technologies Section */}
+                <div className="space-y-1">
+                  <div className="text-xs font-semibold text-muted-foreground px-2 mb-2 uppercase tracking-wider">Technologies</div>
+                  <Link to="/solutions/citrix" className="flex items-center gap-3 p-2 text-sm text-muted-foreground hover:text-foreground transition-colors rounded-md hover:bg-accent/5">
+                    <AppWindow className="h-4 w-4" style={{ color: 'var(--text-secondary)' }} />
+                    <span className="font-medium" style={{ color: 'var(--text-primary)' }}>Citrix Automation</span>
+                  </Link>
+                  <Link to="/solutions/sap" className="flex items-center gap-3 p-2 text-sm text-muted-foreground hover:text-foreground transition-colors rounded-md hover:bg-accent/5">
+                    <Layers className="h-4 w-4" style={{ color: 'var(--text-secondary)' }} />
+                    <span className="font-medium" style={{ color: 'var(--text-primary)' }}>SAP Automation</span>
+                  </Link>
+                </div>
+
+                {/* Industries Section */}
+                <div className="space-y-1">
+                  <div className="text-xs font-semibold text-muted-foreground px-2 mb-2 uppercase tracking-wider">Industries</div>
+                  <Link to="/solutions/finance" className="flex items-center gap-3 p-2 text-sm text-muted-foreground hover:text-foreground transition-colors rounded-md hover:bg-accent/5">
+                    <Landmark className="h-4 w-4" style={{ color: 'var(--text-secondary)' }} />
+                    <span className="font-medium" style={{ color: 'var(--text-primary)' }}>Banking & Finance</span>
+                  </Link>
+                  <Link to="/solutions/retail" className="flex items-center gap-3 p-2 text-sm text-muted-foreground hover:text-foreground transition-colors rounded-md hover:bg-accent/5">
+                    <ShoppingCart className="h-4 w-4" style={{ color: 'var(--text-secondary)' }} />
+                    <span className="font-medium" style={{ color: 'var(--text-primary)' }}>Retail & E-commerce</span>
+                  </Link>
+                  <Link to="/solutions/healthcare" className="flex items-center gap-3 p-2 text-sm text-muted-foreground hover:text-foreground transition-colors rounded-md hover:bg-accent/5">
+                    <Heart className="h-4 w-4" style={{ color: 'var(--text-secondary)' }} />
+                    <span className="font-medium" style={{ color: 'var(--text-primary)' }}>Healthcare</span>
+                  </Link>
+                  <Link to="/solutions/telecom" className="flex items-center gap-3 p-2 text-sm text-muted-foreground hover:text-foreground transition-colors rounded-md hover:bg-accent/5">
+                    <Phone className="h-4 w-4" style={{ color: 'var(--text-secondary)' }} />
+                    <span className="font-medium" style={{ color: 'var(--text-primary)' }}>Telecom</span>
+                  </Link>
+                  <Link to="/solutions/manufacturing" className="flex items-center gap-3 p-2 text-sm text-muted-foreground hover:text-foreground transition-colors rounded-md hover:bg-accent/5">
+                    <Factory className="h-4 w-4" style={{ color: 'var(--text-secondary)' }} />
+                    <span className="font-medium" style={{ color: 'var(--text-primary)' }}>Manufacturing</span>
+                  </Link>
+                  <Link to="/solutions/consumer-electronics" className="flex items-center gap-3 p-2 text-sm text-muted-foreground hover:text-foreground transition-colors rounded-md hover:bg-accent/5">
+                    <Cpu className="h-4 w-4" style={{ color: 'var(--text-secondary)' }} />
+                    <span className="font-medium" style={{ color: 'var(--text-primary)' }}>Consumer Electronics</span>
+                  </Link>
+                  <Link to="/solutions/automotive" className="flex items-center gap-3 p-2 text-sm text-muted-foreground hover:text-foreground transition-colors rounded-md hover:bg-accent/5">
+                    <Car className="h-4 w-4" style={{ color: 'var(--text-secondary)' }} />
+                    <span className="font-medium" style={{ color: 'var(--text-primary)' }}>Automotive</span>
+                  </Link>
+                </div>
               </CollapsibleContent>
             </Collapsible>
 
