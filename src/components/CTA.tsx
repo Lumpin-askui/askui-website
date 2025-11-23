@@ -50,9 +50,6 @@ const CTA = () => {
                 Book a Demo
                 <ArrowRight style={{ marginLeft: '8px' }} size={20} />
               </a>
-              <a href="https://www.caesr.ai" target="_blank" rel="noopener noreferrer" className="btn-secondary" style={{ height: '56px', padding: '0 32px', fontSize: '1.125rem' }}>
-                Start for Free
-              </a>
             </div>
 
             <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center', gap: 'var(--space-xl)', fontSize: '0.875rem', fontWeight: 500, color: 'var(--text-secondary)' }}>

@@ -153,9 +153,6 @@ const Footer = () => {
                 <a href="https://docs.askui.com" target="_blank" rel="noopener noreferrer" className="footer-link">Documentation</a>
               </li>
               <li>
-                <Link to="/pricing" className="footer-link">Pricing</Link>
-              </li>
-              <li>
                 <a href="https://trust.askui.com" target="_blank" rel="noopener noreferrer" className="footer-link">Trust Center</a>
               </li>
             </ul>

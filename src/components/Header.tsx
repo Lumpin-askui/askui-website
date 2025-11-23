@@ -203,9 +203,6 @@ const Header = () => {
               <Link to="/case-studies" className="text-sm font-medium text-foreground/80 hover:text-foreground transition-colors" style={{ color: 'var(--text-secondary)' }}>
                 Customers
               </Link>
-              <Link to="/pricing" className="text-sm font-medium text-foreground/80 hover:text-foreground transition-colors" style={{ color: 'var(--text-secondary)' }}>
-                Pricing
-              </Link>
               <Link to="/blog" className="text-sm font-medium text-foreground/80 hover:text-foreground transition-colors" style={{ color: 'var(--text-secondary)' }}>
                 Blog
               </Link>
@@ -340,9 +337,6 @@ const Header = () => {
             <div className="space-y-2 pt-2 border-t border-border/40" style={{ borderColor: 'var(--border-subtle)' }}>
               <Link to="/case-studies" className="block p-2 text-sm font-medium text-foreground/80 hover:text-foreground transition-colors hover:bg-accent/5 rounded-md" style={{ color: 'var(--text-secondary)' }}>
                 Customers
-              </Link>
-              <Link to="/pricing" className="block p-2 text-sm font-medium text-foreground/80 hover:text-foreground transition-colors hover:bg-accent/5 rounded-md" style={{ color: 'var(--text-secondary)' }}>
-                Pricing
               </Link>
               <Link to="/blog" className="block p-2 text-sm font-medium text-foreground/80 hover:text-foreground transition-colors hover:bg-accent/5 rounded-md" style={{ color: 'var(--text-secondary)' }}>
                 Blog

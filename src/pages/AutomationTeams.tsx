@@ -28,11 +28,6 @@ const AutomationTeams = () => {
                   Book a Demo
                 </a>
               </Button>
-              <Button size="lg" variant="outline" asChild>
-                <a href="https://www.caesr.ai" target="_blank" rel="noopener noreferrer">
-                  Try Caesr
-                </a>
-              </Button>
             </div>
           </div>
         </div>

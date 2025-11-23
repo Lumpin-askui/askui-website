@@ -391,9 +391,6 @@ const CaseStudies = () => {
               Book a Demo
               <ArrowRight style={{ marginLeft: '8px' }} size={20} />
             </Link>
-            <a href="https://www.caesr.ai" target="_blank" rel="noopener noreferrer" className="btn-secondary">
-              Try Caesr
-            </a>
           </div>
         </div>
       </section>

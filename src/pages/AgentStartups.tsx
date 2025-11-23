@@ -27,11 +27,6 @@ const AgentStartups = () => {
                   Book a Demo
                 </a>
               </Button>
-              <Button size="lg" variant="outline" asChild>
-                <a href="https://www.caesr.ai" target="_blank" rel="noopener noreferrer">
-                  Try Caesr
-                </a>
-              </Button>
             </div>
           </div>
         </div>
@@ -300,11 +295,6 @@ const AgentStartups = () => {
               <Button size="lg" className="bg-primary text-primary-foreground hover:bg-primary/90" asChild>
                 <a href="/enterprise">
                   Book a Demo
-                </a>
-              </Button>
-              <Button size="lg" variant="outline" asChild>
-                <a href="https://www.caesr.ai" target="_blank" rel="noopener noreferrer">
-                  Try Caesr
                 </a>
               </Button>
             </div>

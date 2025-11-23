@@ -1047,11 +1047,6 @@ const RoiCalculator = () => {
                   Book a Demo
                 </a>
               </Button>
-              <Button size="lg" variant="outline" className="bg-white/10 text-white border-white/20 hover:bg-white/20" asChild>
-                <a href="https://www.caesr.ai" target="_blank" rel="noopener noreferrer">
-                  Try Caesr
-                </a>
-              </Button>
             </div>
           </div>
         </div>
